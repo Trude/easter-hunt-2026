@@ -333,6 +333,87 @@ En voksen postes ved Gondolen (enkel å finne, kjent for barna) og overleverer k
 
 ---
 
+## EMIL (10 år) — BRUKERTEST-TILBAKEMELDING
+
+*Emil leste gjennom hele planen og ble bedt om å si akkurat hva han tenkte. Ingen filtrering.*
+
+---
+
+### Det han synes er KJEMPEKULT 🔥
+
+**Odin-steget** — *"Det er min favoritt. En hund med hemmelig melding på halsbåndet er faktisk det kuleste jeg har hørt. Vil de voksne klare å sette den på uten at barna ser det?"*
+
+**AI-video av Påskeharen** — *"Hvis den faktisk sier navnene deres og nevner Odin, kommer de til å bli helt gale. Men sørg for at stemmen ikke er creepy. Noen AI-stemmer er creepy."*
+
+**Minecraft-craftingen** — *"Genial idé. Men det MÅ funke på telefon uten at det er irriterende å dra ting rundt. Touchscreen og Minecraft-inventory er ikke alltid bra. Test det skikkelig."*
+
+**UV-usynlig blekk** — *"Det er faktisk magisk. Vil de ha en UV-lommelykt som de ikke vet hva er, og så plutselig skjønner de det? JA."*
+
+**Ballongveggen** — *"Poppe ballonger er alltid gøy. Men hva om de popper den riktige med en gang og ikke de andre? Kanskje ha regler om at de MÅ poppe alle?"*
+
+**Kombinasjonslås på kisten** — *"Ja. Det er jo som en escape room. Kult."*
+
+**Falsk avisforside** — *"Hvis den ser ekte ut er det veldig bra. Hvis den ser hjemmelaget ut er det litt lame. Den må se skikkelig ekte ut."*
+
+**Kaninspor i snøen** — *"Det første de ser om morgenen! Sykt kult. Men sporene må være store nok, ikke for små."*
+
+**Rød sild / falsk konvolutt** — *"Haha ja. 'Ha ha, feil sted' er morsomt. Men ikke mer enn én, da blir det bare frustrerende."*
+
+**Nedtellingstimer** — *"JA men straffen må være noe morsomt, ikke bare jumping jacks. Kanskje de må synge en pinsesang eller noe pinlig."*
+
+**Kompasset** — *"Det er som et eventyrspill i virkeligheten. Kult hvis de faktisk får et ekte kompass å holde."*
+
+---
+
+### Det han synes er MEH eller DÅRLIG 👎
+
+**10 stasjoner hver i klue-kjeden** — *"Det er for mange. Etter stasjon 6-7 begynner det å føles som en oppgave, ikke et spill. Kanskje 7-8 er nok? Og hva skjer hvis den ene er mye raskere enn den andre — sitter den første bare og venter?"*
+
+**Matteoppgavene generelt** — *"Matte på påskeferien er litt trist. Men OK, hvis det bare er et par stykker og de ikke er for lange å løse. 13×14 i hue er faktisk vanskelig om morgenen. Og 3/4 av 120 — det er ikke lett uten papir."*
+
+**Stasjon 9 for Sander (boden utenfra)** — *"Boden? Det høres kjedelig ut som gjemmested. Ingen vil gå til boden. Kanskje noe kjekkere?"*
+
+**Halvt bilde av Kvekk som avslutning på stasjon 10** — *"Hva gjør de med bildet? Bare holder det? Det føles ikke som en skikkelig belønning for å ha funnet alle 10. Det bør være noe mer der."*
+
+**Egg-og-skje-stafett** — *"Det er babyleik. Ingen 10-åring gidder det på alvor."*
+
+**Hvit kritt/akvarell og sitronsaft** — *"Det er kunst og naturfag, ikke påskejakt. Dropp det."*
+
+**Sporidentifisering (dyr i snøen)** — *"Høres kjedelig ut. Som skole. Hvem gidder å identifisere revespor på påskemorning?"*
+
+**Steg 16 — voksne som 'finner' konvolutten i alpinbakken** — *"Det er litt åpenbart at det er planlagt ikke sant? Alle vet at voksne har lagt det der. Kanskje de faktisk gjemmer det under noe, eller fester det til noe, så det virker mer ekte?"*
+
+**Påskedikt-koden** — *"Påskedikt... er det for besteforeldre? Kanskje det passer for Selda, men ikke for Sander."*
+
+**Lørdagsgodteri-egget** — *"'MANDAG'-egget vil de spise med en gang uansett. De gidder ikke vente. Det funker ikke."*
+
+---
+
+### Praktiske bekymringer Emil nevnte
+
+- *"Hva skjer hvis de to har veldig forskjellig fart gjennom de 10 stasjonene? Den ene er ferdig og den andre er på stasjon 6. Det høres kjedelig ut for den som er ferst."*
+- *"Oransje ballong ute i snøen — ballonger sprekker av kulden. Bruk et flagg eller noe mer solid."*
+- *"Craftingbordet på appen — hva er 'hvit ull' på norsk? Er det 'hvit ull'? Vil de skjønne det uten instruksjon?"*
+- *"AI-videoen — hva om telefonen ikke vil spille av video? Test WiFi på hytten."*
+- *"SMS fra Påskeharen — hva om den voksne glemmer å sende den på riktig tidspunkt?"*
+- *"Kode VARDEN26 — er den case-sensitive? Hva om de skriver 'varden26'?"*
+
+---
+
+### Emils topp 5 idéer fra idébanken han vil ha inn
+
+1. UV-usynlig blekk
+2. Kombinasjonslås
+3. Ballongvegg
+4. Kompass
+5. Falsk avisforside (men den MÅ se profesjonell ut)
+
+---
+
+*Emils samlede dom: "Det er veldig bra! Bedre enn de fleste påskejakter jeg har hørt om. Bare ikke ha for mange kjedelige steg på rad. Varier det mer — action, så gåte, så noe morsomt, så gåte igjen."*
+
+---
+
 ## MANGLER / NESTE
 
 - [ ] Navn på voksne på hytten (til quiz-spørsmål)
