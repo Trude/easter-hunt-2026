@@ -12,7 +12,7 @@
 - **Sander** (10 år, nesten 11) — 5. klasse matte, god leser, elsker gaming og Minecraft
 - **Selda** (8 år, nesten 9) — 3. klasse matte, god leser, elsker svømming og Minecraft
 - **Odin** — hunden, aktiv deltaker i ett steg
-- **Voksne på hytten** — støttespillere, gis roller (navn TBD)
+- **Voksne på hytten** — Tommy, Trude, Onkel Svein, Trine
 - Begge barna er gode alpinister og lærer snowboard
 
 **Hytten har:**
@@ -40,74 +40,103 @@
 
 ## FORTELLING
 
-Påskeharen forsvant natt til påskedag. Kråken **Kvekk** (hans assistent) sender barna et haste-brev. De blir offisielle **Påskedetektiver** med detektivbok og oppdrag: finn sporene!
+Påskeharen forsvant natt til påskedag. Påskekyllingen **Piip** (hans assistent) sender barna et haste-brev. De blir offisielle **Påskedetektiver** med detektivbok og oppdrag: finn sporene!
 
 Twisten: Påskeharen er ikke i fare — han ble så ivrig med å gjemme egg at han sovnet i snøen. Alle spor leder tilbake til hytten — og ham.
 
 ---
 
-## STEG-PLAN
+## BEVISSTAVLEN — RYGGRADEN I JAKTEN ✅
 
-### STEG 1 — Brevet fra Kvekk *(Felles)*
-Brev under puten om morgenen. Rebus leder til peisen der individuelle konvolutter venter.
+Bevisstavlen henger ved peisen fra start til slutt. Den er ryggraden hele jakten er bygget rundt.
+
+**Oppsettet:** En stor A2/A1-plate på veggen med overskriften *"MYSTERIET PÅ VARDEN — HVEM TOK PÅSKEHAREN?"*. Tegnestifter og en rull rød hyssing ligger klar.
+
+**Hvordan det fungerer:**
+- Ved **hvert steg** finner barna ett **bevis-element** i tillegg til ledetråden. De bringer beviset tilbake til stavlen og fester det.
+- Bevisene er fysiske gjenstander eller lapper: potelavtrykk, torn lappe, en halvspist gulrot, en Kvikk Lunsj-wrapper med merkelig tegning, en oransje ullbit, osv.
+- Stavlen bygger seg opp gjennom hele jakten — barna ser historien ta form.
+- **Steg 11B** er det store bevisstavle-øyeblikket: de kobler bevisene med rød hyssing og det avslører neste steg.
+- Den som er raskest gjennom sin rute bruker ventetiden på å organisere stavlen — løser timing-problemet naturlig.
+
+**Bevis-elementer per steg (forslag):**
+| Steg | Bevis | Hva det forteller |
+|------|-------|-------------------|
+| Sanderss stasjon 1 | Sotet potelavtrykk på papir | "Noen var ved peisen" |
+| Sanderss stasjon 3 | Kvikk Lunsj-wrapper med X tegnet på | "Noen spiste her og la igjen et kart" |
+| Sanderss stasjon 5 | En halvspist gulrot | "Påskeharen var sulten" |
+| Sanderss stasjon 7 | Bit av oransje stoff (fra skjerfet hans) | "Han mistet noe i skifterommet" |
+| Sanderss stasjon 8 | **Halvt skattekart** | Passer med Seldas halvdel |
+| Seldas stasjon 1 | Et hvitt hår (ullbit) | "En hvit skapning var her" |
+| Seldas stasjon 3 | Liten lapp: *"Var her — Pk"* | "Han var i soverommet!" |
+| Seldas stasjon 5 | Appelsin med bitemerker | "Spiste appelsin — klassisk påskehare" |
+| Seldas stasjon 7 | Liten snøflak-tegning | "Han gikk ut i kulden" |
+| Seldas stasjon 8 | **Halvt skattekart** | Passer med Sanders halvdel |
+| Begge stasjon siste | **Sentralt bilde av Piip** (to halvdeler) | Avslører det store bildet når kombinert |
 
 ---
 
-### STEG 2–11 — Individuelle klue-kjeder *(10 stasjoner hver, parallelt)*
+## STEG-PLAN
 
-Begge løper sitt eget løp rundt hytten SAMTIDIG. Konvoluttene er merket med barnets navn. Hvert steg inneholder: historietekst + ledetråd (rebus, rimgåte eller matteoppgave) til neste sted + noe godteri.
+### STEG 0 — Forberedelse kvelden før *(Voksne)*
+- Sett opp bevisstavlen ved peisen med overskrift og tomt felt
+- Legg ut konvolutter på alle 8 stasjoner (merket med barnets navn)
+- Legg bevis-elementer i/ved hver konvolutt
+- Lag kaninspor i snøen med pappmal ✅
+- Fest kapsel på Odins halsbånd
+- Sjekk at webapp er live
 
-#### SANDERSS RUTE (5. klasse matte, noen engelske ledetråder)
+---
 
-Sander kan noe engelsk og trenger å øve — 3 av 10 ledetråder er på engelsk.
+### STEG 1 — Brevet fra Piip *(Felles)*
 
-| # | Gjemmested | Ut-ledetråd | Språk |
-|---|-----------|-------------|-------|
-| 1 | Peisen | Matteoppgave: 15×6=90 → "der flammene ikke brenner, men maten grilles" → grill | Norsk |
-| 2 | Grillplassen (ute) | Engelsk rimgåte: *"I keep things cold, I hum and glow — open me up and see what I know"* → kjøleskap | **Engelsk** |
-| 3 | Kjøleskapet | Matteoppgave: 48÷8=6 → "rommet der noen sover, men ikke i hovedhuset" → anekset | Norsk |
-| 4 | Anekset | Engelsk rebus: *[picture of bubble] + "BATH"* → boblebad | **Engelsk** |
-| 5 | Boblebad | Matteoppgave: 3/4 av 120=90 → "rommet der klærne vaskes" → vaskerommet | Norsk |
-| 6 | Vaskerommet | Engelsk rimgåte: *"Boots and jackets, hats and more — you'll find your next clue by the changing floor"* → skifterommet | **Engelsk** |
-| 7 | Skifterommet | Matteoppgave: 40% av 200=80 → "det lille rommet der dere ser på TV" → tvstua | Norsk |
-| 8 | Tvstua | **Skattekart-bit #1** + "Finn den andre halvdelen — Selda har den!" | Norsk |
-| 9 | Boden (utenfra) | Matteoppgave: 13×14=182 + rebus → tilbake inn | Norsk |
-| 10 | Under Sanderss seng | Siste historiedel. **HALVT BILDE** (halvparten av en tegning av Kvekk). "Møt Selda ved peisen!" | Norsk |
+Barna finner brevet under puten om morgenen. Utenfor ser de kaninspor i snøen som leder mot hytten — Påskeharen var her! Rebuset i brevet leder dem til peisen, der bevisstavlen henger klar og to konvolutter med navnene deres venter.
+
+**Første handling:** De fester Piips brev på bevisstavlen. Jakten er i gang.
+
+---
+
+### STEG 2–9 — Individuelle klue-kjeder *(8 stasjoner hver, parallelt)* ✅
+
+Begge løper sitt eget løp SAMTIDIG. Ved hver stasjon: ledetråd til neste sted + bevis-element å ta med tilbake. Konvoluttene er merket med barnets navn.
+
+**Ventetid:** Den som er ferst samler og organiserer bevisene på stavlen mens den andre fullfører.
+
+#### SANDERSS RUTE (5. klasse matte, 3 engelske ledetråder)
+
+| # | Gjemmested | Bevis som hentes | Ut-ledetråd | Språk |
+|---|-----------|-----------------|-------------|-------|
+| 1 | Peisen | Sotet potelavtrykk | Matteoppgave: 15×6=90 → grill | Norsk |
+| 2 | Grillplassen (ute) | Kvikk Lunsj-wrapper m/X | *"I keep things cold, I hum and glow"* → kjøleskap | **Engelsk** |
+| 3 | Kjøleskapet | Halvspist gulrot | 48÷8=6 → "sover, ikke i hovedhuset" → anekset | Norsk |
+| 4 | Anekset | Lapp: *"Var her — Pk"* | *[bubble picture] + "BATH"* → boblebad | **Engelsk** |
+| 5 | Boblebad | Bit av oransje stoff | 3/4 av 120=90 → "der klærne vaskes" → vaskerom | Norsk |
+| 6 | Vaskerommet | Snøflak-tegning | *"Boots and jackets, hats and more"* → skifterom | **Engelsk** |
+| 7 | Skifterommet | Halvt skattekart #S | 40% av 200=80 → "det lille rommet med TV" → tvstua | Norsk |
+| 8 | Tvstua | **Halvt Piip-bilde** | *"Ta med alt og møt Selda ved peisen!"* | Norsk |
 
 #### SELDAS RUTE (3. klasse matte, alt på norsk)
 
-| # | Gjemmested | Ut-ledetråd |
-|---|-----------|-------------|
-| 1 | Peisen | Matteoppgave: 7+8=15 → "der dere henger votter og jakker" → skifterom |
-| 2 | Skifterommet | Rebus: seng + "ROMMET" → Seldas seng |
-| 3 | Under Seldas seng | Matteoppgave: 4×5=20 → "rommet der maten lages" → kjøkkenet |
-| 4 | Kjøkkenet | Rimgåte: "Jeg er kald og full av mat" → kjøleskap |
-| 5 | Kjøleskapet | Matteoppgave klokke: 14:30+2t=16:30 → "der dere spiser middag" → middagsbord |
-| 6 | Under middagsbordet | Rebus: vask + "ROMMET" → vaskerommet |
-| 7 | Vaskerommet | Matteoppgave: 24÷3=8 → "utenfor der dere griller pølser" → grill |
-| 8 | Grillplassen (ute) | **Skattekart-bit #1** + "Finn den andre halvdelen — Sander har den!" |
-| 9 | Boblebad | Matteoppgave: 3×6=18 → "det lille rommet der dere ser på TV" → tvstua |
-| 10 | Tvstua | Siste historiedel. **HALVT BILDE** (halvparten av en tegning av Kvekk). "Møt Sander ved peisen!" |
+| # | Gjemmested | Bevis som hentes | Ut-ledetråd |
+|---|-----------|-----------------|-------------|
+| 1 | Peisen | Hvit ullbit | 7+8=15 → "der dere henger jakker" → skifterom |
+| 2 | Skifterommet | Liten skosåle-tegning | Rebus: seng → Seldas seng |
+| 3 | Under Seldas seng | Lapp: *"Var her — Pk"* | 4×5=20 → "der maten lages" → kjøkken |
+| 4 | Kjøkkenet | Appelsin m/bitemerker | Rimgåte: "Jeg er kald og full av mat" → kjøleskap |
+| 5 | Kjøleskapet | Halvspist gulrot nr. 2 | Klokke: 14:30+2t=16:30 → "der dere spiser" → middagsbord |
+| 6 | Under middagsbordet | Torn lapp m/mystisk tekst | Rebus: vask → vaskerom |
+| 7 | Vaskerommet | Halvt skattekart #S | 24÷3=8 → "der dere griller" → grill |
+| 8 | Grillplassen (ute) | **Halvt Piip-bilde** | *"Ta med alt og møt Sander ved peisen!"* |
 
 ---
 
-### STEG 11B — Kreativt steg *(Felles — idé ikke besluttet ennå)*
+### STEG 10 — Bevisstavlen aktiveres *(Felles, ved peisen)*
 
-De to halvdelene fra stasjon 10 kombineres her. Fargelegging ble forkastet som for barnslig.
+Begge møtes med alt de har samlet. De fester siste bevis på stavlen og ser det fulle bildet for første gang. De to halvdelene av Piip-bildet kombineres i midten — og noe åpenbarer seg (en tekst, en pil, et tall — gjemmes i bildet ved produksjon).
 
-**Idé A — Gjennomlys-trikset**
-Halvdelene er trykt på halvgjennomsiktig papir. Holdes de opp mot vinduet/en lampe med begge lagene oppå hverandre, dukker en skjult melding opp som kun er synlig i lyset. Meningsløse alene, avgjørende sammen. Ekte detektiv-følelse.
+De kobler bevisene med rød hyssing: *hvit ullbit → potelavtrykk → oransje stoff → snøflak* tegner en linje som peker mot... neste steg.
 
-**Idé B — Bygg kode-hjulet**
-Halvdelene er komponentene i et roterende chifferhjul (escape room-stil). Barna setter det sammen med en binders/splitt → får et verktøy de bruker til å dekode en kryptert melding videre i jakten. Kreativt, nyttig og nerdy nok.
-
-**Idé C — Rutenett-kode (⚠️ ikke besluttet)**
-Halvdelene er to deler av et rutenett som bare gir mening samlet. Kombinert avslører rutenettet en 4-sifret kode (f.eks. til Minecraft-steget på appen). Logisk, utfordrende, ingen forming.
-
-**Idé D — Krimtavlen**
-Barna har samlet "bevis"-lapper underveis. Nå setter de opp en krimtavle (papir med snorer mellom bevisene) og trekker konklusjoner. Mest komplisert å rigge, men sterk detektiv-stemning.
-
-**Status:** Ikke besluttet — velges senere.
+**Timing-løsning:** Den som kom tilbake først har allerede organisert bevisene. Den andre legger til sine. Ingen venter tomt — stavlen ER aktiviteten.
 
 ---
 
@@ -115,8 +144,17 @@ Barna har samlet "bevis"-lapper underveis. Nå setter de opp en krimtavle (papir
 
 Begge inn på websiden med sin kode (SANDER / SELDA). Skreddersydd quiz:
 
-**Sander (5. kl.):** 25% av 200, 12×7,5m, Odins navn, voksentrivia, areal 8×6cm²
-**Selda (3. kl.):** 36+47, 5×8 egg, Odins navn, voksentrivia, 10:15+45min
+**Sander (5. kl.):**
+- Matte: 25% av 200, areal 8×6cm², 12×7,5m
+- *"Hva heter hunden?"* [Odin]
+- *"Hvem av de voksne er best på ski?"* (spør Tommy, True, Onkel Svein og Trine)
+- *"Hvem sov lengst i morges?"* (spør de voksne)
+
+**Selda (3. kl.):**
+- Matte: 36+47, 5×8 egg, klokke 10:15+45min
+- *"Hva heter hunden?"* [Odin]
+- *"Hvem av de voksne er verst til å stå opp om morgenen?"* (spør de voksne)
+- *"Hva er Trines favorittmat?"* (spør Trine)
 
 Begge får sin 4-sifrede kode ved fullføring.
 
@@ -136,36 +174,32 @@ Minecraft achievement-varsler ("ACHIEVEMENT UNLOCKED") dukker opp gjennom hele a
 
 ---
 
-### STEG 14 — Odin vet noe *(Felles + hunden)*
+### STEG 14 — Ute i snøen *(Felles)*
 
-Kapsel på Odins halsbånd: *"Se etter noe ORANSJE utenfor!"*
+Bevisstavlen eller Minecraft-steget avslører at neste spor er utenfor — *"Se etter noe oransje i snøen!"* Odin er gjerne med ut og snuser rundt for stemningens skyld.
 
----
-
-### STEG 15 — Ute i snøen *(Felles)*
-
-Oransje ballong/flagg i snøen → vanntett boks med de to kartbitene fra stasjon 8. Puslet sammen viser de X i alpinbakken.
+Oransje flagg stukket i snøen → vanntett boks med de to kartbitene fra stasjon 8. Puslet sammen viser de X i alpinbakken.
 
 ---
 
-### STEG 16 — Alpinbakken ved Varden *(Felles + 1 voksen på post)*
+### STEG 15 — Alpinbakken ved Varden *(Felles + 1 voksen på post)*
 
-Voksen postet ved landemerke, "oppdager" konvolutt dramatisk. Innhold: siste brev fra Kvekk + kode VARDEN26.
+Voksen postet ved Gondolen, "oppdager" konvolutt dramatisk. Innhold: siste brev fra Piip + kode VARDEN26.
 
 ---
 
-### STEG 17 — Digital finale *(Alle samlet)*
+### STEG 16 — Digital finale *(Alle samlet)*
 
 Alle rundt ett skjerm. Barna taster VARDEN26. En **AI-generert video av Påskeharen** spilles av — han snakker direkte til Sander og Selda ved navn, nevner Odin, Kvitfjell og at de er de beste detektivene han har møtt. Avslutter med å avsløre gjemmestedet: VED PEISEN (full sirkel).
 
-**AI-video — alternativer (besluttes under produksjon):**
-- **Alt A — Snakkende portrett:** AI-bilde av Påskeharen (Midjourney/DALL-E) + D-ID eller HeyGen animerer munnen og legger til norsk AI-stemme (ElevenLabs). Raskest å lage.
-- **Alt B — HeyGen avatar:** Ferdig karakter-avatar i HeyGen, norsk tekst inn → ferdig video ut.
-- **Alt C — AI-stemme over animasjon:** Gratis påskehare-animasjon + ElevenLabs norsk stemme med skreddersydd tekst.
+**AI-video — verktøy tilgjengelig:**
+- **Adobe Firefly** ✅ — tilgjengelig for bildegenerering av Påskeharen og Piip
+- **D-ID eller HeyGen** — animerer munnen på et Firefly-generert bilde + norsk AI-stemme
+- **ElevenLabs** — norsk AI-stemme for videoen
 
 **Nøkkelpunkt:** Videoen MÅ si navnene Sander og Selda, nevne Odin, og referere til Kvitfjell — det er det som gjør den magisk vs. en generisk video.
 
-**Skattekisten:** Påskeegg, Kvikk Lunsj, individuelle gaver til Sander (gaming?) og Selda (svømming?), brev fra Påskeharen med honnør til Odin.
+**Skattekisten:** Fylt påskeegg til Sander, fylt påskeegg til Selda (begge fylt med godteri og personlige ting), + ett påskeegg til de voksne. Pluss Kvikk Lunsj og avsluttende brev fra Påskeharen med honnør til Odin.
 
 ---
 
@@ -173,7 +207,7 @@ Alle rundt ett skjerm. Barna taster VARDEN26. En **AI-generert video av Påskeha
 
 | Side | Innhold |
 |------|---------|
-| Forside | Kvekk ønsker velkommen |
+| Forside | Piip ønsker velkommen |
 | /sander | Quiz 5. kl. (kode: SANDER) |
 | /selda | Quiz 3. kl. (kode: SELDA) |
 | /kombiner | Felt for begge koder |
@@ -191,121 +225,94 @@ Alle rundt ett skjerm. Barna taster VARDEN26. En **AI-generert video av Påskeha
 
 ---
 
+## HUSKELISTE — TA MED FRA HJEMME
+
+### Kjøp/bestill på forhånd
+- [ ] Kombinasjonslås (hengelås med 4-sifret kode) — Clas Ohlson, Biltema e.l.
+- [ ] ~~Kapsel til Odins halsbånd~~ — fjernet, Odin har ikke halsbånd. Han nevnes i brev, quiz og video i stedet.
+- [ ] Lite akvarellsett + pensel (til stearinlys-avsløringen)
+- [ ] Oransje flagg (liten, stikkes i snøen)
+- [ ] Vanntett boks/pose til utendørs gjemmested
+- [ ] Dekorert skattekiste eller dekorert eske til finalen
+- [ ] 2 × liten notatbok (detektivbøker) + 2 penner
+- [ ] Rød hyssing/garn (til bevisstavlen)
+- [ ] Tegnestifter
+
+### Lag hjemme og print/ta med
+- [ ] Falsk avisforside (AJ/Donald-stil) — printes i farger, A4 eller A3
+- [ ] 2 × brev fra Piip (ett til Sander, ett til Selda)
+- [ ] 16 × konvolutter med innhold (8 til Sander, 8 til Selda)
+- [ ] 2 × halvt skattekart (passer sammen)
+- [ ] 2 × halvt Kvekk-bilde til bevisstavlen (passer sammen)
+- [ ] Alle bevis-elementer (oransje tøybit, hvit ullbit, gulrot, lapper osv.)
+- [ ] 1 × stor papirplate til bevisstavlen (A2/A1) med overskrift ferdig skrevet
+- [ ] Pappmal til kaninspor (stor nok til å se imponerende i snøen)
+- [ ] 1 × konvolutt til alpinbakken (ved Gondolen)
+- [ ] Akvarellark/hvitt papir med stearinlys-melding skrevet på (gjøres hjemme i god belysning)
+
+### Digitalt — klar før avreise
+- [ ] Webapp live på Vercel/Netlify og testet på mobil
+- [ ] QR-koder printet (til steg som bruker dem)
+- [ ] AI-video av Påskeharen klar og testet
+- [ ] SMS til "Påskeharen"-nummeret planlagt og øvd på timing
+- [ ] Adobe Firefly-bilder av Piip og Påskeharen generert og brukt i appen
+
+---
+
 ## FYSISK SJEKKLISTE
 
-- [ ] 2 × brev fra Kvekk
-- [ ] 2 × Detektivbok (notatbok + penn)
-- [ ] 20 × konvolutter med innhold (10 Sander, 10 Selda)
+**Bevisstavlen:**
+- [ ] 1 × stor plate (A2/A1) med overskrift "MYSTERIET PÅ VARDEN"
+- [ ] Tegnestifter + rull rød hyssing
+- [ ] Alle bevis-elementer (se liste under steg 2–9)
+- [ ] 2 × halvt Piip-bilde (passer sammen, midtpunkt på stavlen)
+
+**Konvolutter og brev:**
+- [ ] 2 × brev fra Piip (under putene)
+- [ ] 2 × Detektivbok (liten notatbok + penn)
+- [ ] 16 × konvolutter med innhold (8 Sander, 8 Selda) ✅ redusert fra 20
 - [ ] 2 × halvt skattekart (passer sammen)
-- [ ] 2 × bevis-brikker (passer sammen)
-- [ ] 1 × kapsel til Odins halsbånd
-- [ ] 1 × oransje ballong eller flagg
+
+**Pappmal til kaninspor:**
+- [ ] 1 × pappmal av påskeharspor (lages hjemme) ✅
+
+**Ute:**
+- [ ] 1 × oransje flagg (ikke ballong — sprekker i kulden) ✅
 - [ ] 1 × vanntett boks til snøgjemme
-- [ ] 1 × konvolutt til alpinbakken
+- [ ] 1 × konvolutt til alpinbakken (ved Gondolen)
+
+**Finale:**
+- [ ] 1 × kombinasjonslås til skattekisten (kode samles underveis)
 - [ ] 1 × dekorert skattekiste med innhold
 
 ---
 
-## IDÉBANK — IKKE BESLUTTET ENNÅ
+## IDÉBANK
 
-Idéer som er kastet frem og lagret for vurdering. Noen kan erstate eksisterende steg, andre kan komme i tillegg.
+### BESLUTTET INN I JAKTEN ✅
 
-### Runde 1 — Teknologi og taktil
+| Element | Hvor det brukes |
+|---------|----------------|
+| Falsk avisforside | Morgenens åpning — AJ-format, Donald som vitne, Sander og Selda nevnt i artikkelen |
+| Kombinasjonslås på skattekisten | Koden samles gradvis underveis, klikkes opp ved finalen |
+| Stearinlys-akvarell | Én stasjon i hver individuell kjede — tilsynelatende tomt ark avsløres med pensle + maling |
+| Appelsin med skjult melding | Én stasjon i Seldas individuelle kjede |
+| Kvikk Lunsj-kartet | Én stasjon i Sanderss individuelle kjede — wrapperen er selve skattekartet |
+| Rød sild | Én falsk konvolutt i jakten — *"Ha ha, feil sted! Prøv igjen, detektiver."* |
+| Hytte-inventar som gåtekjede | Felles steg: gåter leder fra gjenstand til gjenstand, bokstaver staver ut neste sted |
+| Pigpen-kryptering | Én klue i Sanderss kjede skrevet i pigpen-symboler. Nøkkel i detektivboken fra start. |
+| Clue skjult i Donald-blad | En konvolutt gjemt inni et Donald Duck-blad — oppdages når de blar gjennom det |
 
-| Idé | Beskrivelse | Innsats |
-|-----|-------------|---------|
-| UV usynlig blekk | Meldinger skrevet med UV-penn, usynlige til de skanner med UV-lykt. Magisk wow-faktor. | Lav (UV-penn + lykt ~100kr) |
-| Kombinasjonslås på skattekisten | Selve kisten er låst med hengelås, koden samles underveis. Tilfredsstillende finale. | Lav |
-| Walkie-talkie-kontakt | Gjemt voksen gir kryptiske hint i sanntid via walkie-talkie. Dramatisk og interaktivt. | Lav |
-| Speilskrift | Ledetråd skrevet baklengs, leses i speil eller telefon selfie-modus. | Minimal |
-| GPS-koordinater / geocaching | De får faktiske koordinater og navigerer til stedet med Google Maps. | Lav |
-| Bokkode | "Bok 3, side 47, ord 6" — ord fra bokhylla settes sammen til melding. | Lav |
-| Klue fryst inn i is | Lapp fryst inn i isklump i fryseren, de må finne ut hvordan de får tak i den. | Lav |
-| Kryptert jigsaw-QR-kode | QR-kode klipt i brikker, de setter den sammen og skanner. | Middels |
+### VURDERES FORTSATT ⏳
 
-### Runde 2 — Kreativt og dramatisk
-
-| Idé | Beskrivelse | Innsats |
-|-----|-------------|---------|
-| Kvitfjell-Avisen | Falsk avisforside: "PÅSKEHAREN SAVNET FRA KVITFJELL!" med skjulte ledetråder i artikkelteksten. | Middels (lages hjemme) |
-| Kaninspor i snøen | Voksen lager store påskeharspor med pappmal kvelden før. Sporene leder fra døra mot gjemmested. | Lav |
-| Ballongvegg | Mange ballonger hengt opp — bare én har noe inni. Barna popper alle for å finne den. | Lav |
-| Falsk ransom-brev | Åpningsbrevet fra Kvekk er klippet fra avisoverskrifter, klassisk trusselbrev-stil. | Lav |
-| Telefonsamtale fra Påskeharen | Ukjent nummer ringer midt i jakten — AI-generert eller innøvd stemme. | Middels |
-| Crime scene tape + bevismarkører | Gult sperrebånd rundt et "åsted", nummererte bevismarkører barna må notere. | Lav |
-
-### Aftenposten Junior (Selda og Sander leser dette hver uke — høy gjenkjenningsfaktor!)
-
-| Idé | Beskrivelse | Innsats |
-|-----|-------------|---------|
-| Falsk AJ-forside | Lag forsiden i Aftenposten Junior-stil: "PÅSKEHAREN SAVNET FRA KVITFJELL". De kjenner formatet igjen — ekstra troverdig og morsomt. | Middels (lages hjemme) |
-| Ransom-brev fra ekte AJ | Kvekks åpningsbrev klippes og limes fra ord i en faktisk utgave av bladet. Bruker *deres* blad til krimmen. | Lav |
-| Bokkode med AJ | Koordinater: "Side 4, avsnitt 2, ord 7" — ord de finner settes sammen til en hemmelig melding. | Lav |
-| Donald-blad-ransom | Klipp og lim fra Donald Duck-blad i stedet for AJ — ekstra ikonisk påskestemning (Donald er jo klassisk norsk påske!). | Lav |
-| Clue skjult I Donald-blad | En konvolutt gjemt inni selve bladet — de oppdager den først når de blar gjennom det. | Minimal |
-| Bokkode fra hytta | Koordinater peker til en bestemt bok i bokhylla på hytten. De slår opp side X, linje Y, ord Z. Fungerer med hvilken som helst bok — skreddersyes til hytta. | Lav |
-
-### Norske påsketradisjoner som aktive jaktelementer
-
-| Idé | Beskrivelse | Innsats |
-|-----|-------------|---------|
-| Kvikk Lunsj-kartet | En Kvikk Lunsj er gjemt et sted. De finner den, spiser den, og innsiden av papiret er brukt som kart — enten det faktiske turkart med X tegnet på, eller en kode skjult i det. | Minimal |
-| Appelsin med skjult melding | En liten rull med tekst er stukket inn gjennom skallet og gjemt mellom båtene inni. Eller: ord/tall skrevet på skallet med tusj, synlig kun fra riktig vinkel. De skjønner ikke hva som er rart med den — til de begynner å skrelle. | Minimal |
-
-*Begge kan brukes i den individuelle klue-kjeden — appelsinen passer fint til Selda, Kvikk Lunsj-kartet til Sander. Eller begge til begge.*
-
-### Runde 3 — Hentet fra norske og internasjonale påskejakttips
-
-**Norske tradisjoner og kultur:**
-
-| Idé | Beskrivelse | Innsats |
-|-----|-------------|---------|
-| Påskedikt-kode | Klassisk norsk påskedikt der én bokstav per linje er understreket — de understrekte bokstavene staver ut neste ledetråd. | Lav |
-| Lørdagsgodteri-egg | Ett egg er merket "MANDAG" og inneholder godteri — men reglene sier de ikke kan spise det før de finner "LØRDAG"-egget gjemt et annet sted. Bygger spenning. | Minimal |
-| NRK Påskekrim-lydklipp | AI-generert (eller innspilt) nyhetssending i NRK-stil: "Vi avbryter sendingen — påskeharen er savnet fra Kvitfjell!" Spilles av som introduksjon. | Middels |
-| SMS-kjede fra "vitner" | I stedet for én SMS fra Påskeharen: en kjede der påskeharen sender én del, en "vitne-kanin" sender neste, og "politiet" sender en tredje. Fragmentene må kombineres. | Lav |
-
-**Utendørs og natur (perfekt for Kvitfjell):**
-
-| Idé | Beskrivelse | Innsats |
-|-----|-------------|---------|
-| Kompass og kurs | Gi barna et kompass og en kurs: "Gå 40 skritt i retning 220°, finn noe ved nærmeste tre." Ekte orienteringsferdighet, fungerer perfekt i snøen. | Lav (kompass trengs) |
-| Vektor-/skrittkart | Instruksjoner istedenfor tegnet kart: "Fra hoveddøren: 15 skritt nord, 8 skritt øst, 3 skritt sør." De må utføre stegene presist. | Minimal |
-| Sporidentifisering i snøen | Legg ut spor fra ulike dyr (fugel, rev, hare) med pappmal. Barna får et feltguidearket og må identifisere alle sporene — bare haresporene leder dem videre. | Middels |
-| Snøballkasting på blink | Neste ledetråd gis kun etter at de treffer et mål (en tegnet påskehare på et tre) med snøball fra en avtalt avstand. Ulik avstand for 8- og 10-åring. | Minimal |
-| Egg-og-skje-stafett i snø | Må bære et (plastikk-)egg 20 meter gjennom snøen på en skje uten å miste det. Klarer de det → får neste konvolutt. | Minimal |
-| Påskelykt-finale | Siste 2–3 ledetråder utendørs gjøres i skumringen med hodelykter/lykter. Skattekisten lyser eller har et stearinlys ved siden av. (Krever sen start eller lenge ute.) | Lav |
-
-**Smarte mekanikker:**
-
-| Idé | Beskrivelse | Innsats |
-|-----|-------------|---------|
-| Torn ledetråd | En ledetråd er revet i to — halvdelene gjemt på vidt forskjellige steder. Barna finner begge, taper dem sammen og kan lese den fulle meldingen. | Minimal |
-| Rød sild (red herring) | Én falsk konvolutt som leder til en blindvei med lapp: "Ha ha, feil sted! Prøv igjen, detektiver." Gjør det ekte sporet ekstra tilfredsstillende å finne. | Minimal |
-| Nedtellingstimer | Ved én stasjon: kjøkkentimer settes på 3 minutter. De MÅ løse gåten før tiden er ute, ellers: straff (10 jumping jacks i snøen, syng en norsk sang osv.). | Minimal |
-| Foto-ledetråd | Et nærbilde tatt fra uvanlig vinkel (undersiden av en hylle, innsiden av en støvel, baksiden av et bilde) av et sted de kjenner. De må identifisere stedet fra bildet alene. | Lav (foto tas hjemme/på hytten) |
-| "Hva er forandret?" | Ta bilde av et rom. Mens barna venter, gjøres 3 endringer (ett er at et egg gjemmes). De sammenligner bildet med rommet og finner hva som er annerledes — ett av disse er gjemmestedet. | Lav |
-| Finn 5 fremmedgjenstander | 5 gjenstander som ikke hører hjemme er gjemt i naturen/hagen. Barna finner alle og bringer dem tilbake. Under hver gjenstand er et tall → tallene gir kombinasjonskoden. | Lav |
-| Sitronsaft-usynlig blekk | Skrevet med sitronsaft (usynlig når tørt), avsløres ved å holde papiret mot en varm lampe/stearinlys — brunes langsomt frem. Annerledes fra UV, mer magisk. | Minimal |
-| Hvit kritt på hvitt papir | Ledetråd skrevet med hvit kritt/vokskritt på hvitt papir. Avsløres ved å male akvarellvask over arket. Feels like an art activity, not a clue. | Lav |
-| Lydklue | Spill av en lydopptak (et dyr, en Kvitfjell-lyd, en spesiell lyd fra hytten). De må identifisere hva lyden er og hvilket sted det representerer. | Lav |
-| Hytte-inventarjakt | Liste med 10 spesifikke gjenstander i hytten (f.eks. "en kopp med elg på", "den tredje boken fra venstre i hylla"). Under hver gjenstand er en liten lapp med en bokstav → bokstavene staver et sted. | Lav |
-| Voicemail fra Påskeharen | Et telefonnummer er en ledetråd — de ringer det og hører en innspilt/AI-generert melding fra Påskeharen med kryptiske hint. | Middels |
-
-**Roller og struktur:**
-
-| Idé | Beskrivelse | Innsats |
-|-----|-------------|---------|
-| Detektivroller | Sander = "kriminalteknikeren" (håndterer alle koder og fysiske bevis), Selda = "etterforskeren" (leser alle ledetråder høyt og bestemmer neste steg). Byttes halvveis. | Minimal |
-| Bevisstavlen | En stor papirplate/korkplate på veggen. Etter hvert steg festes ledetråder, bilder og bevis med tegnestift. På slutten er hele historien synlig. | Lav |
-
-### Runde 2 — Kode og gåter
-
-| Idé | Beskrivelse | Innsats |
-|-----|-------------|---------|
-| Pigpen-kryptering | Grafisk kode (symboler = bokstaver), barna får nøkkel ved start og bruker den underveis. | Lav |
-| Ord-søk med skjult melding | De resterende bokstavene i et ordsøk staver ut neste ledetråd. | Lav (nettverktøy) |
-| Skreddersydd kryssord | Uthevede ruter i kryssordet avslører neste gjemmested. | Lav (nettverktøy) |
+| Idé | Beskrivelse | Beslutning |
+|-----|-------------|------------|
+| Ballongvegg | Mange ballonger, bare én har noe inni — popp alle for å finne den. Emil-favoritt. | Ikke besluttet |
+| Nedtellingstimer | Kjøkkentimer på 3 min ved én stasjon. Straff hvis de ikke klarer det (noe morsomt/pinlig). | Ikke besluttet |
+| Revet ledetråd | Ledetråd revet i to og gjemt på to ulike steder — teipes sammen og leses. | Ikke besluttet |
+| NRK Påskekrim-lydklipp | AI-generert nyhetssending som intro: *"Vi avbryter — påskeharen er savnet fra Kvitfjell!"* | Ikke besluttet |
+| Detektivroller | Sander = kriminalteknikeren, Selda = etterforskeren. Byttes halvveis. | Ikke besluttet |
+| Snøballkasting på blink | Må treffe et mål med snøball for å få neste ledetråd. Ulik avstand for 8 og 10 år. | Ikke besluttet |
 
 ---
 
@@ -323,7 +330,7 @@ Idéer som er kastet frem og lagret for vurdering. Noen kan erstate eksisterende
 | Element | Bruk |
 |---------|------|
 | **Gondolen** | Naturlig og kjent landemerke ved Varden — lett å gjemme noe ved, lett å peke til i en ledetråd |
-| **Jøkul** | Kan avtales på forhånd til å overlevere en konvolutt — eller bare refereres til som Kvekks venn i fjellet |
+| **Jøkul** | Kan avtales på forhånd til å overlevere en konvolutt — eller bare refereres til som Piips venn i fjellet |
 | **Olympiabakken-navnene** | Gaupereksla, Russispranget, Orresvingen osv. — morsomme norske navn som kan brukes i rebus/rimgåter for å peke til et sted i bakken |
 | **Klikkmonopolet-konserten** | Kan brukes som naturlig endepunkt / timing-referanse for når jakten bør være ferdig |
 | **Vardenskogen** | Skogsbakke nær Varden — mer eventyrlig og skjult enn de åpne løypene. Perfekt for å gjemme noe mellom trær, under en stein eller ved et spesifikt tre. Gir jakten et villmarks-/detektiv-feel utendørs. |
@@ -373,7 +380,7 @@ En voksen postes ved Gondolen (enkel å finne, kjent for barna) og overleverer k
 
 **Stasjon 9 for Sander (boden utenfra)** — *"Boden? Det høres kjedelig ut som gjemmested. Ingen vil gå til boden. Kanskje noe kjekkere?"*
 
-**Halvt bilde av Kvekk som avslutning på stasjon 10** — *"Hva gjør de med bildet? Bare holder det? Det føles ikke som en skikkelig belønning for å ha funnet alle 10. Det bør være noe mer der."*
+**Halvt bilde av Piip som avslutning på stasjon 10** — *"Hva gjør de med bildet? Bare holder det? Det føles ikke som en skikkelig belønning for å ha funnet alle 10. Det bør være noe mer der."*
 
 **Egg-og-skje-stafett** — *"Det er babyleik. Ingen 10-åring gidder det på alvor."*
 
@@ -414,10 +421,24 @@ En voksen postes ved Gondolen (enkel å finne, kjent for barna) og overleverer k
 
 ---
 
-## MANGLER / NESTE
+## BESLUTNINGER TATT ✅
 
-- [ ] Navn på voksne på hytten (til quiz-spørsmål)
-- [ ] Gaveønsker til skattekisten (Sander + Selda)
-- [ ] Skrive alle konvoluttekster (norsk)
+- 8 individuelle stasjoner (ned fra 10) ✅
+- Bevisstavlen er ryggraden — hvert steg gir et bevis ✅
+- Kaninspor i snøen — lages med pappmal kvelden før ✅
+- Oransje flagg, ikke ballong, ute i snøen ✅
+- Kombinasjonslås på skattekisten ✅
+- Adobe Firefly brukes til å generere Påskehare- og Piip-bilder ✅
+- Gondolen ved Varden = alpinsteget (steg 16) ✅
+
+## GJENSTÅR
+
+- [x] **Navn på de voksne** — Tommy, True, Onkel Svein, Trine ✅
+- [x] **Skattekisten** — fylt påskeegg til Sander, Selda og de voksne ✅
+- [x] **Falsk avisforside** — "Aftenposten Junior — Påskespesial" i AJ-format, med Donald Duck som vitne i saken. Sander og Selda nevnes som "de to detektivene politiet har kontaktet". Bilde av Donald i snøen på Kvitfjell genereres med Adobe Firefly. ✅
+- [x] **Usynlig skrift** — stearinlys gnides mot papir, avsløres med akvarell + pensle. Brukes som ett steg i hver individuell klue-kjede (barna finner et tilsynelatende tomt ark + pensle og farger). ✅
+- [ ] Skrive alle konvoluttekster på norsk
 - [ ] Designe og bygge webapp
-- [ ] Lage printklare PDF-er
+- [ ] Generere bilder (Piip + Påskehare) med Adobe Firefly
+- [ ] Lage AI-video (D-ID/HeyGen + ElevenLabs)
+- [ ] Lage printklare PDF-er for alle fysiske elementer
