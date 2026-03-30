@@ -254,6 +254,51 @@ Idéer som er kastet frem og lagret for vurdering. Noen kan erstate eksisterende
 
 *Begge kan brukes i den individuelle klue-kjeden — appelsinen passer fint til Selda, Kvikk Lunsj-kartet til Sander. Eller begge til begge.*
 
+### Runde 3 — Hentet fra norske og internasjonale påskejakttips
+
+**Norske tradisjoner og kultur:**
+
+| Idé | Beskrivelse | Innsats |
+|-----|-------------|---------|
+| Påskedikt-kode | Klassisk norsk påskedikt der én bokstav per linje er understreket — de understrekte bokstavene staver ut neste ledetråd. | Lav |
+| Lørdagsgodteri-egg | Ett egg er merket "MANDAG" og inneholder godteri — men reglene sier de ikke kan spise det før de finner "LØRDAG"-egget gjemt et annet sted. Bygger spenning. | Minimal |
+| NRK Påskekrim-lydklipp | AI-generert (eller innspilt) nyhetssending i NRK-stil: "Vi avbryter sendingen — påskeharen er savnet fra Kvitfjell!" Spilles av som introduksjon. | Middels |
+| SMS-kjede fra "vitner" | I stedet for én SMS fra Påskeharen: en kjede der påskeharen sender én del, en "vitne-kanin" sender neste, og "politiet" sender en tredje. Fragmentene må kombineres. | Lav |
+
+**Utendørs og natur (perfekt for Kvitfjell):**
+
+| Idé | Beskrivelse | Innsats |
+|-----|-------------|---------|
+| Kompass og kurs | Gi barna et kompass og en kurs: "Gå 40 skritt i retning 220°, finn noe ved nærmeste tre." Ekte orienteringsferdighet, fungerer perfekt i snøen. | Lav (kompass trengs) |
+| Vektor-/skrittkart | Instruksjoner istedenfor tegnet kart: "Fra hoveddøren: 15 skritt nord, 8 skritt øst, 3 skritt sør." De må utføre stegene presist. | Minimal |
+| Sporidentifisering i snøen | Legg ut spor fra ulike dyr (fugel, rev, hare) med pappmal. Barna får et feltguidearket og må identifisere alle sporene — bare haresporene leder dem videre. | Middels |
+| Snøballkasting på blink | Neste ledetråd gis kun etter at de treffer et mål (en tegnet påskehare på et tre) med snøball fra en avtalt avstand. Ulik avstand for 8- og 10-åring. | Minimal |
+| Egg-og-skje-stafett i snø | Må bære et (plastikk-)egg 20 meter gjennom snøen på en skje uten å miste det. Klarer de det → får neste konvolutt. | Minimal |
+| Påskelykt-finale | Siste 2–3 ledetråder utendørs gjøres i skumringen med hodelykter/lykter. Skattekisten lyser eller har et stearinlys ved siden av. (Krever sen start eller lenge ute.) | Lav |
+
+**Smarte mekanikker:**
+
+| Idé | Beskrivelse | Innsats |
+|-----|-------------|---------|
+| Torn ledetråd | En ledetråd er revet i to — halvdelene gjemt på vidt forskjellige steder. Barna finner begge, taper dem sammen og kan lese den fulle meldingen. | Minimal |
+| Rød sild (red herring) | Én falsk konvolutt som leder til en blindvei med lapp: "Ha ha, feil sted! Prøv igjen, detektiver." Gjør det ekte sporet ekstra tilfredsstillende å finne. | Minimal |
+| Nedtellingstimer | Ved én stasjon: kjøkkentimer settes på 3 minutter. De MÅ løse gåten før tiden er ute, ellers: straff (10 jumping jacks i snøen, syng en norsk sang osv.). | Minimal |
+| Foto-ledetråd | Et nærbilde tatt fra uvanlig vinkel (undersiden av en hylle, innsiden av en støvel, baksiden av et bilde) av et sted de kjenner. De må identifisere stedet fra bildet alene. | Lav (foto tas hjemme/på hytten) |
+| "Hva er forandret?" | Ta bilde av et rom. Mens barna venter, gjøres 3 endringer (ett er at et egg gjemmes). De sammenligner bildet med rommet og finner hva som er annerledes — ett av disse er gjemmestedet. | Lav |
+| Finn 5 fremmedgjenstander | 5 gjenstander som ikke hører hjemme er gjemt i naturen/hagen. Barna finner alle og bringer dem tilbake. Under hver gjenstand er et tall → tallene gir kombinasjonskoden. | Lav |
+| Sitronsaft-usynlig blekk | Skrevet med sitronsaft (usynlig når tørt), avsløres ved å holde papiret mot en varm lampe/stearinlys — brunes langsomt frem. Annerledes fra UV, mer magisk. | Minimal |
+| Hvit kritt på hvitt papir | Ledetråd skrevet med hvit kritt/vokskritt på hvitt papir. Avsløres ved å male akvarellvask over arket. Feels like an art activity, not a clue. | Lav |
+| Lydklue | Spill av en lydopptak (et dyr, en Kvitfjell-lyd, en spesiell lyd fra hytten). De må identifisere hva lyden er og hvilket sted det representerer. | Lav |
+| Hytte-inventarjakt | Liste med 10 spesifikke gjenstander i hytten (f.eks. "en kopp med elg på", "den tredje boken fra venstre i hylla"). Under hver gjenstand er en liten lapp med en bokstav → bokstavene staver et sted. | Lav |
+| Voicemail fra Påskeharen | Et telefonnummer er en ledetråd — de ringer det og hører en innspilt/AI-generert melding fra Påskeharen med kryptiske hint. | Middels |
+
+**Roller og struktur:**
+
+| Idé | Beskrivelse | Innsats |
+|-----|-------------|---------|
+| Detektivroller | Sander = "kriminalteknikeren" (håndterer alle koder og fysiske bevis), Selda = "etterforskeren" (leser alle ledetråder høyt og bestemmer neste steg). Byttes halvveis. | Minimal |
+| Bevisstavlen | En stor papirplate/korkplate på veggen. Etter hvert steg festes ledetråder, bilder og bevis med tegnestift. På slutten er hele historien synlig. | Lav |
+
 ### Runde 2 — Kode og gåter
 
 | Idé | Beskrivelse | Innsats |
@@ -261,6 +306,30 @@ Idéer som er kastet frem og lagret for vurdering. Noen kan erstate eksisterende
 | Pigpen-kryptering | Grafisk kode (symboler = bokstaver), barna får nøkkel ved start og bruker den underveis. | Lav |
 | Ord-søk med skjult melding | De resterende bokstavene i et ordsøk staver ut neste ledetråd. | Lav (nettverktøy) |
 | Skreddersydd kryssord | Uthevede ruter i kryssordet avslører neste gjemmested. | Lav (nettverktøy) |
+
+---
+
+## KVITFJELL — RELEVANT INFO FOR 4. APRIL (PÅSKEAFTEN)
+
+**Heiser:** Åpner 09:30, stenger 16:30
+**Varden-siden:** Familievennlig, grønne og blå løyper, betjenes av **Gondolen** (20-pers. gondol, 253m). Hytten ligger nær toppen av Varden.
+
+**Skjer denne dagen:**
+- ~15:00: Gratis konsert med Klikkmonopolet ved Tyrihanstunet — folk og stemning
+- **Jøkul** (Kvitfjells maskot) er aktiv gjennom hele påskeuken med barneaktiviteter
+
+**Mulige integrasjoner i jakten:**
+
+| Element | Bruk |
+|---------|------|
+| **Gondolen** | Naturlig og kjent landemerke ved Varden — lett å gjemme noe ved, lett å peke til i en ledetråd |
+| **Jøkul** | Kan avtales på forhånd til å overlevere en konvolutt — eller bare refereres til som Kvekks venn i fjellet |
+| **Olympiabakken-navnene** | Gaupereksla, Russispranget, Orresvingen osv. — morsomme norske navn som kan brukes i rebus/rimgåter for å peke til et sted i bakken |
+| **Klikkmonopolet-konserten** | Kan brukes som naturlig endepunkt / timing-referanse for når jakten bør være ferdig |
+| **Vardenskogen** | Skogsbakke nær Varden — mer eventyrlig og skjult enn de åpne løypene. Perfekt for å gjemme noe mellom trær, under en stein eller ved et spesifikt tre. Gir jakten et villmarks-/detektiv-feel utendørs. |
+
+**Anbefaling for alpinsteget (Steg 16):**
+En voksen postes ved Gondolen (enkel å finne, kjent for barna) og overleverer konvolutten der. Evt. Jøkul gjør det om det lar seg arrangere.
 
 ---
 
