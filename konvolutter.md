@@ -586,3 +586,23 @@ Innhold:
 *"HA HA! Rød sild, Sporhunden!
 Du ble lurt! Selv de beste detektivene går i fellen av og til.
 Tilbake til matboden — det gjemmer seg noe der du ikke har lett godt nok. 🐟"*
+
+---
+
+## STEG 11 — SMS FRA PÅSKEHAREN
+
+*Sendes til Sanders telefon av en voksen som er forhåndsavtalt som "Påskeharen-kontakt". Sendes ETTER at barna har fullført sine individuelle quizer (steg 10). Barna leser meldingen opp for alle.*
+
+**Avsender:** Lagres i forkant som "Påskeharen 🐇" i Sanders kontakter (eller sendes fra ukjent nummer for ekstra dramatikk).
+
+**Melding:**
+
+> Sander. Selda. Hører dere meg?
+>
+> Jeg er Påskeharen. Jeg var ikke borte — jeg gikk meg litt bort i snøen her oppe på Varden. Veldig pinlig. La oss ikke snakke mer om det.
+>
+> Dere er nesten i mål. Kombiner alle tre kodene deres på nettsiden — dere finner siden på QR-koden på bildet av Piip.
+>
+> PS: Odin vet ting han ikke har sagt ennå. Spør ham.
+>
+> /P.H.

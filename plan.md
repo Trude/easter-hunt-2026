@@ -140,66 +140,89 @@ De kobler bevisene med rød hyssing: *hvit ullbit → potelavtrykk → oransje s
 
 ---
 
-### STEG 12 — Digitalt detektivkontor *(Parallelt, begge på appen)*
+### STEG 9 — Bevisstavlen aktiveres *(Felles, inne ved peisen)*
 
-Begge inn på websiden med sin kode (SANDER / SELDA). Skreddersydd quiz:
+Barna fester alle bevis og kobler med rød hyssing. De to halvdelene av Piip-bildet kombineres i midten — **baksiden av det kombinerte bildet avslører en QR-kode** som peker til webappen.
 
-**Sander (5. kl.):**
+Svein ankommer nå med sin fullførte ONKELS-kode. Han starter sitt løp på `/agent` FØRST NÅR BARNA GÅR DIGITALE (steg 10) — kontrolleres ved at han får sin klassifiserte konvolutt på dette tidspunktet.
+
+---
+
+### STEG 10 — Digitalt detektivkontor *(Parallelt på egne enheter)*
+
+Barna skanner QR-koden og går inn med sin kode. Skreddersydd quiz:
+
+**Sander (5. kl.) — kode: SANDER:**
 - Matte: 25% av 200, areal 8×6cm², 12×7,5m
 - *"Hva heter hunden?"* [Odin]
-- *"Hvem av de voksne er best på ski?"* (spør Tommy, True, Onkel Svein og Trine)
+- *"Hvem av de voksne er best på ski?"* (spør de voksne)
 - *"Hvem sov lengst i morges?"* (spør de voksne)
+→ Får 2-sifret kode ved fullføring
 
-**Selda (3. kl.):**
+**Selda (3. kl.) — kode: SELDA:**
 - Matte: 36+47, 5×8 egg, klokke 10:15+45min
 - *"Hva heter hunden?"* [Odin]
 - *"Hvem av de voksne er verst til å stå opp om morgenen?"* (spør de voksne)
 - *"Hva er Trines favorittmat?"* (spør Trine)
+→ Får 2-sifret kode ved fullføring
 
-Begge får sin 4-sifrede kode ved fullføring.
-
----
-
-### STEG 13 — SMS + kombinere koder *(Felles, med voksne)*
-
-Voksen "mottar" SMS fra Påskeharen, leser opp. Barna taster inn begge kodene → Minecraft-oppdraget låses opp.
+**Svein — kode: SVEIN:**
+6 trivia-grupper på `/agent` (~35 min). Se svein-sidespor.md for detaljer.
+→ Får kode ONKELS ved fullføring
 
 ---
 
-### STEG 13B — Minecraft-oppdraget *(Samarbeid, begge)*
+### STEG 11 — SMS + kombiner alle koder *(Felles)*
 
-Interaktivt craftingbord på websiden. Barna må kombinere riktige items (gulrot + pinne + hvit ull = "Påskehare-stav") → avslører neste ledetråd.
+SMS fra Påskeharen sendes direkte til **Sanders telefon**. Barna leser den opp for alle.
+
+På `/kombiner` tastes inn:
+- Sanders 2-sifrede kode
+- Seldas 2-sifrede kode
+- Sveins kode: **ONKELS**
+
+Alle tre må stemme → Minecraft-steget låses opp.
+
+---
+
+### STEG 12 — Minecraft-oppdraget *(Samarbeid, begge barna)*
+
+Interaktivt craftingbord på websiden. Barna kombinerer riktige items (gulrot + pinne + hvit ull = "Påskehare-stav") → avslører melding: *"Neste spor er ute i snøen — se etter ballongene!"*
 
 Minecraft achievement-varsler ("ACHIEVEMENT UNLOCKED") dukker opp gjennom hele appens UI.
 
 ---
 
-### STEG 14 — Ute i snøen *(Felles)*
+### STEG 13 — Ballongvegg *(Ute i hagen, felles)*
 
-Bevisstavlen eller Minecraft-steget avslører at neste spor er utenfor — *"Se etter noe oransje i snøen!"* Odin er gjerne med ut og snuser rundt for stemningens skyld.
-
-Oransje flagg stukket i snøen → vanntett boks med de to kartbitene fra stasjon 8. Puslet sammen viser de X i alpinbakken.
+Mange ballonger hengt opp ute. Barna popper alle — én inneholder en lapp. Lappen + skattekartet (samlet fra individuelle kjeder, stasjon 6) bekrefter: **X = ved Gondolen i alpinbakken**.
 
 ---
 
-### STEG 15 — Alpinbakken ved Varden *(Felles + 1 voksen på post)*
+### STEG 14 — Alpinbakken ved Gondolen *(Felles + 1 voksen på post)*
 
-Voksen postet ved Gondolen, "oppdager" konvolutt dramatisk. Innhold: siste brev fra Piip + kode VARDEN26.
+Voksen postet ved Gondolen "oppdager" konvolutt dramatisk. Innhold: siste brev fra Piip + kode **VARDEN26**.
+
+*⚠️ Vurderes: Utvide med flere hint/ledetråder i løypa — tas opp senere.*
 
 ---
 
-### STEG 16 — Digital finale *(Alle samlet)*
+### STEG 15 — Digital finale *(Alle samlet, inne)*
 
-Alle rundt ett skjerm. Barna taster VARDEN26. En **AI-generert video av Påskeharen** spilles av — han snakker direkte til Sander og Selda ved navn, nevner Odin, Kvitfjell og at de er de beste detektivene han har møtt. Avslutter med å avsløre gjemmestedet: VED PEISEN (full sirkel).
+Alle rundt ett skjerm. Barna taster VARDEN26 på `/finale`. En **AI-generert video av Påskeharen** spilles av — han snakker direkte til Sander og Selda ved navn, nevner Odin og Kvitfjell. Avslutter med å avsløre gjemmestedet: VED PEISEN (full sirkel).
 
-**AI-video — verktøy tilgjengelig:**
-- **Adobe Firefly** ✅ — tilgjengelig for bildegenerering av Påskeharen og Piip
-- **D-ID eller HeyGen** — animerer munnen på et Firefly-generert bilde + norsk AI-stemme
-- **ElevenLabs** — norsk AI-stemme for videoen
+**Kombinasjonslåsen** på skattekisten åpnes med Sanders + Seldas 4-sifrede kode (2+2 siffer fra quiz).
 
-**Nøkkelpunkt:** Videoen MÅ si navnene Sander og Selda, nevne Odin, og referere til Kvitfjell — det er det som gjør den magisk vs. en generisk video.
+*⚠️ Vurderes: Gjøre gjemmestedet for påskeeggene vanskeligere å finne — tas opp senere.*
 
-**Skattekisten:** Fylt påskeegg til Sander, fylt påskeegg til Selda (begge fylt med godteri og personlige ting), + ett påskeegg til de voksne. Pluss Kvikk Lunsj og avsluttende brev fra Påskeharen med honnør til Odin.
+**AI-video — verktøy:**
+- **Adobe Firefly** ✅ — bildegenerering av Påskeharen og Piip
+- **D-ID eller HeyGen** — animerer munnen på Firefly-bilde
+- **ElevenLabs** — norsk AI-stemme
+
+**Nøkkelpunkt:** Videoen MÅ si navnene Sander og Selda, nevne Odin og referere til Kvitfjell.
+
+**Skattekisten:** Fylt påskeegg til Sander, fylt påskeegg til Selda + ett til de voksne. Kvikk Lunsj og avsluttende brev fra Påskeharen med honnør til Odin.
 
 ---
 
@@ -210,11 +233,17 @@ Alle rundt ett skjerm. Barna taster VARDEN26. En **AI-generert video av Påskeha
 | Forside | Piip ønsker velkommen |
 | /sander | Quiz 5. kl. (kode: SANDER) |
 | /selda | Quiz 3. kl. (kode: SELDA) |
-| /kombiner | Felt for begge koder |
+| /agent | Sveins løp — 6 trivia-grupper (kode: SVEIN). Se svein-sidespor.md |
+| /agent/gruppe/1–6 | Trivia-grupper, låst sekvensielt |
+| /agent/fullfort | Ferdig-side med kode ONKELS + bursdagsbrev |
+| /kombiner | Felt for alle tre koder (Sanders 2-siffer + Seldas 2-siffer + ONKELS) |
 | /minecraft | Crafting-gåte, samarbeid |
 | /finale | Animert Påskehare (kode: VARDEN26) |
+| /voksne | *(Planlagt sidespor for Tommy, True og Trine — ikke utviklet ennå. Reservert rute, legges til som egen modul med eigen innloggingskode.)* |
 
 **Design:** Minecraft achievement-estetikk (pixelfonter, achievement-pop-ups) med påskekrim-tema over.
+
+**Utvidbarhet:** `/voksne`-ruten er reservert for et fremtidig digitalt sidespor for de andre voksne. Webappen bør håndtere ukjente koder med en nøytral feilmelding slik at nye ruter kan legges til uten å påvirke eksisterende flyt.
 
 ---
 
