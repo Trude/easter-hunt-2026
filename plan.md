@@ -239,7 +239,7 @@ Alle rundt ett skjerm. Barna taster VARDEN26 på `/finale`. En **AI-generert vid
 | /kombiner | Felt for alle tre koder (Sanders 2-siffer + Seldas 2-siffer + ONKELS) |
 | /minecraft | Crafting-gåte, samarbeid |
 | /finale | Animert Påskehare (kode: VARDEN26) |
-| /voksne | *(Planlagt sidespor for Tommy, True og Trine — ikke utviklet ennå. Reservert rute, legges til som egen modul med eigen innloggingskode.)* |
+| /voksne | *(Planlagt sidespor for Tommy, Trude og Trine — ikke utviklet ennå. Reservert rute, legges til som egen modul med eigen innloggingskode.)* |
 
 **Design:** Minecraft achievement-estetikk (pixelfonter, achievement-pop-ups) med påskekrim-tema over.
 
@@ -464,7 +464,7 @@ En voksen postes ved Gondolen (enkel å finne, kjent for barna) og overleverer k
 
 ## GJENSTÅR
 
-- [x] **Navn på de voksne** — Tommy, True, Onkel Svein, Trine ✅
+- [x] **Navn på de voksne** — Tommy, Trude, Onkel Svein, Trine ✅
 - [x] **Skattekisten** — fylt påskeegg til Sander, Selda og de voksne ✅
 - [x] **Falsk avisforside** — "Aftenposten Junior — Påskespesial" i AJ-format, med Donald Duck som vitne i saken. Sander og Selda nevnes som "de to detektivene politiet har kontaktet". Bilde av Donald i snøen på Kvitfjell genereres med Adobe Firefly. ✅
 - [x] **Usynlig skrift** — stearinlys gnides mot papir, avsløres med akvarell + pensle. Brukes som ett steg i hver individuell klue-kjede (barna finner et tilsynelatende tomt ark + pensle og farger). ✅
