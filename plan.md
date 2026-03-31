@@ -9,8 +9,9 @@
 **Dato:** Påskeuken 2026 (estimert 1.–5. april)
 
 **Deltakere:**
-- **Sander** (10 år, nesten 11) — 5. klasse matte, god leser, elsker gaming og Minecraft
-- **Selda** (8 år, nesten 9) — 3. klasse matte, god leser, elsker svømming og Minecraft
+- **Sander** (10 år, nesten 11) — 5. klasse matte, god leser, elsker gaming og Minecraft, spiller golf, går på speideren
+- **Selda** (8 år, nesten 9) — 3. klasse matte, god leser, elsker boblebad og dans (freestyle/slow), elsker Minecraft
+- Begge driver med crossfit
 - **Odin** — hunden, aktiv deltaker i ett steg
 - **Voksne på hytten** — Tommy, Trude, Onkel Svein, Trine
 - Begge barna er gode alpinister og lærer snowboard
@@ -54,7 +55,7 @@ Bevisstavlen henger ved peisen fra start til slutt. Den er ryggraden hele jakten
 
 **Hvordan det fungerer:**
 - Ved **hvert steg** finner barna ett **bevis-element** i tillegg til ledetråden. De bringer beviset tilbake til stavlen og fester det.
-- Bevisene er fysiske gjenstander eller lapper: potelavtrykk, torn lappe, en halvspist gulrot, en Kvikk Lunsj-wrapper med merkelig tegning, en oransje ullbit, osv.
+- Bevisene er fysiske gjenstander eller lapper: potelavtrykk, torn lappe, en halvspist gulrot, en spist Kvikk Lunsj med håndtegnet kart på papir ved siden av, en oransje ullbit, osv.
 - Stavlen bygger seg opp gjennom hele jakten — barna ser historien ta form.
 - **Steg 11B** er det store bevisstavle-øyeblikket: de kobler bevisene med rød hyssing og det avslører neste steg.
 - Den som er raskest gjennom sin rute bruker ventetiden på å organisere stavlen — løser timing-problemet naturlig.
@@ -62,11 +63,11 @@ Bevisstavlen henger ved peisen fra start til slutt. Den er ryggraden hele jakten
 **Bevis-elementer per steg (forslag):**
 | Steg | Bevis | Hva det forteller |
 |------|-------|-------------------|
-| Sanderss stasjon 1 | Sotet potelavtrykk på papir | "Noen var ved peisen" |
-| Sanderss stasjon 3 | Kvikk Lunsj-wrapper med X tegnet på | "Noen spiste her og la igjen et kart" |
-| Sanderss stasjon 5 | En halvspist gulrot | "Påskeharen var sulten" |
-| Sanderss stasjon 7 | Bit av oransje stoff (fra skjerfet hans) | "Han mistet noe i skifterommet" |
-| Sanderss stasjon 8 | **Halvt skattekart** | Passer med Seldas halvdel |
+| Sanders stasjon 1 | Sotet potelavtrykk på papir | "Noen var ved peisen" |
+| Sanders stasjon 3 | Spist Kvikk Lunsj + håndtegnet kart på papir | "Noen spiste her og tegnet et kart" |
+| Sanders stasjon 5 | En halvspist gulrot | "Påskeharen var sulten" |
+| Sanders stasjon 7 | Bit av oransje stoff (fra skjerfet hans) | "Han mistet noe i skifterommet" |
+| Sanders stasjon 8 | **Halvt skattekart** | Passer med Seldas halvdel |
 | Seldas stasjon 1 | Et hvitt hår (ullbit) | "En hvit skapning var her" |
 | Seldas stasjon 3 | Liten lapp: *"Var her — Pk"* | "Han var i soverommet!" |
 | Seldas stasjon 5 | Appelsin med bitemerker | "Spiste appelsin — klassisk påskehare" |
@@ -107,12 +108,11 @@ Begge løper sitt eget løp SAMTIDIG. Ved hver stasjon: ledetråd til neste sted
 | # | Gjemmested | Bevis som hentes | Ut-ledetråd | Språk |
 |---|-----------|-----------------|-------------|-------|
 | 1 | Peisen | Sotet potelavtrykk | Matteoppgave: 15×6=90 → grill | Norsk |
-| 2 | Grillplassen (ute) | Kvikk Lunsj-wrapper m/X | *"I keep things cold, I hum and glow"* → kjøleskap | **Engelsk** |
+| 2 | Grillplassen (ute) | Spist Kvikk Lunsj + håndtegnet kart | *"I keep things cold, I hum and glow"* → kjøleskap | **Engelsk** |
 | 3 | Kjøleskapet | Halvspist gulrot | 48÷8=6 → "sover, ikke i hovedhuset" → anekset | Norsk |
-| 4 | Anekset | Lapp: *"Var her — Pk"* | *[bubble picture] + "BATH"* → boblebad | **Engelsk** |
-| 5 | Boblebad | Bit av oransje stoff | 3/4 av 120=90 → "der klærne vaskes" → vaskerom | Norsk |
-| 6 | Vaskerommet | Snøflak-tegning | *"Boots and jackets, hats and more"* → skifterom | **Engelsk** |
-| 7 | Skifterommet | Halvt skattekart #S | 40% av 200=80 → "det lille rommet med TV" → tvstua | Norsk |
+| 4 | Anekset | Lapp: *"Var her — Pk"* | Pigpen-kryptering → Odins matskåler | **Engelsk** |
+| 5 | Odins matskåler | Snøflak-tegning | *"Boots and jackets, hats and more"* → skifterom | **Engelsk** |
+| 6 | Skifterommet | Halvt skattekart #S | 40% av 200=80 → "det lille rommet med TV" → tvstua | Norsk |
 | 8 | Tvstua | **Halvt Piip-bilde** | *"Ta med alt og møt Selda ved peisen!"* | Norsk |
 
 #### SELDAS RUTE (3. klasse matte, alt på norsk)
@@ -237,6 +237,7 @@ Alle rundt ett skjerm. Barna taster VARDEN26. En **AI-generert video av Påskeha
 - [ ] 2 × liten notatbok (detektivbøker) + 2 penner
 - [ ] Rød hyssing/garn (til bevisstavlen)
 - [ ] Tegnestifter
+- [ ] Teip (til å feste konvolutter på gjemmesteder)
 
 ### Lag hjemme og print/ta med
 - [ ] Falsk avisforside (AJ/Donald-stil) — printes i farger, A4 eller A3
@@ -244,7 +245,15 @@ Alle rundt ett skjerm. Barna taster VARDEN26. En **AI-generert video av Påskeha
 - [ ] 16 × konvolutter med innhold (8 til Sander, 8 til Selda)
 - [ ] 2 × halvt skattekart (passer sammen)
 - [ ] 2 × halvt Kvekk-bilde til bevisstavlen (passer sammen)
-- [ ] Alle bevis-elementer (oransje tøybit, hvit ullbit, gulrot, lapper osv.)
+- [ ] Alle bevis-elementer:
+  - [ ] Bit av oransje stoff (fra et gammelt skjerf e.l. — Sanders bevis ved boblebad)
+  - [ ] Hvit ullbit (Seldas bevis ved peisen)
+  - [ ] 2 × halvspist gulrot (én til Sanders kjøleskap, én til Seldas kjøleskap)
+  - [ ] Lapper med tekst (se konvolutter.md for innhold)
+  - [ ] Liten snøflak-tegning (Sanders bevis ved vaskerom)
+  - [ ] Appelsin med bitemerker (Seldas bevis ved matboden — ta en bit ut av appelsinen og legg den ved konvolutten)
+  - [ ] Halvspist frossen gulrot (Seldas bevis ved fryseren — legg i fryseren kvelden før)
+  - [ ] Spist Kvikk Lunsj + håndskrevet handleliste på papir (Sanders bevis ved grill — se konvolutter.md for innhold)
 - [ ] 1 × stor papirplate til bevisstavlen (A2/A1) med overskrift ferdig skrevet
 - [ ] Pappmal til kaninspor (stor nok til å se imponerende i snøen)
 - [ ] 1 × konvolutt til alpinbakken (ved Gondolen)
@@ -297,22 +306,15 @@ Alle rundt ett skjerm. Barna taster VARDEN26. En **AI-generert video av Påskeha
 | Kombinasjonslås på skattekisten | Koden samles gradvis underveis, klikkes opp ved finalen |
 | Stearinlys-akvarell | Én stasjon i hver individuell kjede — tilsynelatende tomt ark avsløres med pensle + maling |
 | Appelsin med skjult melding | Én stasjon i Seldas individuelle kjede |
-| Kvikk Lunsj-kartet | Én stasjon i Sanderss individuelle kjede — wrapperen er selve skattekartet |
+| Kvikk Lunsj-kartet | Én stasjon i Sanders individuelle kjede — spist Kvikk Lunsj + håndtegnet kart på papir ved siden av |
 | Rød sild | Én falsk konvolutt i jakten — *"Ha ha, feil sted! Prøv igjen, detektiver."* |
 | Hytte-inventar som gåtekjede | Felles steg: gåter leder fra gjenstand til gjenstand, bokstaver staver ut neste sted |
-| Pigpen-kryptering | Én klue i Sanderss kjede skrevet i pigpen-symboler. Nøkkel i detektivboken fra start. |
+| Pigpen-kryptering | Én klue i Sanders kjede skrevet i pigpen-symboler. Nøkkel i detektivboken fra start. |
 | Clue skjult i Donald-blad | En konvolutt gjemt inni et Donald Duck-blad — oppdages når de blar gjennom det |
-
-### VURDERES FORTSATT ⏳
-
-| Idé | Beskrivelse | Beslutning |
-|-----|-------------|------------|
-| Ballongvegg | Mange ballonger, bare én har noe inni — popp alle for å finne den. Emil-favoritt. | Ikke besluttet |
-| Nedtellingstimer | Kjøkkentimer på 3 min ved én stasjon. Straff hvis de ikke klarer det (noe morsomt/pinlig). | Ikke besluttet |
-| Revet ledetråd | Ledetråd revet i to og gjemt på to ulike steder — teipes sammen og leses. | Ikke besluttet |
-| NRK Påskekrim-lydklipp | AI-generert nyhetssending som intro: *"Vi avbryter — påskeharen er savnet fra Kvitfjell!"* | Ikke besluttet |
-| Detektivroller | Sander = kriminalteknikeren, Selda = etterforskeren. Byttes halvveis. | Ikke besluttet |
-| Snøballkasting på blink | Må treffe et mål med snøball for å få neste ledetråd. Ulik avstand for 8 og 10 år. | Ikke besluttet |
+| Ballongvegg | Alle ballonger poppes — bare én har noe inni. **Ute, felles steg.** |
+| Nedtellingstimer | Kjøkkentimer på 3 min ved én stasjon. Straff: stave fornavnet sitt baklengs — én burpee per bokstav. (SANDER = 6 burpees, SELDA = 5 burpees) |
+| NRK Påskekrim-lydklipp | AI-generert nyhetssending som del av steg 1 — spilles av når barna finner brevet fra Piip. *"Vi avbryter sendingen — påskeharen er meldt savnet fra Kvitfjell!"* |
+| Detektivroller | Sander = **Kodeknekkeren**, Selda = **Sporhunden**. Titler i detektivbøkene fra start. |
 
 ---
 
