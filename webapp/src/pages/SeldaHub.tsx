@@ -49,6 +49,7 @@ export default function SeldaHub() {
 
   const getStatus = (id: number) => {
     if (game.isDeptComplete('selda', id)) return 'completed' as const;
+    if (allComplete) return 'completed' as const;
     if (id === nextDept) return 'active' as const;
     return 'locked' as const;
   };
@@ -69,33 +70,6 @@ export default function SeldaHub() {
   }, [game]);
 
   const eggsFound = game.countEggsFound('selda', TOTAL_EGGS);
-
-  if (allComplete) {
-    return (
-      <div className="min-h-screen flex flex-col items-center justify-center px-6 gap-8 text-center">
-        <div className="text-6xl">🏆</div>
-        <h2 className="font-pixel text-mc-yellow text-sm leading-relaxed">
-          ALLE SAKER LØST!
-        </h2>
-        <p className="font-pixel text-white text-xs leading-relaxed max-w-xs">
-          Sporhunden — du har bevist at du er Påskedetektivenes beste agent.
-        </p>
-        <div className="bg-mc-dark border-2 border-mc-yellow rounded-lg p-6">
-          <p className="font-pixel text-gray-400 text-xs mb-2">DIN HEMMELIGE KODE:</p>
-          <p className="font-pixel text-mc-yellow text-4xl tracking-widest">08</p>
-        </div>
-        <p className="font-pixel text-gray-400 text-xs leading-relaxed max-w-xs">
-          Ta vare på koden. Du trenger den snart.
-        </p>
-        <button
-          onClick={() => navigate('/kombiner')}
-          className="bg-mc-green text-white font-pixel text-xs py-4 px-8 rounded border-b-4 border-green-800 active:border-b-0 active:translate-y-1"
-        >
-          GÅ TIL KOMBINER →
-        </button>
-      </div>
-    );
-  }
 
   return (
     <div className="min-h-screen px-4 py-6 max-w-lg mx-auto relative">
@@ -136,6 +110,30 @@ export default function SeldaHub() {
           </p>
         )}
       </div>
+
+      {/* Fullført-banner med hemmelig kode */}
+      {allComplete && (
+        <div className="mb-6 border-2 border-mc-yellow bg-mc-dark rounded-lg p-4 text-center">
+          <div className="text-4xl mb-2">🏆</div>
+          <p className="font-pixel text-mc-yellow text-xs mb-1">ALLE SAKER LØST!</p>
+          <p className="font-pixel text-white text-xs mb-3">
+            Sporhunden — du har bevist at du er Påskedetektivenes beste agent.
+          </p>
+          <div className="bg-black/40 rounded p-3 mb-3">
+            <p className="font-pixel text-gray-400 text-xs mb-1">DIN HEMMELIGE KODE:</p>
+            <p className="font-pixel text-mc-yellow text-3xl tracking-widest">08</p>
+          </div>
+          <p className="font-pixel text-gray-400 text-xs mb-3">
+            Ta vare på koden. Du trenger den snart.
+          </p>
+          <button
+            onClick={() => navigate('/kombiner')}
+            className="bg-mc-green text-white font-pixel text-xs py-3 px-6 rounded border-b-4 border-green-800 active:border-b-0 active:translate-y-1"
+          >
+            GÅ TIL KOMBINER →
+          </button>
+        </div>
+      )}
 
       {/* Avdelingskort */}
       <div className="grid grid-cols-2 gap-3 mb-4">

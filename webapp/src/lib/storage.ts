@@ -60,6 +60,31 @@ export const storage = {
   setMinecraftDone: () => localStorage.setItem('minecraft_done', 'true'),
   isMinecraftDone: (): boolean => localStorage.getItem('minecraft_done') === 'true',
 
+  // Cheat code — låser opp ALT
+  activateCheat: () => {
+    // Sander: 12 dept + secret (13)
+    for (let i = 1; i <= 13; i++) {
+      localStorage.setItem(key(['sander', 'dept', String(i), 'complete']), 'true');
+    }
+    localStorage.setItem(key(['sander', 'secret', 'unlocked']), 'true');
+    // Selda: 12 dept + secret (13)
+    for (let i = 1; i <= 13; i++) {
+      localStorage.setItem(key(['selda', 'dept', String(i), 'complete']), 'true');
+    }
+    localStorage.setItem(key(['selda', 'secret', 'unlocked']), 'true');
+    // Svein: 6 grupper
+    for (let i = 1; i <= 6; i++) {
+      localStorage.setItem(key(['svein', 'dept', String(i), 'complete']), 'true');
+    }
+    // Kombiner + Minecraft
+    localStorage.setItem('kombiner_done', 'true');
+    localStorage.setItem('minecraft_done', 'true');
+  },
+  isCheatActive: (): boolean =>
+    localStorage.getItem('cheat_active') === 'true',
+  markCheatActive: () =>
+    localStorage.setItem('cheat_active', 'true'),
+
   // Reset (kun for voksne/testing)
   resetAll: () => localStorage.clear(),
 };

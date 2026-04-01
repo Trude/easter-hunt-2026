@@ -13,51 +13,6 @@ export default function Agent() {
   const allDone = groupsDone.every(Boolean);
   const nextGroup = sveinGroups.findIndex((_, i) => !groupsDone[i]);
 
-  if (allDone) {
-    return (
-      <div className="min-h-screen bg-mc-dark px-4 py-8 max-w-lg mx-auto flex flex-col items-center gap-8 text-center">
-        <div className="border-2 border-red-700 bg-black/50 rounded px-4 py-2">
-          <p className="font-pixel text-red-500 text-xs tracking-widest">KLASSIFISERT — DEKRYPTERT</p>
-        </div>
-
-        <div className="text-5xl">🔓</div>
-
-        <div>
-          <p className="font-pixel text-gray-400 text-xs mb-3">BOKSTAVENE DINE:</p>
-          <div className="flex gap-3 justify-center">
-            {LETTERS.map((l, i) => (
-              <div key={i} className="w-10 h-10 border-2 border-mc-yellow bg-black flex items-center justify-center">
-                <span className="font-pixel text-mc-yellow text-sm">{l}</span>
-              </div>
-            ))}
-          </div>
-          <p className="font-pixel text-mc-yellow text-xl mt-3 tracking-widest">ONKELS</p>
-        </div>
-
-        <div className="border border-gray-600 rounded p-4 max-w-sm">
-          <p className="font-pixel text-gray-300 text-xs leading-relaxed">
-            Agent Øransen — oppdraget er fullført.
-          </p>
-          <p className="font-pixel text-gray-400 text-xs leading-relaxed mt-3">
-            Men det virkelige mysteriet var aldri Påskeharen.
-            Det var hvordan noen klarer å bli 54 og fortsatt tro at Liverpool vinner ligaen hvert år.
-          </p>
-          <p className="font-pixel text-mc-green text-xs leading-relaxed mt-4">
-            Gratulerer med dagen, Svein. 🎂
-          </p>
-          <p className="font-pixel text-gray-400 text-xs leading-relaxed mt-4">
-            Barna trenger deg nå. Møt dem ved peisen.
-          </p>
-        </div>
-
-        <div className="bg-mc-dark border border-gray-600 rounded-lg p-4">
-          <p className="font-pixel text-gray-400 text-xs mb-2">DIN KODE TIL KOMBINER:</p>
-          <p className="font-pixel text-mc-yellow text-2xl tracking-widest">ONKELS</p>
-        </div>
-      </div>
-    );
-  }
-
   return (
     <div className="min-h-screen bg-mc-dark px-4 py-6 max-w-lg mx-auto">
       {/* Header */}
@@ -89,12 +44,41 @@ export default function Agent() {
         ))}
       </div>
 
+      {/* Fullført-banner */}
+      {allDone && (
+        <div className="mb-6 border-2 border-mc-yellow bg-black/50 rounded-lg p-4 text-center">
+          <div className="text-4xl mb-2">🔓</div>
+          <p className="font-pixel text-red-500 text-xs tracking-widest mb-3">KLASSIFISERT — DEKRYPTERT</p>
+
+          <div className="border border-gray-600 rounded p-3 mb-3 text-left">
+            <p className="font-pixel text-gray-300 text-xs leading-relaxed">
+              Agent Øransen — oppdraget er fullført.
+            </p>
+            <p className="font-pixel text-gray-400 text-xs leading-relaxed mt-2">
+              Men det virkelige mysteriet var aldri Påskeharen.
+              Det var hvordan noen klarer å bli 54 og fortsatt tro at Liverpool vinner ligaen hvert år.
+            </p>
+            <p className="font-pixel text-mc-green text-xs leading-relaxed mt-3">
+              Gratulerer med dagen, Svein. 🎂
+            </p>
+            <p className="font-pixel text-gray-400 text-xs leading-relaxed mt-3">
+              Barna trenger deg nå. Møt dem ved peisen.
+            </p>
+          </div>
+
+          <div className="bg-black/40 rounded p-3">
+            <p className="font-pixel text-gray-400 text-xs mb-1">DIN KODE TIL KOMBINER:</p>
+            <p className="font-pixel text-mc-yellow text-2xl tracking-widest">ONKELS</p>
+          </div>
+        </div>
+      )}
+
       {/* Gruppe-kort */}
       <div className="flex flex-col gap-3">
         {sveinGroups.map((group, i) => {
           const done = groupsDone[i];
           const isNext = i === nextGroup;
-          const locked = !done && !isNext;
+          const locked = !done && !isNext && !allDone;
 
           return (
             <button
