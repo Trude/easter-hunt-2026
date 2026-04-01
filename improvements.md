@@ -3,8 +3,6 @@
 * Memoryspill: legg til eller fjern to bilder så griden går opp. Gjør kortene større. 
 * Fang påskeegg: Må ha noen liv elns, så man kan tape. Må klare å fang x egg før man mister alle liv. Tempo bør gradevis økes.
 * Fang pip: samme her, man må "tape" etterhvert - nå kan man holde på i det uendelige. tempo bør også gradevis økes
-* Laberynt: AAAAlt for lett, lag den mye vanskeligere
-* Bunny jump: man må stikke av fra noe som kommer nedenfra - typ vann eller lava eller noe annet gøy, så man faktisk kan tape hvis man er for treig. 
 * Puslespill: Legg brikkene utenfor rammen. Gjør puslespillet større (dynamisk i forhold til skjermstørrelse)
 
 
