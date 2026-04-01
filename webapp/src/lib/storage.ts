@@ -44,6 +44,22 @@ export const storage = {
   getKombinerCode: (player: Player): string =>
     localStorage.getItem(key([player, 'kombiner', 'code'])) || '',
 
+  // Svein gruppe-fullføring (bruker setDeptComplete('svein', groupId))
+  isSveinAllDone: (): boolean => {
+    for (let i = 1; i <= 6; i++) {
+      if (localStorage.getItem(key(['svein', 'dept', String(i), 'complete'])) !== 'true') return false;
+    }
+    return true;
+  },
+
+  // Kombiner-steget
+  setKombinerDone: () => localStorage.setItem('kombiner_done', 'true'),
+  isKombinerDone: (): boolean => localStorage.getItem('kombiner_done') === 'true',
+
+  // Minecraft-steget
+  setMinecraftDone: () => localStorage.setItem('minecraft_done', 'true'),
+  isMinecraftDone: (): boolean => localStorage.getItem('minecraft_done') === 'true',
+
   // Reset (kun for voksne/testing)
   resetAll: () => localStorage.clear(),
 };

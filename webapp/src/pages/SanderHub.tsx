@@ -21,6 +21,16 @@ const DEPT_META = [
 
 const TOTAL_EGGS = 6;
 
+// Plassering av de skjulte eggene (6 stk)
+const EGG_POSITIONS = [
+  { id: '1', style: 'absolute top-0 right-0' },
+  { id: '2', style: 'absolute bottom-0 left-0' },
+  { id: '3', style: 'absolute top-1/2 right-0' },
+  { id: '4', style: 'absolute bottom-0 right-4' },
+  { id: '5', style: 'absolute top-0 left-1/3' },
+  { id: '6', style: 'absolute bottom-4 left-1/2' },
+];
+
 export default function SanderHub() {
   const navigate = useNavigate();
   const game = useGame();
@@ -28,13 +38,12 @@ export default function SanderHub() {
 
   const secretUnlocked = game.allEggsFound('sander', TOTAL_EGGS) || game.isSecretUnlocked('sander');
 
-  // Finn neste aktive avdeling
   const nextDept = (() => {
     for (let i = 1; i <= 12; i++) {
       if (!game.isDeptComplete('sander', i)) return i;
     }
     if (secretUnlocked && !game.isDeptComplete('sander', 13)) return 13;
-    return null; // alt fullført
+    return null;
   })();
 
   const allComplete = (() => {
@@ -42,7 +51,7 @@ export default function SanderHub() {
       if (!game.isDeptComplete('sander', i)) return false;
     }
     if (secretUnlocked && !game.isDeptComplete('sander', 13)) return false;
-    if (!secretUnlocked) return false; // kan ikke fullføre uten hemmelig
+    if (!secretUnlocked) return false;
     return true;
   })();
 
@@ -55,6 +64,19 @@ export default function SanderHub() {
   const handleCardClick = useCallback((id: number) => {
     navigate(`/sander/${id}`);
   }, [navigate]);
+
+  const handleEggFound = useCallback((eggId: string) => {
+    if (game.isEggFound('sander', eggId)) return;
+    game.foundEgg('sander', eggId);
+    const count = game.countEggsFound('sander', TOTAL_EGGS) + 1;
+    if (count >= TOTAL_EGGS) {
+      setAchievement({ title: 'ALLE EGG FUNNET! 🥚', desc: 'Hemmelig avdeling låst opp!' });
+    } else {
+      setAchievement({ title: `Påskeegg funnet! (${count}/${TOTAL_EGGS})` });
+    }
+  }, [game]);
+
+  const eggsFound = game.countEggsFound('sander', TOTAL_EGGS);
 
   if (allComplete) {
     return (
@@ -84,7 +106,7 @@ export default function SanderHub() {
   }
 
   return (
-    <div className="min-h-screen px-4 py-6 max-w-lg mx-auto">
+    <div className="min-h-screen px-4 py-6 max-w-lg mx-auto relative">
       <AchievementPopup
         show={!!achievement}
         title={achievement?.title || ''}
@@ -92,15 +114,36 @@ export default function SanderHub() {
         onDone={() => setAchievement(null)}
       />
 
+      {/* Skjulte påskeegg (6 stk — finn dem alle!) */}
+      {EGG_POSITIONS.map(egg => {
+        const found = game.isEggFound('sander', egg.id);
+        return (
+          <button
+            key={egg.id}
+            onClick={() => handleEggFound(egg.id)}
+            className={`${egg.style} text-sm leading-none p-1 select-none touch-manipulation transition-opacity ${
+              found ? 'opacity-80' : 'opacity-[0.08] hover:opacity-20'
+            }`}
+          >
+            🥚
+          </button>
+        );
+      })}
+
       {/* Header */}
       <div className="text-center mb-6">
         <h1 className="font-pixel text-mc-yellow text-xs leading-relaxed">
           DETEKTIVKONTORET
         </h1>
-        <p className="font-pixel text-gray-400 text-xs mt-2">AGENT: SANDER</p>
+        <p className="font-pixel text-gray-400 text-xs mt-2">AGENT: KODEKNEKKEREN</p>
         <p className="font-pixel text-gray-500 text-xs mt-1">
           {Array.from({length: 12}, (_, i) => i + 1).filter(i => game.isDeptComplete('sander', i)).length}/12 fullført
         </p>
+        {eggsFound > 0 && (
+          <p className="font-pixel text-yellow-600 text-xs mt-1">
+            🥚 {eggsFound}/{TOTAL_EGGS} påskeegg funnet
+          </p>
+        )}
       </div>
 
       {/* Avdelingskort */}

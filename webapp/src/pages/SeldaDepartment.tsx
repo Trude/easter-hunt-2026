@@ -2,8 +2,14 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { useGame } from '../context/GameContext';
 import { seldaTrivia } from '../data/selda-trivia';
 import TriviaSection from '../components/trivia/TriviaSection';
+import Memory from '../components/games/Memory';
+import Labyrinth from '../components/games/Labyrinth';
+import CatchEggs from '../components/games/CatchEggs';
+import CatchPiip from '../components/games/CatchPiip';
+import BunnyJump from '../components/games/BunnyJump';
+import Puzzle from '../components/games/Puzzle';
 
-const TRIVIA_DEPTS = [1, 3, 5, 7, 9, 11];
+const TRIVIA_DEPTS = [1, 3, 5, 7, 9, 11, 13];
 
 const DEPT_META: Record<number, { title: string; icon: string }> = {
   1: { title: 'Påske & Krim', icon: '🔍' },
@@ -59,17 +65,23 @@ export default function SeldaDepartment() {
 
       {/* Innhold */}
       {TRIVIA_DEPTS.includes(id) && seldaTrivia[id] ? (
-        <TriviaSection
-          section={seldaTrivia[id]}
-          onComplete={handleComplete}
-        />
+        <TriviaSection section={seldaTrivia[id]} onComplete={handleComplete} />
+      ) : id === 2 ? (
+        <Memory onComplete={handleComplete} />
+      ) : id === 4 ? (
+        <CatchEggs onComplete={handleComplete} />
+      ) : id === 6 ? (
+        <CatchPiip onComplete={handleComplete} />
+      ) : id === 8 ? (
+        <Labyrinth onComplete={handleComplete} />
+      ) : id === 10 ? (
+        <BunnyJump onComplete={handleComplete} />
+      ) : id === 12 ? (
+        <Puzzle onComplete={handleComplete} />
       ) : (
         <div className="flex flex-col items-center gap-6 text-center py-10">
           <div className="text-5xl">{meta?.icon}</div>
-          <p className="font-pixel text-gray-400 text-xs leading-relaxed">
-            KOMMER SNART
-          </p>
-          {/* Placeholder-knapp for testing */}
+          <p className="font-pixel text-gray-400 text-xs leading-relaxed">KOMMER SNART</p>
           <button
             onClick={handleComplete}
             className="bg-gray-700 text-gray-300 font-pixel text-xs py-3 px-6 rounded border border-gray-600"

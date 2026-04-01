@@ -1,11 +1,13 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { storage } from '../lib/storage';
 
 const ROUTES: Record<string, string> = {
-  SANDER: '/sander',
-  SELDA: '/selda',
+  KODEKNEKKEREN: '/sander',
+  SPORHUNDEN: '/selda',
   SVEIN: '/agent',
   VARDEN26: '/finale',
+  KOMBINER: '/kombiner',
 };
 
 export default function Home() {
@@ -15,6 +17,11 @@ export default function Home() {
 
   const handleSubmit = () => {
     const upper = code.trim().toUpperCase();
+    if (upper === 'RESET2026') {
+      storage.resetAll();
+      setCode('');
+      return;
+    }
     const route = ROUTES[upper];
     if (route) {
       navigate(route);
@@ -57,7 +64,7 @@ export default function Home() {
           onChange={e => setCode(e.target.value.toUpperCase())}
           onKeyDown={e => { if (e.key === 'Enter') handleSubmit(); }}
           placeholder="KODE HER"
-          maxLength={10}
+          maxLength={14}
           className={`bg-mc-dark border-2 rounded px-4 py-4 font-pixel text-xs text-white text-center placeholder-gray-600 outline-none transition-colors ${
             error ? 'border-red-500' : 'border-gray-600 focus:border-mc-yellow'
           }`}

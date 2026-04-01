@@ -129,4 +129,16 @@ export const seldaTrivia: Record<number, TriviaSection> = {
       { id: 5, format: 'text', question: 'Hva heter den grønne ogre-karakteren fra Dreamworks?', answer: 'Shrek' },
     ],
   },
+  13: {
+    id: 13,
+    title: 'Hemmelig Mappe',
+    icon: '🔍',
+    questions: [
+      { id: 1, format: 'multiple-choice', question: 'Hva heter kråken som sendte dere det hemmelige brevet om morgenen?', options: ['Kvekk', 'Piip', 'Odin', 'Kråksen'], answer: 'Kvekk' },
+      { id: 2, format: 'multiple-choice', question: 'Hva heter Påskeharens lille gule assistent?', options: ['Piip', 'Kvekk', 'Tweety', 'Kyllingen'], answer: 'Piip' },
+      { id: 3, format: 'multiple-choice', question: 'Hva er ditt hemmelige agentnavn?', options: ['Sporhunden', 'Kodeknekkeren', 'Agent Øransen', 'Detektiven'], answer: 'Sporhunden' },
+      { id: 4, format: 'multiple-choice', question: 'Hva er Sanderss hemmelige agentnavn?', options: ['Kodeknekkeren', 'Sporhunden', 'Agent Piip', 'Superdetektiven'], answer: 'Kodeknekkeren' },
+      { id: 5, format: 'multiple-choice', question: 'Hvem var den hemmelige agenten som hjalp dere i den digitale delen?', options: ['Agent Øransen', 'En mystisk fremmed', 'Påskeharen selv', 'Piip'], answer: 'Agent Øransen' },
+    ],
+  },
 };
