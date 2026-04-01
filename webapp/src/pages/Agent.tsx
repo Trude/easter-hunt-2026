@@ -40,7 +40,7 @@ export default function Agent() {
           </p>
           <p className="font-pixel text-gray-400 text-xs leading-relaxed mt-3">
             Men det virkelige mysteriet var aldri Påskeharen.
-            Det var hvordan noen klarer å bli 51 og fortsatt tro at Liverpool vinner ligaen hvert år.
+            Det var hvordan noen klarer å bli 54 og fortsatt tro at Liverpool vinner ligaen hvert år.
           </p>
           <p className="font-pixel text-mc-green text-xs leading-relaxed mt-4">
             Gratulerer med dagen, Svein. 🎂

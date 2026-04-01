@@ -5,9 +5,9 @@
 
 ## KONTEKST
 
-**Hvem:** Svein, 50+ år, onkel til Sander og Selda
+**Hvem:** Svein, 54 år (f. 4. april 1972), onkel til Sander og Selda
 **Profil:** Daglig leder Betonmast Romerike. Liverpool-supporter. Glad i alpint, aquavit, crémant og er nevenyttig. Veldig dyktig på trivia.
-**Bursdag:** Samme dag som påskejakten
+**Bursdag:** 4. april 2026 — påskeaften, samme dag som jakten. Fyller 54.
 **Varighet:** Ca. 1 time
 **Tone:** Påskekrim-ramme med bursdagsvri — personlige referanser, humor og en dose ydmykelse
 **Kobling til barnas løp:** Uavhengig inntil et naturlig samlingspunkt mot slutten, der alle trenger hverandre for finalen
@@ -155,9 +155,9 @@ Her snur temaet. Spørsmålene handler om **Svein selv** — stilt som "etterfor
 |---|----------|-------------|-----------|
 | 1 | Den mistenkte hevder å være daglig leder. Hva heter firmaet hans — FULLT navn? | Betonmast Romerike (godta rimelige varianter) | |
 | 2 | Den mistenkte har en kjent svakhet for en engelsk fotballklubb. Hva er klubbens KALLENAVN (ikke byen)? | The Reds | Godta også "The Pool" |
-| 3 | I henhold til våre kilder fyller agenten år i dag. Hvilket årstall er han født? | *(Tilpasses)* | |
+| 3 | I henhold til våre kilder fyller agenten år i dag. Hvilket årstall er han født? | 1972 | |
 | 4 | Den mistenkte har en nevø og en niese. Hva heter de? | Sander og Selda | |
-| 5 | Agenten fyller [X] år i dag. Omtrent hvor mange DAGER har han levd? (±500 dager) | *(Regn ut: alder × 365)* | F.eks. 50 → ca. 18 250. Valider med toleranse. |
+| 5 | Agenten fyller 54 år i dag. Omtrent hvor mange DAGER har han levd? (±500 dager) | 19 724 | 54 × 365 + 14 skuddår = 19 724. Godta 19 200–20 200. |
 
 **Ved bestått → bokstav: L**
 
@@ -190,7 +190,7 @@ Når alle 6 grupper er bestått, viser appen:
 > Agent Øransen — oppdraget er fullført.
 >
 > Men det virkelige mysteriet var aldri Påskeharen.
-> Det var hvordan noen klarer å bli [50+] og fortsatt tro at Liverpool vinner ligaen hvert år.
+> Det var hvordan noen klarer å bli 54 og fortsatt tro at Liverpool vinner ligaen hvert år.
 >
 > Gratulerer med dagen, Svein.
 >
@@ -225,7 +225,7 @@ Koden **ONKELS** kan brukes som:
 ## PRODUKSJONSNOTATER
 
 - **Trivia-spørsmålene bør kvalitetssjekkes** — spesielt Liverpool- og Betonmast-spørsmålene. Tilpass med oppdaterte fakta.
-- **Personlige spørsmål i Gruppe 5** må fylles inn med ekte detaljer om Svein (fødselsår, bosted osv.).
+- **Personlige spørsmål i Gruppe 5** er fylt inn (f. 1972, fyller 54, ~19 724 dager). Bosted/kommune gjenstår.
 - **Gruppe 5 bruker fritekstfelt** — appen trenger fuzzy matching / godkjenningslogikk for disse svarene. Alternativt: flervalg med lure alternativer.
 - **Tidssynk med barnas løp:** Barnas individuelle klue-kjede (Steg 2–9, 8 stasjoner hver) tar ca. 40–50 min. Sveins 6 grupper à 5 spørsmål bør ta ca. 30–45 min med tenking + eventuelle nye forsøk. Pausen mellom barnas klue-kjede og felles-stegene (bevisstavle, digitalt detektivkontor) gir buffer.
 - **Vanskelighetsgrad:** Spørsmålene er bevisst harde. Svein er god på trivia — ikke gjør det for lett. Triksspørsmål og presise tall er med vilje.

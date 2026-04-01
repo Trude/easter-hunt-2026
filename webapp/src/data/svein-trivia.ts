@@ -1,7 +1,6 @@
 import type { Question, TriviaSection } from './types';
 
-// TODO: Verifiser Sveins fødselsår (brukt: 1975 → fyller 51 i 2026)
-// Oppdater Q i gruppe 5 (id 53 og 55) om nødvendig.
+// Sveins fødselsår: 4. april 1972 → fyller 54 i 2026. Verifisert ✅
 
 export interface SveinGroup {
   id: number;
@@ -218,8 +217,8 @@ export const sveinGroups: SveinGroup[] = [
         id: 53,
         question: 'I henhold til våre kilder fyller agenten år i dag. Hvilket årstall er han født?',
         format: 'multiple-choice',
-        options: ['1973', '1974', '1975', '1977'],
-        answer: '1975',
+        options: ['1970', '1972', '1974', '1976'],
+        answer: '1972',
       },
       {
         id: 54,
@@ -229,10 +228,10 @@ export const sveinGroups: SveinGroup[] = [
       },
       {
         id: 55,
-        question: 'Agenten fyller 51 år i dag. Omtrent hvor mange DAGER har han levd? (±500 dager)',
+        question: 'Agenten fyller 54 år i dag. Omtrent hvor mange DAGER har han levd? (±500 dager)',
         format: 'multiple-choice',
-        options: ['~14 000 dager', '~16 500 dager', '~18 600 dager', '~21 000 dager'],
-        answer: '~18 600 dager',
+        options: ['~16 500 dager', '~18 000 dager', '~19 700 dager', '~21 500 dager'],
+        answer: '~19 700 dager',
       },
     ] as Question[],
   },
