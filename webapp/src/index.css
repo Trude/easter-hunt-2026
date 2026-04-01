@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1a1a2e;
+  color: #ffffff;
+  font-family: 'Press Start 2P', cursive;
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* Pixel-stil scrollbar */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #1a1a2e; }
+::-webkit-scrollbar-thumb { background: #5c8a1e; }

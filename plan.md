@@ -267,7 +267,7 @@ Alle rundt ett skjerm. Barna taster VARDEN26 på `/finale`. En **AI-generert vid
 - [ ] Oransje flagg (liten, stikkes i snøen)
 - [ ] Vanntett boks/pose til utendørs gjemmested
 - [ ] Dekorert skattekiste eller dekorert eske til finalen
-- [ ] 2 × liten notatbok (detektivbøker) + 2 penner
+- [x] 2 × liten notatbok (detektivbøker) + 2 penner
 - [ ] Rød hyssing/garn (til bevisstavlen)
 - [ ] Tegnestifter
 - [ ] Teip (til å feste konvolutter på gjemmesteder)
@@ -277,7 +277,7 @@ Alle rundt ett skjerm. Barna taster VARDEN26 på `/finale`. En **AI-generert vid
 - [ ] 2 × brev fra Piip (ett til Sander, ett til Selda)
 - [ ] 16 × konvolutter med innhold (8 til Sander, 8 til Selda)
 - [ ] 2 × halvt skattekart (passer sammen)
-- [ ] 2 × halvt Kvekk-bilde til bevisstavlen (passer sammen)
+- [ ] 2 × halvt Piip-bilde til bevisstavlen (passer sammen)
 - [ ] Alle bevis-elementer:
   - [ ] Bit av oransje stoff (fra et gammelt skjerf e.l. — Sanders bevis ved boblebad)
   - [ ] Hvit ullbit (Seldas bevis ved peisen)
@@ -315,9 +315,6 @@ Alle rundt ett skjerm. Barna taster VARDEN26 på `/finale`. En **AI-generert vid
 - [ ] 2 × Detektivbok (liten notatbok + penn)
 - [ ] 16 × konvolutter med innhold (8 Sander, 8 Selda) ✅ redusert fra 20
 - [ ] 2 × halvt skattekart (passer sammen)
-
-**Pappmal til kaninspor:**
-- [ ] 1 × pappmal av påskeharspor (lages hjemme) ✅
 
 **Ute:**
 - [ ] 1 × oransje flagg (ikke ballong — sprekker i kulden) ✅
