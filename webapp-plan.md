@@ -59,7 +59,7 @@ Hvert barn logger inn og ser sitt **Detektivkontor** — en hubside med 12 avdel
 
 - **Sekvensiell låsing:** Avdeling 1 må fullføres før 2 åpner seg, osv.
 - **Replay:** Fullførte avdelinger kan åpnes og spilles på nytt fritt.
-- **Fullført:** Når alle 12 er grønne → koden avsløres og de kan gå videre til `/kombiner`.
+- **Fullført:** Når alle 12 er grønne → fullføringsskjerm med barnets kode (f.eks. «08») tydelig og stor, pluss en «Gå til kombiner →»-knapp. Barna kan trykke med en gang de er ferdige — kombiner-siden krever alle fire felt utfylt før noe skjer, så det er ingen fare i å ankomme først.
 - **Visuelt:** Hvert kort har et ikon og en tittel. Låste kort er grå/dimmet. Fullførte kort er grønne med hake. Aktiv (neste å gjøre) pulserer/gløder.
 
 ### Mekanikk per avdelingstype
@@ -469,14 +469,13 @@ Samme opplegg som barna: skjulte klikk/trykkbare elementer spredt på Sveins sid
 
 Alle tre løp må fullføres før jakten kan fortsette.
 
-Siden viser tre inntastingsfelt:
-1. **Sanders kode** (2 siffer)
-2. **Seldas kode** (2 siffer)
-3. **Sveins kode** (ONKELS)
+Siden viser fire inntastingsfelt:
+1. **Sanders kode** (2 siffer — fra Detektivkontoret)
+2. **Seldas kode** (2 siffer — fra Detektivkontoret)
+3. **Sveins kode** (ONKELS — fra `/agent`)
+4. **Hemmelig kodeord** (PÅSKEJAKT — satt sammen av bokstaver skjult på de fysiske bevis-elementene)
 
-Hvis én eller flere koder mangler → "Venter på de andre agentene…" med en status-indikator som viser hvem som er ferdig og hvem som ikke er det.
-
-Når alle tre koder stemmer → Achievement-animasjon + redirect til `/minecraft`.
+Når alle fire koder stemmer → Achievement-animasjon + redirect til `/minecraft`.
 
 *Merknad: Kombiner-siden trenger ingen ventemekanisme i sanntid — barna fyller inn alle tre kodene manuelt når alle er klare.*
 
@@ -484,10 +483,22 @@ Når alle tre koder stemmer → Achievement-animasjon + redirect til `/minecraft
 
 ## `/minecraft` — Crafting-gåten
 
-Et Minecraft-craftingbord vises. Tilgjengelige ingredienser ligger rundt bordet. Barna drar/klikker ingredienser inn i de riktige rutene i crafting-griddet (3×3).
+Et Minecraft-craftingbord vises på én delt enhet. Barna drar/klikker ingredienser inn i de riktige rutene i crafting-griddet (3×3).
 
-**Løsningen:**
-- Gulrot (carrot) + Pinne (stick) + Hvit ull (white wool) → Påskehare-stav
+**Delte ingredienser — ekte samarbeid:**
+Siden vet hvilke barn som er pålogget (fra localStorage). Ingrediensene er fordelt:
+- **Sanderss ingredienser** (merket med grønn navnelapp): gulrot, pinne
+- **Seldas ingredienser** (merket med gul navnelapp): hvit ull
+
+Begge barns ingredienser vises på siden — men de må sitte sammen for å vite hva den andre har og bli enige om plasseringen. Ingen nettverkssynk nødvendig.
+
+**Eksakt plassering (Minecraft-stil):**
+```
+[ ] [ull ] [ ]     ← rad 1
+[ ] [pinne] [ ]    ← rad 2
+[ ] [gulrot] [ ]   ← rad 3
+```
+Midtre kolonne, topp til bunn. Feil plassering gir ingen reaksjon — prøv igjen.
 
 **Feil kombinasjon:** Ingen ting lages — prøv igjen.
 **Riktig kombinasjon:** Animasjon + tekst:

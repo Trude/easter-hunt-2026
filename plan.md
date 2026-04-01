@@ -60,20 +60,24 @@ Bevisstavlen henger ved peisen fra start til slutt. Den er ryggraden hele jakten
 - **Steg 11B** er det store bevisstavle-øyeblikket: de kobler bevisene med rød hyssing og det avslører neste steg.
 - Den som er raskest gjennom sin rute bruker ventetiden på å organisere stavlen — løser timing-problemet naturlig.
 
+**Hemmelig kodeord — PÅSKEJAKT:**
+Utvalgte bevis-elementer har en bokstav skrevet på seg (på baksiden eller på en liten lapp festet til gjenstanden). Når barna samler alle bevisene på stavlen, kan de finne alle 9 bokstavene og sette dem sammen til kodeordet **PÅSKEJAKT**. Dette kodeordet tastes inn som et tredje felt på kombiner-siden (`/kombiner`), i tillegg til Sanderss og Seldas 2-sifrede koder fra Detektivkontoret.
+
 **Bevis-elementer per steg (forslag):**
-| Steg | Bevis | Hva det forteller |
-|------|-------|-------------------|
-| Sanders stasjon 1 | Sotet potelavtrykk på papir | "Noen var ved peisen" |
-| Sanders stasjon 3 | Spist Kvikk Lunsj + håndtegnet kart på papir | "Noen spiste her og tegnet et kart" |
-| Sanders stasjon 5 | En halvspist gulrot | "Påskeharen var sulten" |
-| Sanders stasjon 7 | Bit av oransje stoff (fra skjerfet hans) | "Han mistet noe i skifterommet" |
-| Sanders stasjon 8 | **Halvt skattekart** | Passer med Seldas halvdel |
-| Seldas stasjon 1 | Et hvitt hår (ullbit) | "En hvit skapning var her" |
-| Seldas stasjon 3 | Liten lapp: *"Var her — Pk"* | "Han var i soverommet!" |
-| Seldas stasjon 5 | Appelsin med bitemerker | "Spiste appelsin — klassisk påskehare" |
-| Seldas stasjon 7 | Liten snøflak-tegning | "Han gikk ut i kulden" |
-| Seldas stasjon 8 | **Halvt skattekart** | Passer med Sanders halvdel |
-| Begge stasjon siste | **Sentralt bilde av Piip** (to halvdeler) | Avslører det store bildet når kombinert |
+| Steg | Bevis | Hva det forteller | Bokstav |
+|------|-------|-------------------|---------|
+| Sanders stasjon 1 | Sotet potelavtrykk på papir | "Noen var ved peisen" | **P** |
+| Sanders stasjon 2 | Spist Kvikk Lunsj + håndtegnet kart på papir | "Noen spiste her og tegnet et kart" | **Å** |
+| Sanders stasjon 3 | En halvspist gulrot | "Påskeharen var sulten" | **S** |
+| Sanders stasjon 4 | Lapp: *"Var her — Pk"* (anekset) | "Han var i anekset!" | **K** |
+| Sanders stasjon 5 | Snøflak-tegning | "Han gikk ut i kulden" | **E** |
+| Sanders stasjon 6 | **Halvt skattekart** | Passer med Seldas halvdel | — |
+| Seldas stasjon 1 | Hvit ullbit | "En hvit skapning var her" | **J** |
+| Seldas stasjon 4 | Appelsin med bitemerker | "Spiste appelsin — klassisk påskehare" | **A** |
+| Seldas stasjon 5 | Halvspist gulrot nr. 2 | "Påskeharen var sulten" | **K** |
+| Seldas stasjon 6 | Torn lapp m/mystisk tekst | "Noen rev noe i stykker" | **T** |
+| Seldas stasjon 7 | **Halvt skattekart** | Passer med Sanders halvdel | — |
+| Begge, siste stasjon | **Sentralt bilde av Piip** (to halvdeler) | Avslører QR-kode på baksiden | — |
 
 ---
 
@@ -304,6 +308,7 @@ Alle rundt ett skjerm. Barna taster VARDEN26 på `/finale`. En **AI-generert vid
 - [ ] Tegnestifter + rull rød hyssing
 - [ ] Alle bevis-elementer (se liste under steg 2–9)
 - [ ] 2 × halvt Piip-bilde (passer sammen, midtpunkt på stavlen)
+- [ ] QR-kode til forsiden `/` genereres og trykkes på/ved Piip-bildet på bevisstavlen (barna scanner for å starte Detektivkontoret — videre til `/kombiner` skjer via knapp i appen)
 
 **Konvolutter og brev:**
 - [ ] 2 × brev fra Piip (under putene)
