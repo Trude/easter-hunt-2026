@@ -21,15 +21,8 @@ const DEPT_META = [
 
 const TOTAL_EGGS = 6;
 
-// Plassering av de skjulte eggene (6 stk)
-const EGG_POSITIONS = [
-  { id: '1', style: 'absolute top-0 right-0' },
-  { id: '2', style: 'absolute bottom-0 left-0' },
-  { id: '3', style: 'absolute top-1/2 right-0' },
-  { id: '4', style: 'absolute bottom-0 right-4' },
-  { id: '5', style: 'absolute top-0 left-1/3' },
-  { id: '6', style: 'absolute bottom-4 left-1/2' },
-];
+// Kun ett egg på huben — de andre 5 er gjemt i forskjellige avdelinger
+const HUB_EGG = { id: '1', style: 'absolute top-1 right-1' };
 
 export default function SanderHub() {
   const navigate = useNavigate();
@@ -68,7 +61,7 @@ export default function SanderHub() {
   const handleEggFound = useCallback((eggId: string) => {
     if (game.isEggFound('sander', eggId)) return;
     game.foundEgg('sander', eggId);
-    const count = game.countEggsFound('sander', TOTAL_EGGS) + 1;
+    const count = game.countEggsFound('sander', TOTAL_EGGS);
     if (count >= TOTAL_EGGS) {
       setAchievement({ title: 'ALLE EGG FUNNET! 🥚', desc: 'Hemmelig avdeling låst opp!' });
     } else {
@@ -114,21 +107,20 @@ export default function SanderHub() {
         onDone={() => setAchievement(null)}
       />
 
-      {/* Skjulte påskeegg (6 stk — finn dem alle!) */}
-      {EGG_POSITIONS.map(egg => {
-        const found = game.isEggFound('sander', egg.id);
+      {/* Skjult påskeegg #1 — de andre er gjemt i avdelingene */}
+      {(() => {
+        const found = game.isEggFound('sander', HUB_EGG.id);
         return (
           <button
-            key={egg.id}
-            onClick={() => handleEggFound(egg.id)}
-            className={`${egg.style} text-sm leading-none p-1 select-none touch-manipulation transition-opacity ${
-              found ? 'opacity-80' : 'opacity-[0.08] hover:opacity-20'
+            onClick={() => handleEggFound(HUB_EGG.id)}
+            className={`${HUB_EGG.style} absolute text-sm leading-none p-1 select-none touch-manipulation transition-opacity ${
+              found ? 'opacity-80' : 'opacity-[0.07] hover:opacity-20'
             }`}
           >
             🥚
           </button>
         );
-      })}
+      })()}
 
       {/* Header */}
       <div className="text-center mb-6">

@@ -8,6 +8,8 @@ import CatchEggs from '../components/games/CatchEggs';
 import CatchPiip from '../components/games/CatchPiip';
 import BunnyJump from '../components/games/BunnyJump';
 import Puzzle from '../components/games/Puzzle';
+import AchievementPopup from '../components/ui/AchievementPopup';
+import { useState } from 'react';
 
 const TRIVIA_DEPTS = [1, 3, 5, 7, 9, 11, 13];
 
@@ -27,11 +29,20 @@ const DEPT_META: Record<number, { title: string; icon: string }> = {
   13: { title: 'Hemmelig Mappe', icon: '🔍' },
 };
 
+const DEPT_EGG: Record<number, { eggId: string; position: string }> = {
+  2:  { eggId: '2', position: 'bottom-3 right-3' },
+  5:  { eggId: '3', position: 'top-2 left-2' },
+  7:  { eggId: '4', position: 'bottom-3 left-3' },
+  9:  { eggId: '5', position: 'top-2 right-2' },
+  11: { eggId: '6', position: 'bottom-16 right-2' },
+};
+
 export default function SeldaDepartment() {
   const { deptId } = useParams();
   const navigate = useNavigate();
   const game = useGame();
   const id = parseInt(deptId || '1');
+  const [achievement, setAchievement] = useState<string | null>(null);
 
   const meta = DEPT_META[id];
   const isCompleted = game.isDeptComplete('selda', id);
@@ -41,8 +52,40 @@ export default function SeldaDepartment() {
     navigate('/selda');
   };
 
+  const eggConfig = DEPT_EGG[id];
+  const eggFound = eggConfig ? game.isEggFound('selda', eggConfig.eggId) : false;
+
+  const handleEggFound = () => {
+    if (!eggConfig || eggFound) return;
+    game.foundEgg('selda', eggConfig.eggId);
+    const count = game.countEggsFound('selda', 6);
+    if (count >= 6) {
+      setAchievement('ALLE EGG FUNNET! 🥚 Hemmelig avdeling låst opp!');
+    } else {
+      setAchievement(`Påskeegg funnet! (${count}/6)`);
+    }
+  };
+
   return (
-    <div className="min-h-screen max-w-lg mx-auto px-4 py-6">
+    <div className="min-h-screen max-w-lg mx-auto px-4 py-6 relative">
+      <AchievementPopup
+        show={!!achievement}
+        title={achievement || ''}
+        onDone={() => setAchievement(null)}
+      />
+
+      {/* Skjult påskeegg (kun i utvalgte avdelinger) */}
+      {eggConfig && (
+        <button
+          onClick={handleEggFound}
+          className={`absolute ${eggConfig.position} text-sm leading-none p-1 select-none touch-manipulation transition-opacity z-10 ${
+            eggFound ? 'opacity-70' : 'opacity-[0.07] hover:opacity-20'
+          }`}
+        >
+          🥚
+        </button>
+      )}
+
       {/* Tilbake-knapp */}
       <button
         onClick={() => navigate('/selda')}
