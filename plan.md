@@ -57,7 +57,7 @@ Bevisstavlen henger ved peisen fra start til slutt. Den er ryggraden hele jakten
 - Ved **hvert steg** finner barna ett **bevis-element** i tillegg til ledetråden. De bringer beviset tilbake til stavlen og fester det.
 - Bevisene er fysiske gjenstander eller lapper: potelavtrykk, torn lappe, en halvspist gulrot, en spist Kvikk Lunsj med håndtegnet kart på papir ved siden av, en oransje ullbit, osv.
 - Stavlen bygger seg opp gjennom hele jakten — barna ser historien ta form.
-- **Steg 11B** er det store bevisstavle-øyeblikket: de kobler bevisene med rød hyssing og det avslører neste steg.
+- **Steg 9** er det store bevisstavle-øyeblikket: de kobler bevisene med rød hyssing og det avslører neste steg.
 - Den som er raskest gjennom sin rute bruker ventetiden på å organisere stavlen — løser timing-problemet naturlig.
 
 **Hemmelig kodeord — PÅSKEJAKT:**
@@ -88,7 +88,6 @@ Utvalgte bevis-elementer har en bokstav skrevet på seg (på baksiden eller på 
 - Legg ut konvolutter på alle 8 stasjoner (merket med barnets navn)
 - Legg bevis-elementer i/ved hver konvolutt
 - Lag kaninspor i snøen med pappmal ✅
-- Fest kapsel på Odins halsbånd
 - Sjekk at webapp er live
 
 ---
