@@ -6,11 +6,11 @@
 
 ## ÅPNE SPØRSMÅL (må avklares før bygging)
 
-- [ ] **Mini-spill poengkrav** — forslag: fang 20 egg / treff 12 Piip. Bekreft eller juster.
-- [ ] **Feil svar trivia** — umiddelbar tilbakemelding per spørsmål, eller vis resultat etter hele mappen?
-- [ ] **Familietrivia** — skal noen spørsmål kreve at de spør de voksne? (ikke validerbart automatisk)
-- [ ] **Seldas dansespørsmål** — er BTS, Alan Walker og Renegade riktige referanser?
-- [ ] **2-sifrede koder** — bestemmes nå og brukes i kombinasjonslåsen. Sander: XX, Selda: YY → lås = XXYY
+- [x] **Mini-spill poengkrav** — startverdi: fang 20 egg / treff 12 Piip / Bunny Jump høyde TBD. Justeres under testing. ✅
+- [x] **Feil svar trivia** — umiddelbar tilbakemelding per spørsmål, men ingen retry. Hele seksjonen må tas på nytt ved ett eller flere feil. ✅
+- [x] **Familietrivia** — ingen spørsmål som krever å spørre de voksne. Alle svar er validerbare automatisk. ✅
+- [x] **Seldas dansespørsmål** — erstattet av musikkseksjon med Spotify-embeds. ✅
+- [x] **2-sifrede koder** — Sander: 42, Selda: 08 → kombinasjonslås: 4208. ✅
 
 ---
 
@@ -66,9 +66,10 @@ Hvert barn logger inn og ser sitt **Detektivkontor** — en hubside med 12 avdel
 
 **Trivia-mapper:**
 - Spørsmål vises ett om gangen
-- Umiddelbar tilbakemelding: grønn hake (riktig) eller rød X + riktig svar vises (feil) → neste spørsmål
-- Alle spørsmål må besvares riktig for å fullføre mappen
-- Feil svar: de får prøve igjen til de svarer riktig (ingen straff, men de sitter fast til de treffer)
+- Umiddelbar tilbakemelding etter hvert svar: grønn hake (riktig) eller rød X + riktig svar vises (feil)
+- Alle spørsmål gjennomføres uansett — ingen mulighet til å prøve enkeltspørsmål på nytt
+- Hvis ett eller flere svar var feil → seksjonen er ikke bestått, og de må ta hele mappen på nytt fra starten
+- Bestått: alle svar riktig → avdeling markeres grønn og neste låses opp
 
 **Interaktive steg (labyrint, memory, prikk-til-prikk, puslespill):**
 - Fullført når oppgaven er løst
@@ -77,7 +78,7 @@ Hvert barn logger inn og ser sitt **Detektivkontor** — en hubside med 12 avdel
 **Mini-spill (fang egg, fang Piip):**
 - Krever X poeng for å låse opp neste avdeling
 - Kan spilles om igjen ubegrenset
-- Poengkrav: *⚠️ TBD — forslag: 20 egg / 12 Piip*
+- Poengkrav: **20 egg / 12 Piip** — justeres under testing
 
 ### Skjulte Easter eggs + Hemmelig avdeling
 
@@ -88,7 +89,7 @@ Spredt rundt i appen er det gjemt **skjulte Easter eggs** — små, klikk/trykkb
 - Hvert barn har sitt eget sett med eggs, på sine egne sider — Sander og Selda finner ikke de samme
 - Når alle eggs er funnet → **Avdeling 13: HEMMELIG MAPPE** dukker opp i hubben
 - Avdeling 13 er påkrevd for fullføring — de oppdager at den mangler når alt annet er grønt
-- Innhold i avdeling 13: *⚠️ TBD — kommer tilbake til dette*
+- Sander og Selda har **samme** hemmelige avdeling 13 — innhold TBD, bestemmes senere
 
 **Svein har samme opplegg** på sine `/agent`-sider — egne skjulte eggs, egen hemmelig gruppe 7 som låses opp når alle er funnet.
 
@@ -111,8 +112,10 @@ Spredt rundt i appen er det gjemt **skjulte Easter eggs** — små, klikk/trykkb
 
 ### Avdeling 2 — Utfordring: Memory (interaktiv)
 
-12 kort (6 par) med påskesymboler: Piip, påskeegg, hare, kylling, blomst, sjokolade.
-Vend kort og finn alle parene. Fullført når alle par er matchet.
+18 kort (9 par). Vend kort og finn alle parene. Fullført når alle par er matchet.
+
+**Bilder (`assets/memory/`):**
+`egg.png` · `hare.png` · `kylling.png` · `chocklate.png` · `flower.png` · `tulip.png` · `odin.png` · `c.png` · `revi.png`
 
 *Ingen tidsbegrensning — bare finn alle parene.*
 
@@ -498,17 +501,17 @@ Et Minecraft-craftingbord vises. Tilgjengelige ingredienser ligger rundt bordet.
 
 Barna taster inn koden `VARDEN26` (hentet fra konvolutten i alpinbakken, steg 14).
 
-**AI-video av Påskeharen spilles av** — norsk stemme (ElevenLabs), animert munn på Firefly-bilde (D-ID/HeyGen).
+**AI-video av Påskeharen spilles av.**
+- Script: `assets/video-script.md`
+- Verktøy: ElevenLabs (norsk stemme) + D-ID/HeyGen (leppesync)
+- Bilde: portrett av Påskeharen rett frem (Firefly-generert)
+- *⚠️ Video er ikke ferdig ennå — bygg inn en placeholder (f.eks. animert Piip-bilde med tekst) som kan byttes ut med ferdig video senere*
 
-Videoen MÅ inneholde:
-- Navnene Sander og Selda
-- Hunden Odin
-- Kvitfjell
-- Avsløring av gjemmested: ved peisen
+**Etter video:** Tekst på skjermen bekrefter gjemmestedet. Alle løper dit.
 
-**Etter video:** Tekst på skjermen bekrefter gjemmestedet. Alle går til peisen.
+*⚠️ Gjemmestedet er ikke bestemt — "ved peisen" er foreløpig tekst men må endres. Skatten synes med en gang man kommer inn i hytta hvis den er der. Bestemmes senere og oppdateres i script + appens sluttekst.*
 
-**Kombinasjonslåsen** på skattekisten åpnes med Sanders + Seldas koder slått sammen: `XXYY` (4 siffer).
+**Kombinasjonslåsen** på skattekisten åpnes med `4208` (Sander: 42, Selda: 08).
 
 ---
 
@@ -528,6 +531,7 @@ Videoen MÅ inneholde:
 
 ## TEKNISKE NOTATER
 
+- **Triviaspørsmål i egne datafiler** — alle spørsmål ligger i `src/data/sander-trivia.ts` og `src/data/selda-trivia.ts`, én array per avdeling. Spillogikken er helt adskilt fra innholdet, slik at spørsmål enkelt kan byttes ut uten å røre koden.
 - **Tekstsvar** valideres case-insensitivt og med trimming (fjern mellomrom)
 - **Fuzzy matching** for fritekst der flere svar godtas (f.eks. "Nilen" / "nilen" / "Nilen elv")
 - **localStorage-nøkler:** én per barn per avdeling, f.eks. `sander_avdeling_3_complete: true`
