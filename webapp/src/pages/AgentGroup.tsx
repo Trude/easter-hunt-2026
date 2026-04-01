@@ -256,6 +256,11 @@ export default function AgentGroup() {
                   </button>
                 );
               })}
+              {showResult && (
+                <p className={`font-pixel text-xs text-center mt-1 ${answerState === 'correct' ? 'text-mc-green' : 'text-red-400'}`}>
+                  {answerState === 'correct' ? '✓ Riktig!' : '✗ Feil svar'}
+                </p>
+              )}
             </div>
           )}
 

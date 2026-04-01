@@ -45,7 +45,8 @@ test.describe('SanderHub', () => {
       }
     });
     await page.reload();
-    await expect(page.locator('text=HEMMELIG MAPPE')).toBeVisible();
+    // DepartmentCard med status='secret' viser teksten 'HEMMELIG' (ikke tittelen)
+    await expect(page.locator('text=HEMMELIG').first()).toBeVisible();
   });
 
   test('avdeling 1 er aktiv (ikke låst) ved start', async ({ page }) => {
@@ -104,7 +105,8 @@ test.describe('SeldaHub', () => {
       }
     });
     await page.reload();
-    await expect(page.locator('text=HEMMELIG MAPPE')).toBeVisible();
+    // DepartmentCard med status='secret' viser teksten 'HEMMELIG' (ikke tittelen)
+    await expect(page.locator('text=HEMMELIG').first()).toBeVisible();
   });
 
   test('avdeling 1 er aktiv (kan navigeres til) ved start', async ({ page }) => {

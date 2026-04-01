@@ -109,7 +109,7 @@ export default function Combine() {
               {f.icon} {f.label}
             </label>
             <input
-              type={f.inputMode === 'numeric' ? 'number' : 'text'}
+              type={f.inputMode === 'numeric' ? 'tel' : 'text'}
               inputMode={f.inputMode}
               value={f.value}
               onChange={e => f.set(e.target.value)}
