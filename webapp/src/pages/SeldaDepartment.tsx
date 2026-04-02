@@ -1,6 +1,8 @@
 import { useParams, useNavigate } from 'react-router-dom';
 import { useGame } from '../context/GameContext';
 import { seldaTrivia } from '../data/selda-trivia';
+import eggImg from '../assets/easteregg.png';
+import eggCrackedImg from '../assets/easteregg_cracked.png';
 import TriviaSection from '../components/trivia/TriviaSection';
 import Memory from '../components/games/Memory';
 import Labyrinth from '../components/games/Labyrinth';
@@ -78,11 +80,11 @@ export default function SeldaDepartment() {
       {eggConfig && (
         <button
           onClick={handleEggFound}
-          className={`absolute ${eggConfig.position} text-sm leading-none p-1 select-none touch-manipulation transition-opacity z-10 ${
-            eggFound ? 'opacity-70' : 'opacity-[0.07] hover:opacity-20'
+          className={`absolute ${eggConfig.position} p-0 select-none touch-manipulation transition-opacity z-10 ${
+            eggFound ? 'opacity-90' : 'opacity-50 hover:opacity-75'
           }`}
         >
-          🥚
+          <img src={eggFound ? eggCrackedImg : eggImg} alt="påskeegg" className="w-12 h-12 object-contain" />
         </button>
       )}
 

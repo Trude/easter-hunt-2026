@@ -48,9 +48,9 @@ describe('Sanderss detektivkontor', () => {
     expect(screen.getByText(/3\/12 fullført/)).toBeInTheDocument()
   })
 
-  it('viser ikke egg-teller før noen egg er funnet', () => {
+  it('viser egg-teller fra start (0 egg funnet)', () => {
     renderPage(<SanderHub />)
-    expect(screen.queryByText(/påskeegg funnet/i)).not.toBeInTheDocument()
+    expect(screen.getByText(/0\/6 påskeegg funnet/i)).toBeInTheDocument()
   })
 
   it('viser egg-teller etter at Sander har funnet påskeegg', () => {

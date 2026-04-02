@@ -48,7 +48,7 @@ export default function Home() {
       {/* Intro */}
       <div className="max-w-xs text-center border-2 border-purple-200 rounded-lg px-4 py-3 bg-purple-50/60">
         <p className="font-pixel text-gray-800 text-xs leading-relaxed">
-          Hei, detektiv! Tast inn koden din for å starte oppdraget.
+          Hei, detektiv! Tast inn kodenavnet ditt for å komme videre.
         </p>
       </div>
 

@@ -1,4 +1,6 @@
 import { useRef, useEffect, useState, useCallback } from 'react';
+import odinSitSrc from '../../assets/odin_sit.png';
+import odinJumpSrc from '../../assets/odin_jump.png';
 
 const W = 360;
 const H = 500;
@@ -175,6 +177,19 @@ interface Props {
 
 export default function BunnyJump({ onComplete }: Props) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const sitImgRef  = useRef<HTMLImageElement | null>(null);
+  const jumpImgRef = useRef<HTMLImageElement | null>(null);
+
+  // Preload Odin images once
+  useEffect(() => {
+    const sit = new Image();
+    sit.src = odinSitSrc;
+    sitImgRef.current = sit;
+    const jump = new Image();
+    jump.src = odinJumpSrc;
+    jumpImgRef.current = jump;
+  }, []);
+
   const stateRef = useRef({
     bunnyX: W / 2 - BUNNY_W / 2,
     bunnyY: H - 120,
@@ -414,9 +429,10 @@ export default function BunnyJump({ onComplete }: Props) {
 
       // Background — gets darker/redder as lava approaches
       const lavaProximity = Math.max(0, 1 - (s.lavaScreenY - s.bunnyY) / H);
-      const bgR = Math.floor(26 + lavaProximity * 40);
-      const bgG = Math.floor(26 - lavaProximity * 10);
-      const bgB = Math.floor(46 - lavaProximity * 20);
+      // Light sky-blue base, shifts warm as lava approaches
+      const bgR = Math.floor(186 + lavaProximity * 69);
+      const bgG = Math.floor(225 - lavaProximity * 105);
+      const bgB = Math.floor(255 - lavaProximity * 155);
       ctx.fillStyle = `rgb(${bgR},${bgG},${bgB})`;
       ctx.fillRect(0, 0, W, H);
 
@@ -430,7 +446,7 @@ export default function BunnyJump({ onComplete }: Props) {
       const lavaProgress = Math.max(0, Math.min(progress, s.lavaWorldY / REQUIRED_HEIGHT));
 
       // Bar background
-      ctx.fillStyle = '#2a2a4e';
+      ctx.fillStyle = 'rgba(100,160,220,0.3)';
       ctx.fillRect(barX, 0, barW, H);
 
       // Lava fill (red, from bottom up to lava height)
@@ -519,11 +535,16 @@ export default function BunnyJump({ onComplete }: Props) {
         ctx.restore();
       }
 
-      // ── Bunny ──
-      ctx.font = `${BUNNY_W}px serif`;
-      ctx.textAlign = 'left';
-      ctx.textBaseline = 'top';
-      ctx.fillText('🐇', s.bunnyX, s.bunnyY);
+      // ── Odin ──
+      const odinImg = s.velY < 0 ? jumpImgRef.current : sitImgRef.current;
+      if (odinImg?.complete && odinImg.naturalWidth > 0) {
+        ctx.drawImage(odinImg, s.bunnyX, s.bunnyY, BUNNY_W, BUNNY_H);
+      } else {
+        ctx.font = `${BUNNY_W}px serif`;
+        ctx.textAlign = 'left';
+        ctx.textBaseline = 'top';
+        ctx.fillText('🐕', s.bunnyX, s.bunnyY);
+      }
 
       // ── Lava ──
       drawLava(ctx, s.lavaScreenY, time);

@@ -17,7 +17,7 @@ beforeEach(() => {
 describe('Forsiden — kode-innlogging', () => {
   it('viser velkomsttekst til detektiven', () => {
     renderPage(<Home />)
-    expect(screen.getByText(/tast inn koden din/i)).toBeInTheDocument()
+    expect(screen.getByText(/kodenavnet ditt/i)).toBeInTheDocument()
   })
 
   it('viser feilmelding når brukeren taster inn en ugyldig kode', async () => {

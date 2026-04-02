@@ -3,6 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import { useGame } from '../context/GameContext';
 import DepartmentCard from '../components/ui/DepartmentCard';
 import AchievementPopup from '../components/ui/AchievementPopup';
+import eggImg from '../assets/easteregg.png';
+import eggCrackedImg from '../assets/easteregg_cracked.png';
 
 const DEPT_META = [
   { id: 1, title: 'Påske & Krim', icon: '🔍' },
@@ -28,6 +30,7 @@ export default function SanderHub() {
   const navigate = useNavigate();
   const game = useGame();
   const [achievement, setAchievement] = useState<{ title: string; desc?: string } | null>(null);
+  const [showEggInfo, setShowEggInfo] = useState(false);
 
   const secretUnlocked = game.allEggsFound('sander', TOTAL_EGGS) || game.isSecretUnlocked('sander');
 
@@ -87,11 +90,11 @@ export default function SanderHub() {
         return (
           <button
             onClick={() => handleEggFound(HUB_EGG.id)}
-            className={`${HUB_EGG.style} absolute text-sm leading-none p-1 select-none touch-manipulation transition-opacity ${
-              found ? 'opacity-80' : 'opacity-[0.07] hover:opacity-20'
+            className={`${HUB_EGG.style} absolute p-0 select-none touch-manipulation transition-opacity ${
+              found ? 'opacity-90' : 'opacity-50 hover:opacity-75'
             }`}
           >
-            🥚
+            <img src={found ? eggCrackedImg : eggImg} alt="påskeegg" className="w-12 h-12 object-contain" />
           </button>
         );
       })()}
@@ -110,10 +113,19 @@ export default function SanderHub() {
         <p className="font-pixel text-gray-500 text-xs mt-1">
           {Array.from({length: 12}, (_, i) => i + 1).filter(i => game.isDeptComplete('sander', i)).length}/12 fullført
         </p>
-        {eggsFound > 0 && (
-          <p className="font-pixel text-yellow-600 text-xs mt-1">
-            🥚 {eggsFound}/{TOTAL_EGGS} påskeegg funnet
-          </p>
+        <button
+          onClick={() => setShowEggInfo(v => !v)}
+          className="font-pixel text-yellow-600 text-xs mt-2 underline decoration-dotted"
+        >
+          <img src={eggsFound > 0 ? eggCrackedImg : eggImg} alt="egg" className="inline w-5 h-5 object-contain align-middle mr-1" />
+          {eggsFound}/{TOTAL_EGGS} påskeegg funnet
+        </button>
+        {showEggInfo && (
+          <div className="mt-2 border border-yellow-300 bg-yellow-50 rounded-lg px-3 py-2 max-w-xs mx-auto text-left">
+            <p className="font-pixel text-gray-700 text-xs leading-relaxed">
+              Det er gjemt {TOTAL_EGGS} påskeegg rundt omkring i applikasjonen. Klarer du å finne dem alle?
+            </p>
+          </div>
         )}
       </div>
 
