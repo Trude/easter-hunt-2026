@@ -532,7 +532,7 @@ Vi ses ved peisen, Sporhunden!
 ### Stearinlys-akvarell (2 ark — lages hjemme i god belysning!)
 Teknikk: Bruk et hvitt stearinlys-stykke og skriv hardt mot hvitt kopipapir. La tørke. Arket ser helt tomt ut.
 - **Sanders ark** (stasjon S3, kjøleskap): Skriv "NESTE: ANEKSET"
-- **Seldas ark** (stasjon Ø3, under seng): Skriv "NESTE: KJØKKENET"
+- **Seldas ark** (stasjon Ø3, under seng): Skriv "NESTE: MATBODEN"
 Test hjemme at meldingen avsløres med akvarell + pensel + vann. Ta med pensel og lite akvarellsett til hytten.
 
 ### Pigpen-kryptering (stasjon S4 for Sander + stasjon Ø5 for Selda)

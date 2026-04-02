@@ -7,6 +7,7 @@
 [ ] Gå igjennom Sander sin quiz, sjekke at alle spørsmål og svar stemmer og passer for han
 [ ] Gå igjennom Selda sin quiz, sjekke at alle spørsmål og svar stemmer og passer for han
 [ ] Minecraft: Gøy med craftingtable, men ganske random spill? Kan vi gjøre noe fornuftig ut av dette?
+[ ] Test at alle spillene fungerer med touch på mobil/pad
 
 
 # Layout:
