@@ -11,6 +11,7 @@ const BASKET_SPEED = 7;
 const ITEM_RADIUS = 16;
 const REQUIRED_EGGS = 20;
 const GAME_DURATION = 60;
+const MAX_LIVES = 5;
 
 interface FallingItem {
   id: number;
@@ -30,19 +31,20 @@ export default function CatchEggs({ onComplete }: Props) {
     basketX: CANVAS_W / 2 - BASKET_W / 2,
     items: [] as FallingItem[],
     score: 0,
-    timeLeft: GAME_DURATION,
+    lives: MAX_LIVES,
     running: false,
     moveLeft: false,
     moveRight: false,
     nextId: 0,
     spawnTimer: 0,
   });
+  const completedRef = useRef(false);
   const [displayScore, setDisplayScore] = useState(0);
-  const [displayTime, setDisplayTime] = useState(GAME_DURATION);
-  const [phase, setPhase] = useState<'idle' | 'playing' | 'won' | 'lost'>('idle');
+  const [displayLives, setDisplayLives] = useState(MAX_LIVES);
+  const [completed, setCompleted] = useState(false);
+  const [phase, setPhase] = useState<'idle' | 'playing' | 'lost'>('idle');
   const animRef = useRef<number>(0);
   const lastTimeRef = useRef<number>(0);
-  const secondTimerRef = useRef<number>(0);
   const eggImgRef = useRef<HTMLImageElement | null>(null);
   const basketImgRef = useRef<HTMLImageElement | null>(null);
   const crowImgRef = useRef<HTMLImageElement | null>(null);
@@ -58,14 +60,16 @@ export default function CatchEggs({ onComplete }: Props) {
     s.basketX = CANVAS_W / 2 - BASKET_W / 2;
     s.items = [];
     s.score = 0;
-    s.timeLeft = GAME_DURATION;
+    s.lives = MAX_LIVES;
     s.running = true;
     s.nextId = 0;
     s.spawnTimer = 0;
     s.moveLeft = false;
     s.moveRight = false;
+    completedRef.current = false;
     setDisplayScore(0);
-    setDisplayTime(GAME_DURATION);
+    setDisplayLives(MAX_LIVES);
+    setCompleted(false);
     setPhase('playing');
   }, []);
 
@@ -137,36 +141,46 @@ export default function CatchEggs({ onComplete }: Props) {
       }
 
       // Move + catch
+      let livesChanged = false;
       s.items = s.items.filter(item => {
         item.y += item.speed * dt;
         const inBasketX = item.x >= s.basketX && item.x <= s.basketX + BASKET_W;
         const inBasketY = item.y + ITEM_RADIUS >= CANVAS_H - BASKET_H && item.y <= CANVAS_H;
         if (inBasketX && inBasketY) {
-          s.score = item.type === 'egg'
-            ? s.score + 1
-            : Math.max(0, s.score - 1);
-          setDisplayScore(s.score);
+          if (item.type === 'egg') {
+            s.score += 1;
+            setDisplayScore(s.score);
+          } else {
+            s.lives -= 1;
+            livesChanged = true;
+          }
           return false;
         }
-        return item.y < CANVAS_H + ITEM_RADIUS;
-      });
-
-      // Countdown
-      secondTimerRef.current += dt;
-      if (secondTimerRef.current >= 60) {
-        secondTimerRef.current = 0;
-        s.timeLeft = Math.max(0, s.timeLeft - 1);
-        setDisplayTime(s.timeLeft);
-        if (s.timeLeft === 0) {
-          s.running = false;
-          if (s.score >= REQUIRED_EGGS) {
-            setPhase('won');
-            setTimeout(onComplete, 800);
-          } else {
-            setPhase('lost');
+        // Missed egg falls past bottom
+        if (item.y >= CANVAS_H + ITEM_RADIUS) {
+          if (item.type === 'egg') {
+            s.lives -= 1;
+            livesChanged = true;
           }
+          return false;
+        }
+        return true;
+      });
+      if (livesChanged) {
+        s.lives = Math.max(0, s.lives);
+        setDisplayLives(s.lives);
+        if (s.lives === 0) {
+          s.running = false;
+          setPhase('lost');
           return;
         }
+      }
+
+      // Unlock completion when enough eggs caught
+      if (!completedRef.current && s.score >= REQUIRED_EGGS) {
+        completedRef.current = true;
+        setCompleted(true);
+        onComplete();
       }
 
       // Draw
@@ -212,7 +226,6 @@ export default function CatchEggs({ onComplete }: Props) {
     };
 
     lastTimeRef.current = performance.now();
-    secondTimerRef.current = 0;
     animRef.current = requestAnimationFrame(loop);
     return () => cancelAnimationFrame(animRef.current);
   }, [phase, onComplete]);
@@ -222,38 +235,65 @@ export default function CatchEggs({ onComplete }: Props) {
   return (
     <div className="flex flex-col items-center gap-4 p-4">
       <div className="flex justify-between w-full max-w-sm">
-        <span className="font-pixel text-xs text-mc-yellow">🧺 {displayScore}/{REQUIRED_EGGS}</span>
-        <span className="font-pixel text-xs text-gray-600">⏱ {displayTime}s</span>
+        <span className="font-pixel text-xs text-mc-yellow">
+          🧺 {displayScore}{completed ? ' ✅' : `/${REQUIRED_EGGS}`}
+        </span>
+        <span className="font-pixel text-xs">{'❤️'.repeat(displayLives)}{'🖤'.repeat(MAX_LIVES - displayLives)}</span>
       </div>
 
-      <div style={{ transform: `scale(${scale})`, transformOrigin: 'top center', height: CANVAS_H * scale }}>
+      <div style={{ transform: `scale(${scale})`, transformOrigin: 'top center', height: CANVAS_H * scale }} className="relative">
         <canvas
           ref={canvasRef}
           width={CANVAS_W}
           height={CANVAS_H}
           className="rounded-lg border-2 border-gray-200 touch-none block"
         />
+        {phase === 'idle' && (
+          <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 rounded-lg bg-black/40">
+            <p className="font-pixel text-xs text-white text-center leading-relaxed px-6">
+              Trykk venstre/høyre side for å bevege kurven.<br /><br />Fang {REQUIRED_EGGS} egg — unngå kråkene!<br /><br />Du har {MAX_LIVES} liv ❤️<br />Miss et egg eller ta en kråke: -1 liv.
+            </p>
+            <button onClick={startGame} className="bg-mc-green text-white font-pixel text-xs py-3 px-8 rounded border-b-4 border-green-800 active:border-b-0 active:translate-y-1">
+              START →
+            </button>
+          </div>
+        )}
+        {phase === 'playing' && (
+          <>
+            <button
+              onPointerDown={() => { stateRef.current.moveLeft = true; }}
+              onPointerUp={() => { stateRef.current.moveLeft = false; }}
+              onPointerLeave={() => { stateRef.current.moveLeft = false; }}
+              className="absolute left-0 bottom-0 w-1/2 h-24 flex items-end justify-start pb-3 pl-3 select-none touch-none"
+              style={{ WebkitUserSelect: 'none' }}
+            >
+              <span className="text-4xl opacity-40">◀</span>
+            </button>
+            <button
+              onPointerDown={() => { stateRef.current.moveRight = true; }}
+              onPointerUp={() => { stateRef.current.moveRight = false; }}
+              onPointerLeave={() => { stateRef.current.moveRight = false; }}
+              className="absolute right-0 bottom-0 w-1/2 h-24 flex items-end justify-end pb-3 pr-3 select-none touch-none"
+              style={{ WebkitUserSelect: 'none' }}
+            >
+              <span className="text-4xl opacity-40">▶</span>
+            </button>
+          </>
+        )}
+        {phase === 'lost' && (
+          <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 rounded-lg bg-black/60">
+            <p className="font-pixel text-red-400 text-xs text-center px-4">
+              {completed ? `💀 GAME OVER\n${displayScore} egg fanget!` : `💀 GAME OVER\nBare ${displayScore}/${REQUIRED_EGGS} egg!`}
+            </p>
+            <p className="font-pixel text-white text-xs text-center">
+              {completed ? '🎉 Du klarte oppdraget!' : ''}
+            </p>
+            <button onClick={startGame} className="bg-mc-yellow text-black font-pixel text-xs py-3 px-8 rounded border-b-4 border-yellow-700 active:border-b-0 active:translate-y-1">
+              PRØV IGJEN
+            </button>
+          </div>
+        )}
       </div>
-
-      {phase === 'idle' && (
-        <div className="flex flex-col items-center gap-3 mt-2">
-          <p className="font-pixel text-xs text-gray-600 text-center leading-relaxed max-w-xs">
-            Trykk venstre/høyre side for å bevege kurven.<br />Fang {REQUIRED_EGGS} egg — unngå kråkene!
-          </p>
-          <button onClick={startGame} className="bg-mc-green text-white font-pixel text-xs py-3 px-8 rounded border-b-4 border-green-800 active:border-b-0 active:translate-y-1">
-            START →
-          </button>
-        </div>
-      )}
-      {phase === 'won' && <p className="font-pixel text-mc-green text-xs text-center">🎉 KLART! {displayScore} egg fanget!</p>}
-      {phase === 'lost' && (
-        <div className="flex flex-col items-center gap-3">
-          <p className="font-pixel text-red-400 text-xs text-center">Bare {displayScore} egg — du trenger {REQUIRED_EGGS}!</p>
-          <button onClick={startGame} className="bg-mc-yellow text-black font-pixel text-xs py-3 px-8 rounded border-b-4 border-yellow-700 active:border-b-0 active:translate-y-1">
-            PRØV IGJEN
-          </button>
-        </div>
-      )}
     </div>
   );
 }
