@@ -616,6 +616,76 @@ Tilbake til matboden — det gjemmer seg noe der du ikke har lett godt nok. 🐟
 
 ---
 
+## SVEINS KUVERT — "KLASSIFISERT"
+
+*Forseglet konvolutt legges på kaffekoppen eller ved crémant-flaskene i kjøleskapet. Merking utenpå:*
+
+```
+┌─────────────────────────────────────┐
+│                                     │
+│         ██ KLASSIFISERT ██          │
+│                                     │
+│    KUN FOR: AGENT ØRANSEN           │
+│    SIKKERHETSNIVÅ: ALFA             │
+│    ÅPNES UMIDDELBART                │
+│                                     │
+└─────────────────────────────────────┘
+```
+
+*Skrives ut eller skrives for hånd. Forsegles med litt rød tape eller lakksegel for ekstra effekt.*
+
+---
+
+HEMMELIG MELDING
+Gradert: TOPP HEMMELIG — ALFA
+Fra: Piip, assistentdetektiv
+Til: AGENT ØRANSEN
+Dato: 04.04.2026
+
+---
+
+Vi vet hvem du er.
+
+Vi vet at du drikker kaffe om morgenen.
+Vi vet at du heier på det rette laget.
+Vi vet hva du gjør i alpinbakken.
+Og vi vet at du liker å tro at du kan alt om betong.
+
+Det er derfor vi trenger deg.
+
+Påskeharen forsvant i natt. Barna tror de er de eneste detektivene på saken.
+
+De tar feil.
+
+Påskeharen hadde et hemmelig arkiv — 6 krypterte mapper med informasjon ingen andre har klart å dekryptere. Barna er for unge. Politiet er forvirret. Piip er nervøs.
+
+Men du? Du har akkurat den kombinasjonen vi trenger.
+
+DITT OPPDRAG:
+
+Åpne nettsiden på din mobil eller nettbrett.
+Tast inn koden: **SVEIN**
+
+Du har 60 minutter.
+Barna jobber parallelt med sitt eget spor — de vet ikke at du er aktivert.
+
+Ikke si noe til dem. Ennå.
+
+En siste ting, Agent:
+
+Vi la merke til at noe interessant skjer akkurat i dag.
+Arkivet vårt sier at 4. april er en dato som har betydd noe i 54 år nå.
+
+Men det er klassifisert informasjon. Vi snakker om det senere.
+
+Lykke til — og husk: Ingen vet du er her.
+
+— Piip 🐣
+Assistentdetektiv
+*"Liten, gul og vet alt"*
+
+---
+
 ## STEG 11 — SMS FRA PÅSKEHAREN
 
 *Sendes til Sanders telefon av en voksen som er forhåndsavtalt som "Påskeharen-kontakt". Sendes ETTER at barna har fullført sine individuelle quizer (steg 10). Barna leser meldingen opp for alle.*

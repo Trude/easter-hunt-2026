@@ -7,6 +7,11 @@
   box-sizing: border-box;
 }
 
+/* Prevent iOS Safari from zooming on input focus */
+input, select, textarea {
+  font-size: 16px !important;
+}
+
 body {
   background: linear-gradient(160deg, #fef9c3 0%, #fde68a 15%, #fce7f3 55%, #e9d5ff 85%, #ddd6fe 100%);
   background-attachment: fixed;
