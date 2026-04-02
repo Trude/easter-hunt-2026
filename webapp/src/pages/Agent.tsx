@@ -87,8 +87,9 @@ export default function Agent() {
           </div>
 
           <div className="bg-yellow-100 border border-yellow-400 rounded p-3 mb-3">
-            <p className="font-pixel text-gray-600 text-xs mb-1">DITT KODEORD TIL KOMBINER:</p>
-            <p className="font-pixel text-mc-yellow text-2xl tracking-widest">GULROT</p>
+            <p className="font-pixel text-gray-600 text-xs leading-relaxed">
+              Sett sammen bokstavene du har samlet — de avslører kodeordet ditt til KOMBINER!
+            </p>
           </div>
 
           <button

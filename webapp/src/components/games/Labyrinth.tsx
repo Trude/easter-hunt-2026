@@ -320,7 +320,7 @@ export default function Labyrinth({ onComplete }: Props) {
                 const isGoal = r === GRID - 2 && c === GRID - 2;
                 const visible = isVisible(r, c);
                 const explored = isExplored(r, c);
-                const dimExplored = !visible && explored;
+                void explored;
                 const onSolution = showHint && solutionSet.has(`${r},${c}`) && visible;
 
                 let bg: string;

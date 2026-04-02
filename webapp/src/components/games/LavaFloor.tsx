@@ -9,7 +9,7 @@ const BUNNY_H = 36;
 const JUMP_VEL = -13;
 const GRAVITY = 0.4;
 const MOVE_SPEED = 5;
-const REQUIRED_HEIGHT = 2600;
+const REQUIRED_HEIGHT = 2500;
 
 // ─── Difficulty tiers every 500 height ──────────────────────
 interface Tier {
