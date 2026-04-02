@@ -173,11 +173,11 @@ I hold the milk and keep it right.
 Open me up — a clue awaits,
 behind the food, behind the crates."*
 
-— Piip 🐣
+— Piip 🐣 
 
 ---
 
-### Stasjon S2 — Kjøleskapet (Stearinlys-akvarell!)
+### Stasjon S2 — Kjøleskapet — 📌 Bokstav: **P** (Stearinlys-akvarell!)
 
 *Konvolutten er gjemt bak melken/smøret i kjøleskapet. Bevis: halvspist gulrot. Et tilsynelatende tomt ark er festet utenpå konvolutten — sammen med en liten pensel og et lite akvarellsett.*
 
@@ -203,7 +203,7 @@ Sannheten vil vise seg.
 
 ---
 
-### Stasjon S3 — Anekset (ENGELSK + NEDTELLINGSTIMER!)
+### Stasjon S3 — Anekset — 📌 Bokstav: **S** (ENGELSK + NEDTELLINGSTIMER!)
 
 *Konvolutten er gjemt i aneksets stue eller soverom. Bevis: liten lapp med "Was here — EH" (Easter Hare).*
 
@@ -265,7 +265,7 @@ Neste ledetråd er kodet. Bruk dekoderen i detektivboken.
 
 ---
 
-### Stasjon S5 — Odins matskåler (ENGELSK ledetråd)
+### Stasjon S5 — Odins matskåler — 📌 Bokstav: **J** (ENGELSK ledetråd)
 
 *Konvolutten er gjemt ved/under Odins matskåler. Bevis: liten snøflak-tegning.*
 
@@ -289,7 +289,7 @@ Find the clue, don't lose hope."*
 
 ---
 
-### Stasjon S6 — Skifterommet
+### Stasjon S6 — Skifterommet — 📌 Bokstav: **K**
 
 *Konvolutten er gjemt i en jakkelomme eller sko. Bevis: halvt skattekart (S-halvdelen).*
 
@@ -314,7 +314,7 @@ Neste stasjon: Gå til det lille rommet der dere ser på film og TV. Der venter 
 
 ---
 
-### Stasjon S7 — Tvstua (Siste individuell stasjon!)
+### Stasjon S7 — Tvstua — 📌 Bokstav: **T** (Siste individuell stasjon!)
 
 *Konvolutten er gjemt under pute eller bak/under sofa. Bevis: halvt Piip-bilde.*
 
@@ -367,7 +367,7 @@ Neste spor: Gå til det stedet i hytten der DU sover. Under eller ved sengen din
 
 ---
 
-### Stasjon Ø2 — Under Seldas seng (Stearinlys-akvarell!)
+### Stasjon Ø2 — Under Seldas seng — 📌 Bokstav: **K** (Stearinlys-akvarell!)
 
 *Konvolutten er gjemt under Seldas seng. Et tilsynelatende tomt ark er festet utenpå konvolutten, med en liten pensel og akvarellsett.*
 
@@ -392,7 +392,7 @@ Sannheten avsløres.
 
 ---
 
-### Stasjon Ø3 — Matboden (NEDTELLINGSTIMER!)
+### Stasjon Ø3 — Matboden — 📌 Bokstav: **E** (NEDTELLINGSTIMER!)
 
 *Konvolutten er gjemt bak noe i matboden — bak bokser, under en hylle eller inni en pose. Gjemmes godt nok til at hun må lete litt. Bevis: appelsin med bitemerker (legg ved konvolutten).*
 
@@ -458,7 +458,7 @@ Neste stasjon: Tenk på stedet der hele familien sitter og spiser middag. Gå di
 
 ---
 
-### Stasjon Ø5 — Under middagsbordet
+### Stasjon Ø5 — Under middagsbordet — 📌 Bokstav: **Å**
 
 *Konvolutten er festet under bordet eller bak et bord ben. Bevis: lapp med mystisk dato-notat.*
 
@@ -503,7 +503,7 @@ Neste stasjon: Gå ut til den grønne bilen. Sjekk godt rundt den.
 
 ---
 
-### Stasjon Ø7 — Den grønne Teslaen (Siste individuell stasjon!)
+### Stasjon Ø7 — Den grønne Teslaen — 📌 Bokstav: **A** (Siste individuell stasjon!)
 
 *Konvolutten er gjemt under en vindusvisk, i en dørsprekk eller under bilen. Bevis: halvt Piip-bilde.*
 
@@ -528,6 +528,33 @@ Vi ses ved peisen, Sporhunden!
 ---
 
 ## NOTER TIL VOKSNE — PRAKTISK PRODUKSJON
+
+### PÅSKEJAKT-bokstaver — oversikt
+
+Skriv bokstaven **synlig på utsiden av konvolutten** (f.eks. øverst i hjørnet). Tilsammen staver Sander og Selda **PÅSKEJAKT**.
+
+| Barn | Stasjon | Sted | Bokstav |
+|------|---------|------|---------|
+| Sander | S1 | Grillplassen | — |
+| Sander | S2 | Kjøleskapet | **P** |
+| Sander | S3 | Anekset | **S** |
+| Sander | S4 | Boblebad | — |
+| Sander | S5 | Odins matskåler | **J** |
+| Sander | S6 | Skifterommet | **K** |
+| Sander | S7 | Tvstua | **T** |
+| Selda | Ø1 | Kisten i stua | — |
+| Selda | Ø2 | Under Seldas seng | **K** |
+| Selda | Ø3 | Matboden | **E** |
+| Selda | Ø4 | Fryseren | — |
+| Selda | Ø5 | Under middagsbordet | **Å** |
+| Selda | Ø6 | Vaskerommet | — |
+| Selda | Ø7 | Den grønne Teslaen | **A** |
+
+**Sander:** P + S + J + K + T
+**Selda:** K + E + Å + A
+**Tilsammen:** P Å S K E J A K T = **PÅSKEJAKT** ✓
+
+---
 
 ### Stearinlys-akvarell (2 ark — lages hjemme i god belysning!)
 Teknikk: Bruk et hvitt stearinlys-stykke og skriv hardt mot hvitt kopipapir. La tørke. Arket ser helt tomt ut.
@@ -586,6 +613,76 @@ Innhold:
 *"HA HA! Rød sild, Sporhunden!
 Du ble lurt! Selv de beste detektivene går i fellen av og til.
 Tilbake til matboden — det gjemmer seg noe der du ikke har lett godt nok. 🐟"*
+
+---
+
+## SVEINS KUVERT — "KLASSIFISERT"
+
+*Forseglet konvolutt legges på kaffekoppen eller ved crémant-flaskene i kjøleskapet. Merking utenpå:*
+
+```
+┌─────────────────────────────────────┐
+│                                     │
+│         ██ KLASSIFISERT ██          │
+│                                     │
+│    KUN FOR: AGENT ØRANSEN           │
+│    SIKKERHETSNIVÅ: ALFA             │
+│    ÅPNES UMIDDELBART                │
+│                                     │
+└─────────────────────────────────────┘
+```
+
+*Skrives ut eller skrives for hånd. Forsegles med litt rød tape eller lakksegel for ekstra effekt.*
+
+---
+
+HEMMELIG MELDING
+Gradert: TOPP HEMMELIG — ALFA
+Fra: Piip, assistentdetektiv
+Til: AGENT ØRANSEN
+Dato: 04.04.2026
+
+---
+
+Vi vet hvem du er.
+
+Vi vet at du drikker kaffe om morgenen.
+Vi vet at du heier på det rette laget.
+Vi vet hva du gjør i alpinbakken.
+Og vi vet at du liker å tro at du kan alt om betong.
+
+Det er derfor vi trenger deg.
+
+Påskeharen forsvant i natt. Barna tror de er de eneste detektivene på saken.
+
+De tar feil.
+
+Påskeharen hadde et hemmelig arkiv — 6 krypterte mapper med informasjon ingen andre har klart å dekryptere. Barna er for unge. Politiet er forvirret. Piip er nervøs.
+
+Men du? Du har akkurat den kombinasjonen vi trenger.
+
+DITT OPPDRAG:
+
+Åpne nettsiden på din mobil eller nettbrett.
+Tast inn koden: **SVEIN**
+
+Du har 60 minutter.
+Barna jobber parallelt med sitt eget spor — de vet ikke at du er aktivert.
+
+Ikke si noe til dem. Ennå.
+
+En siste ting, Agent:
+
+Vi la merke til at noe interessant skjer akkurat i dag.
+Arkivet vårt sier at 4. april er en dato som har betydd noe i 54 år nå.
+
+Men det er klassifisert informasjon. Vi snakker om det senere.
+
+Lykke til — og husk: Ingen vet du er her.
+
+— Piip 🐣
+Assistentdetektiv
+*"Liten, gul og vet alt"*
 
 ---
 

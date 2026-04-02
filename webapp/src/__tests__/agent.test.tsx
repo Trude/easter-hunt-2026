@@ -11,7 +11,7 @@ vi.mock('framer-motion', () => ({
     button: ({ children, initial, animate, exit, transition, ...rest }: any) => <button {...rest}>{children}</button>,
   },
   AnimatePresence: ({ children }: any) => <>{children}</>,
-}))
+})) 
 
 const mockNavigate = vi.fn()
 vi.mock('react-router-dom', async () => ({
