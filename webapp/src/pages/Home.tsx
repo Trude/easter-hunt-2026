@@ -1,7 +1,6 @@
-import { useState, useRef } from 'react';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { storage } from '../lib/storage';
-import fraHarenSrc from '../assets/fraharen.mp3';
 
 const ROUTES: Record<string, string> = {
   KODEKNEKKEREN: '/sander',
@@ -14,24 +13,7 @@ const ROUTES: Record<string, string> = {
 export default function Home() {
   const [code, setCode] = useState('');
   const [error, setError] = useState(false);
-  const [playing, setPlaying] = useState(false);
-  const audioRef = useRef<HTMLAudioElement | null>(null);
   const navigate = useNavigate();
-
-  const toggleAudio = () => {
-    if (!audioRef.current) {
-      audioRef.current = new Audio(fraHarenSrc);
-      audioRef.current.onended = () => setPlaying(false);
-    }
-    if (playing) {
-      audioRef.current.pause();
-      audioRef.current.currentTime = 0;
-      setPlaying(false);
-    } else {
-      audioRef.current.play();
-      setPlaying(true);
-    }
-  };
 
   const handleSubmit = () => {
     const upper = code.trim().toUpperCase();
@@ -69,21 +51,6 @@ export default function Home() {
           Hei, detektiv! Tast inn kodenavnet ditt for å komme videre.
         </p>
       </div>
-
-      {/* Melding fra Påskeharen */}
-      <button
-        onClick={toggleAudio}
-        className={`flex items-center gap-3 border-2 rounded-xl px-5 py-3 transition-colors shadow-sm ${
-          playing
-            ? 'border-mc-yellow bg-yellow-100 text-yellow-700'
-            : 'border-purple-300 bg-purple-50 text-purple-700 hover:border-purple-400'
-        }`}
-      >
-        <span className="text-2xl">{playing ? '⏹' : '▶️'}</span>
-        <span className="font-pixel text-xs leading-relaxed">
-          {playing ? 'STOPP MELDING' : 'MELDING FRA\nPÅSKEHAREN 🐇'}
-        </span>
-      </button>
 
       {/* Kodefelt */}
       <div className="w-full max-w-xs flex flex-col gap-3">

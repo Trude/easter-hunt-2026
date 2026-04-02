@@ -1,6 +1,6 @@
-import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { storage } from '../lib/storage';
+import bunnySrc from '../assets/bunny.mp4';
 
 // Sjekk om alle tre har fullført sine løp
 function allPlayersReady(): boolean {
@@ -29,7 +29,6 @@ function playerStatus() {
 }
 
 export default function Finale() {
-  const [revealed, setRevealed] = useState(false);
   const ready = allPlayersReady();
   const status = playerStatus();
 
@@ -106,45 +105,32 @@ export default function Finale() {
             <p className="font-pixel text-gray-700 text-xs leading-relaxed mt-3">
               Dere fant alle sporene mine og reddet påsken!
             </p>
-            <p className="font-pixel text-mc-green text-xs leading-relaxed mt-3">
-              Skatten er gjemt ute — gå og finn den!
-            </p>
           </motion.div>
 
-          <AnimatePresence>
-            {!revealed && (
-              <motion.button
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 1.2 }}
-                onClick={() => setRevealed(true)}
-                className="bg-mc-yellow text-black font-pixel text-xs py-4 px-10 rounded border-b-4 border-yellow-700 active:border-b-0 active:translate-y-1"
-              >
-                VIS GJEMMESTEDET →
-              </motion.button>
-            )}
-          </AnimatePresence>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1.0 }}
+            className="w-full max-w-sm rounded-xl overflow-hidden border-2 border-mc-yellow shadow-lg"
+          >
+            <div className="relative w-full" style={{ paddingBottom: '100%' }}>
+              <video
+                src={bunnySrc}
+                controls
+                playsInline
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+            </div>
+          </motion.div>
 
-          <AnimatePresence>
-            {revealed && (
-              <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                className="flex flex-col items-center gap-4"
-              >
-                <div className="text-5xl">🥚</div>
-                <div className="border-4 border-mc-yellow rounded-lg p-6 bg-mc-yellow/10">
-                  <p className="font-pixel text-mc-yellow text-2xl tracking-widest">
-                    BODEN UTE
-                  </p>
-                </div>
-
-                <p className="font-pixel text-gray-600 text-xs leading-relaxed max-w-xs mt-2">
-                  Med hilsen fra Påskeharen og Piip 🐥🐇
-                </p>
-              </motion.div>
-            )}
-          </AnimatePresence>
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1.4 }}
+            className="font-pixel text-gray-600 text-xs leading-relaxed max-w-xs"
+          >
+            Med hilsen fra Påskeharen og Piip 🐥🐇
+          </motion.p>
         </>
       )}
     </div>
