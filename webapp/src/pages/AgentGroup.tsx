@@ -108,7 +108,7 @@ export default function AgentGroup() {
           show={achievement}
           title="ARKIVMAPPE DEKRYPTERT 🔓"
           description={`Bokstav avslørt: ${group.letter}`}
-          onDone={() => { setAchievement(false); navigate('/agent'); }}
+          onDone={() => setAchievement(false)}
         />
 
         <div className="border-2 border-red-700 bg-white/90 rounded px-4 py-1">
@@ -127,10 +127,10 @@ export default function AgentGroup() {
               <p className="font-pixel text-mc-yellow text-5xl">{group.letter}</p>
             </div>
             <button
-              onClick={() => setAchievement(true)}
+              onClick={() => navigate('/agent')}
               className="bg-mc-green text-white font-pixel text-xs py-3 px-8 rounded border-b-4 border-green-800 active:border-b-0 active:translate-y-1"
             >
-              FORTSETT →
+              ← TILBAKE TIL MAPPENE
             </button>
           </>
         ) : (
@@ -168,7 +168,7 @@ export default function AgentGroup() {
         show={achievement}
         title="ARKIVMAPPE DEKRYPTERT 🔓"
         description={`Bokstav avslørt: ${group.letter}`}
-        onDone={() => { setAchievement(false); navigate('/agent'); }}
+        onDone={() => setAchievement(false)}
       />
 
       {/* Tilbake */}

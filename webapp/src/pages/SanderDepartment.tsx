@@ -50,9 +50,13 @@ export default function SanderDepartment() {
   const meta = DEPT_META[id];
   const isCompleted = game.isDeptComplete('sander', id);
 
+  const [justCompleted, setJustCompleted] = useState(false);
+
   const handleComplete = () => {
-    game.completeDept('sander', id);
-    navigate('/sander');
+    if (!game.isDeptComplete('sander', id)) {
+      game.completeDept('sander', id);
+      setJustCompleted(true);
+    }
   };
 
   const eggConfig = DEPT_EGG[id];
@@ -127,12 +131,25 @@ export default function SanderDepartment() {
       ) : (
         <div className="flex flex-col items-center gap-6 text-center py-10">
           <div className="text-5xl">{meta?.icon}</div>
-          <p className="font-pixel text-gray-600 text-xs leading-relaxed">KOMMER SNART</p>
+          <p className="font-pixel text-gray-400 text-xs leading-relaxed">KOMMER SNART</p>
           <button
             onClick={handleComplete}
-            className="bg-gray-200 text-gray-700 font-pixel text-xs py-3 px-6 rounded border border-gray-300"
+            className="bg-gray-700 text-white font-pixel text-xs py-3 px-8 rounded border-b-4 border-gray-900 active:border-b-0 active:translate-y-1"
           >
-            [TEST: MARKER FULLFØRT]
+            FULLFØR (DEV) →
+          </button>
+        </div>
+      )}
+
+      {/* Fullført-banner */}
+      {justCompleted && (
+        <div className="mt-6 border-2 border-mc-green bg-mc-dark rounded-lg p-4 text-center">
+          <p className="font-pixel text-mc-green text-xs mb-3">✅ AVDELING {id} FULLFØRT!</p>
+          <button
+            onClick={() => navigate('/sander')}
+            className="bg-mc-green text-white font-pixel text-xs py-3 px-8 rounded border-b-4 border-green-800 active:border-b-0 active:translate-y-1"
+          >
+            ← TILBAKE TIL KONTORET
           </button>
         </div>
       )}

@@ -1,8 +1,9 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 import { motion } from 'framer-motion';
 
+// 8 bilder = 8 par = 16 kort = 4×4 grid
 const IMAGES = [
-  'egg', 'hare', 'kylling', 'chocklate', 'flower', 'tulip', 'odin', 'c', 'revi'
+  'egg', 'hare', 'kylling', 'chocklate', 'flower', 'tulip', 'odin', 'revi'
 ];
 
 interface Card {
@@ -26,6 +27,15 @@ function createCards(): Card[] {
   }));
 }
 
+function formatTime(ms: number): string {
+  const secs = Math.floor(ms / 1000);
+  const mins = Math.floor(secs / 60);
+  const s = secs % 60;
+  const tenths = Math.floor((ms % 1000) / 100);
+  if (mins > 0) return `${mins}:${s.toString().padStart(2, '0')}.${tenths}`;
+  return `${s}.${tenths}s`;
+}
+
 interface Props {
   onComplete: () => void;
 }
@@ -35,20 +45,40 @@ export default function Memory({ onComplete }: Props) {
   const [flipped, setFlipped] = useState<number[]>([]);
   const [locked, setLocked] = useState(false);
   const [attempts, setAttempts] = useState(0);
+  const [startTime, setStartTime] = useState<number | null>(null);
+  const [elapsed, setElapsed] = useState(0);
+  const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   const allMatched = cards.every(c => c.isMatched);
 
+  // Timer tick
   useEffect(() => {
-    if (allMatched) {
+    if (startTime && !allMatched) {
+      timerRef.current = setInterval(() => {
+        setElapsed(Date.now() - startTime);
+      }, 100);
+      return () => { if (timerRef.current) clearInterval(timerRef.current); };
+    }
+    if (allMatched && timerRef.current) {
+      clearInterval(timerRef.current);
+    }
+  }, [startTime, allMatched]);
+
+  useEffect(() => {
+    if (allMatched && startTime) {
+      setElapsed(Date.now() - startTime);
       setTimeout(onComplete, 800);
     }
-  }, [allMatched, onComplete]);
+  }, [allMatched, onComplete, startTime]);
 
   const handleFlip = useCallback((id: number) => {
     if (locked) return;
     const card = cards.find(c => c.id === id);
     if (!card || card.isFlipped || card.isMatched) return;
     if (flipped.length === 1 && flipped[0] === id) return;
+
+    // Start timer on first flip
+    if (!startTime) setStartTime(Date.now());
 
     const newFlipped = [...flipped, id];
     setCards(prev => prev.map(c => c.id === id ? { ...c, isFlipped: true } : c));
@@ -58,7 +88,6 @@ export default function Memory({ onComplete }: Props) {
       setAttempts(a => a + 1);
       const [first, second] = newFlipped.map(fid => cards.find(c => c.id === fid)!);
       if (first.image === second.image) {
-        // Match
         setTimeout(() => {
           setCards(prev => prev.map(c =>
             newFlipped.includes(c.id) ? { ...c, isMatched: true } : c
@@ -67,7 +96,6 @@ export default function Memory({ onComplete }: Props) {
           setLocked(false);
         }, 600);
       } else {
-        // No match
         setTimeout(() => {
           setCards(prev => prev.map(c =>
             newFlipped.includes(c.id) ? { ...c, isFlipped: false } : c
@@ -80,26 +108,32 @@ export default function Memory({ onComplete }: Props) {
     } else {
       setFlipped(newFlipped);
     }
-  }, [cards, flipped, locked]);
+  }, [cards, flipped, locked, startTime]);
+
+  const PAIRS = IMAGES.length;
 
   return (
     <div className="flex flex-col items-center gap-4 p-4">
-      <div className="flex justify-between w-full max-w-xs">
-        <p className="font-pixel text-xs text-gray-600">
+      <div className="flex justify-between w-full max-w-sm">
+        <p className="font-pixel text-xs text-gray-400">
           Forsøk: {attempts}
         </p>
+        <p className="font-pixel text-xs text-mc-yellow">
+          ⏱ {formatTime(elapsed)}
+        </p>
         <p className="font-pixel text-xs text-mc-green">
-          {cards.filter(c => c.isMatched).length / 2}/9 par
+          {cards.filter(c => c.isMatched).length / 2}/{PAIRS} par
         </p>
       </div>
 
-      <div className="grid grid-cols-3 gap-2 sm:grid-cols-4 sm:gap-3">
+      {/* 4×4 grid — kort fyller bredden */}
+      <div className="grid grid-cols-4 gap-2 w-full max-w-sm">
         {cards.map(card => (
           <motion.div
             key={card.id}
             onClick={() => handleFlip(card.id)}
-            className={`w-20 h-20 sm:w-24 sm:h-24 rounded-lg cursor-pointer select-none border-2 ${
-              card.isMatched ? 'border-mc-green' : 'border-gray-300'
+            className={`aspect-square rounded-lg cursor-pointer select-none border-2 ${
+              card.isMatched ? 'border-mc-green' : 'border-gray-600'
             }`}
             whileTap={{ scale: 0.95 }}
             style={{ perspective: 600 }}
@@ -112,14 +146,14 @@ export default function Memory({ onComplete }: Props) {
             >
               {/* Bakside */}
               <div
-                className="absolute inset-0 flex items-center justify-center rounded-lg bg-yellow-50"
+                className="absolute inset-0 flex items-center justify-center rounded-lg bg-mc-dark"
                 style={{ backfaceVisibility: 'hidden' }}
               >
                 <span className="text-2xl">🥚</span>
               </div>
               {/* Forside */}
               <div
-                className="absolute inset-0 flex items-center justify-center rounded-lg bg-yellow-50 p-1"
+                className="absolute inset-0 flex items-center justify-center rounded-lg bg-mc-dark p-1"
                 style={{ backfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}
               >
                 <img
@@ -134,13 +168,18 @@ export default function Memory({ onComplete }: Props) {
       </div>
 
       {allMatched && (
-        <motion.p
+        <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
-          className="font-pixel text-mc-green text-xs text-center"
+          className="text-center"
         >
-          ALLE PAR FUNNET! 🎉
-        </motion.p>
+          <p className="font-pixel text-mc-green text-xs">
+            ALLE PAR FUNNET! 🎉
+          </p>
+          <p className="font-pixel text-mc-yellow text-xs mt-1">
+            Tid: {formatTime(elapsed)} — {attempts} forsøk
+          </p>
+        </motion.div>
       )}
     </div>
   );

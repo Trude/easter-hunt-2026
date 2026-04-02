@@ -1,6 +1,6 @@
 [ ] Når en seksjon er ferdig, ikke hopp direkte tilbake til huben, bli stående inne i seksjonen og la brukeren navigere tilbake selv. Evnt vis en knapp for å navigere tilbake
 [ ] Gå igjennom alle triviaspørsmål og sjekk at de er ok
-[ ] Memoryspill: legg til eller fjern to bilder så griden går opp. Gjør kortene større. 
+[X] Memoryspill: legg til eller fjern to bilder så griden går opp. Gjør kortene større. 
 [ ] Fang påskeegg: Må ha noen liv elns, så man kan tape. Må klare å fang x egg før man mister alle liv. Tempo bør gradevis økes.
 [ ] Fang pip: samme her, man må "tape" etterhvert - nå kan man holde på i det uendelige. tempo bør også gradevis økes
 [ ] Puslespill: Legg brikkene utenfor rammen. Gjør puslespillet større (dynamisk i forhold til skjermstørrelse)
