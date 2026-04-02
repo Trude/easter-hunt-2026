@@ -1,4 +1,4 @@
-import { useState, useCallback, useMemo } from 'react';
+import { useState, useCallback, useMemo, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useGame } from '../context/GameContext';
@@ -32,6 +32,25 @@ export default function AgentGroup() {
   const [achievement, setAchievement] = useState(false);
 
   const alreadyDone = group ? game.isDeptComplete('svein', group.id) : false;
+
+  const correctCount = results.filter(r => r.state === 'correct').length;
+  const passed = correctCount >= MIN_CORRECT;
+
+  // All hooks must be before early returns (Rules of Hooks)
+  const currentQuestion = group ? group.questions[currentIdx] : null;
+  const shuffledOptions = useMemo(() => {
+    if (!currentQuestion) return [];
+    const opts = (currentQuestion as any).options as string[] | undefined;
+    if (!opts) return [];
+    return [...opts].sort(() => Math.random() - 0.5);
+  }, [currentQuestion]);
+
+  // Persist completion in useEffect, not during render
+  useEffect(() => {
+    if (groupDone && passed && group && !game.isDeptComplete('svein', group.id)) {
+      game.completeDept('svein', group.id);
+    }
+  }, [groupDone, passed]);
 
   const handleRetry = useCallback(() => {
     setCurrentIdx(0);
@@ -75,7 +94,7 @@ export default function AgentGroup() {
     );
   }
 
-  if (alreadyDone) {
+  if (alreadyDone && !groupDone) {
     return (
       <div className="min-h-screen bg-yellow-50 px-4 py-8 max-w-lg mx-auto flex flex-col items-center gap-6 text-center">
         <div className="text-4xl">{group.icon}</div>
@@ -94,14 +113,7 @@ export default function AgentGroup() {
     );
   }
 
-  const correctCount = results.filter(r => r.state === 'correct').length;
-  const passed = correctCount >= MIN_CORRECT;
-
   if (groupDone) {
-    if (passed && !game.isDeptComplete('svein', group.id)) {
-      game.completeDept('svein', group.id);
-    }
-
     return (
       <div className="min-h-screen bg-yellow-50 px-4 py-8 max-w-lg mx-auto flex flex-col items-center gap-6 text-center">
         <AchievementPopup
@@ -159,15 +171,6 @@ export default function AgentGroup() {
       </div>
     );
   }
-
-  const currentQuestion = group.questions[currentIdx];
-
-  // Shuffle options so correct answer isn't always in the same position
-  const shuffledOptions = useMemo(() => {
-    const opts = (currentQuestion as any).options as string[] | undefined;
-    if (!opts) return [];
-    return [...opts].sort(() => Math.random() - 0.5);
-  }, [currentQuestion]);
 
   return (
     <div className="min-h-screen bg-yellow-50 px-4 py-6 max-w-lg mx-auto">
@@ -234,15 +237,15 @@ export default function AgentGroup() {
           className="flex flex-col gap-4"
         >
           <p className="font-pixel text-gray-800 text-xs leading-relaxed text-center px-2">
-            {currentQuestion.question}
+            {currentQuestion!.question}
           </p>
 
           {/* Multiple choice */}
-          {currentQuestion.format === 'multiple-choice' && (
+          {currentQuestion!.format === 'multiple-choice' && (
             <div className="flex flex-col gap-2">
               {shuffledOptions.map((option: string) => {
                 const isSelected = selectedOption === option;
-                const correctAnswer = (currentQuestion as any).answer;
+                const correctAnswer = (currentQuestion! as any).answer;
                 let btnClass = 'bg-white/80 border border-gray-300 text-gray-700';
                 if (showResult && isSelected) {
                   btnClass = answerState === 'correct'
@@ -272,7 +275,7 @@ export default function AgentGroup() {
           )}
 
           {/* Text input */}
-          {currentQuestion.format === 'text' && (
+          {currentQuestion!.format === 'text' && (
             <div className="flex flex-col gap-2">
               <input
                 type="text"
