@@ -34,24 +34,20 @@ export default function Home() {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center px-6 py-10 gap-8">
       {/* Logo / Piip */}
-      <div className="flex flex-col items-center gap-4">
-        <img
-          src="/assets/piip/piip_and_bunny.png"
-          alt="Piip"
-          className="w-32 h-32 object-contain"
-          onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
-        />
-        <h1 className="font-pixel text-mc-yellow text-sm text-center leading-relaxed">
-          PÅSKE-<br/>DETEKTIVENE
-        </h1>
-        <p className="font-pixel text-gray-400 text-xs text-center leading-relaxed">
+      <div className="flex flex-col items-center gap-3">
+        <div className="border-4 border-yellow-300 rounded-2xl px-6 py-4 bg-yellow-50/80 shadow-lg">
+          <h1 className="font-pixel text-mc-yellow text-sm text-center leading-relaxed">
+            PÅSKE-<br/>DETEKTIVENE
+          </h1>
+        </div>
+        <p className="font-pixel text-purple-500 text-xs text-center leading-relaxed">
           2026
         </p>
       </div>
 
       {/* Intro */}
-      <div className="max-w-xs text-center">
-        <p className="font-pixel text-white text-xs leading-relaxed">
+      <div className="max-w-xs text-center border-2 border-purple-200 rounded-lg px-4 py-3 bg-purple-50/60">
+        <p className="font-pixel text-gray-800 text-xs leading-relaxed">
           Hei, detektiv! Tast inn koden din for å starte oppdraget.
         </p>
       </div>
@@ -65,8 +61,8 @@ export default function Home() {
           onKeyDown={e => { if (e.key === 'Enter') handleSubmit(); }}
           placeholder="KODE HER"
           maxLength={14}
-          className={`bg-mc-dark border-2 rounded px-4 py-4 font-pixel text-xs text-white text-center placeholder-gray-600 outline-none transition-colors ${
-            error ? 'border-red-500' : 'border-gray-600 focus:border-mc-yellow'
+          className={`bg-white border-2 rounded px-4 py-4 font-pixel text-xs text-gray-800 text-center placeholder-gray-400 outline-none transition-colors ${
+            error ? 'border-red-500' : 'border-yellow-300 focus:border-mc-yellow'
           }`}
         />
         {error && (
@@ -76,14 +72,14 @@ export default function Home() {
         )}
         <button
           onClick={handleSubmit}
-          className="bg-mc-yellow text-black font-pixel text-xs py-4 rounded border-b-4 border-yellow-700 active:border-b-0 active:translate-y-1 transition-all"
+          className="bg-mc-yellow text-black font-pixel text-xs py-4 rounded border-b-4 border-yellow-600 active:border-b-0 active:translate-y-1 transition-all shadow-md"
         >
           TAST INN KODE →
         </button>
       </div>
 
       {/* Footer */}
-      <p className="font-pixel text-gray-700 text-xs text-center">
+      <p className="font-pixel text-purple-500 text-xs text-center">
         Piip ønsker lykke til! 🐥
       </p>
     </div>

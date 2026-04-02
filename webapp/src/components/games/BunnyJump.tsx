@@ -588,13 +588,13 @@ export default function BunnyJump({ onComplete }: Props) {
           ref={canvasRef}
           width={W}
           height={H}
-          className="rounded-lg border-2 border-gray-700 touch-none block"
+          className="rounded-lg border-2 border-gray-200 touch-none block"
         />
       </div>
 
       {phase === 'idle' && (
         <div className="flex flex-col items-center gap-3 mt-2">
-          <p className="font-pixel text-xs text-gray-400 text-center leading-relaxed max-w-xs">
+          <p className="font-pixel text-xs text-gray-600 text-center leading-relaxed max-w-xs">
             Trykk venstre/høyre side for å styre.<br />
             Hopp opp til høyde {REQUIRED_HEIGHT}!<br />
             <span className="text-red-400">Pass opp for lavaen! 🌋</span>

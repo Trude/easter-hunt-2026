@@ -257,7 +257,7 @@ export default function Labyrinth({ onComplete }: Props) {
 
   return (
     <div className="flex flex-col items-center gap-3 p-4">
-      <p className="font-pixel text-xs text-gray-400 text-center">
+      <p className="font-pixel text-xs text-gray-600 text-center">
         Hjelp Piip gjennom den mørke labyrinten! 🐥
       </p>
       <div className="flex gap-4 items-center">
@@ -274,7 +274,7 @@ export default function Labyrinth({ onComplete }: Props) {
       {/* Mini-map: tiny overview of full maze */}
       <div className="relative">
         <div
-          className="border border-gray-700 overflow-hidden"
+          className="border border-gray-200 overflow-hidden"
           style={{ width: GRID * 2, height: GRID * 2 }}
         >
           {maze.map((row, r) => (
@@ -337,7 +337,7 @@ export default function Labyrinth({ onComplete }: Props) {
                     bg = visible
                       ? onSolution
                         ? 'bg-yellow-900'
-                        : 'bg-mc-dark'
+                        : 'bg-yellow-50'
                       : 'bg-gray-900';
                   }
                 }
@@ -374,26 +374,26 @@ export default function Labyrinth({ onComplete }: Props) {
           <div />
           <button
             onClick={() => move(-1, 0)}
-            className="bg-mc-dark border border-gray-600 rounded p-2.5 text-white text-sm active:bg-gray-700 select-none"
+            className="bg-yellow-50 border border-gray-300 rounded p-2.5 text-white text-sm active:bg-gray-200 select-none"
           >
             ▲
           </button>
           <div />
           <button
             onClick={() => move(0, -1)}
-            className="bg-mc-dark border border-gray-600 rounded p-2.5 text-white text-sm active:bg-gray-700 select-none"
+            className="bg-yellow-50 border border-gray-300 rounded p-2.5 text-white text-sm active:bg-gray-200 select-none"
           >
             ◀
           </button>
           <button
             onClick={() => move(1, 0)}
-            className="bg-mc-dark border border-gray-600 rounded p-2.5 text-white text-sm active:bg-gray-700 select-none"
+            className="bg-yellow-50 border border-gray-300 rounded p-2.5 text-white text-sm active:bg-gray-200 select-none"
           >
             ▼
           </button>
           <button
             onClick={() => move(0, 1)}
-            className="bg-mc-dark border border-gray-600 rounded p-2.5 text-white text-sm active:bg-gray-700 select-none"
+            className="bg-yellow-50 border border-gray-300 rounded p-2.5 text-white text-sm active:bg-gray-200 select-none"
           >
             ▶
           </button>
@@ -404,7 +404,7 @@ export default function Labyrinth({ onComplete }: Props) {
           <button
             onClick={handleHint}
             disabled={showHint}
-            className="font-pixel text-xs text-gray-500 border border-gray-700 rounded px-3 py-2 mt-2 active:bg-gray-800 disabled:opacity-30 select-none"
+            className="font-pixel text-xs text-gray-500 border border-gray-200 rounded px-3 py-2 mt-2 active:bg-gray-800 disabled:opacity-30 select-none"
           >
             💡 Hint
           </button>

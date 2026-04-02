@@ -85,7 +85,7 @@ export default function Memory({ onComplete }: Props) {
   return (
     <div className="flex flex-col items-center gap-4 p-4">
       <div className="flex justify-between w-full max-w-xs">
-        <p className="font-pixel text-xs text-gray-400">
+        <p className="font-pixel text-xs text-gray-600">
           Forsøk: {attempts}
         </p>
         <p className="font-pixel text-xs text-mc-green">
@@ -99,7 +99,7 @@ export default function Memory({ onComplete }: Props) {
             key={card.id}
             onClick={() => handleFlip(card.id)}
             className={`w-20 h-20 sm:w-24 sm:h-24 rounded-lg cursor-pointer select-none border-2 ${
-              card.isMatched ? 'border-mc-green' : 'border-gray-600'
+              card.isMatched ? 'border-mc-green' : 'border-gray-300'
             }`}
             whileTap={{ scale: 0.95 }}
             style={{ perspective: 600 }}
@@ -112,14 +112,14 @@ export default function Memory({ onComplete }: Props) {
             >
               {/* Bakside */}
               <div
-                className="absolute inset-0 flex items-center justify-center rounded-lg bg-mc-dark"
+                className="absolute inset-0 flex items-center justify-center rounded-lg bg-yellow-50"
                 style={{ backfaceVisibility: 'hidden' }}
               >
                 <span className="text-2xl">🥚</span>
               </div>
               {/* Forside */}
               <div
-                className="absolute inset-0 flex items-center justify-center rounded-lg bg-mc-dark p-1"
+                className="absolute inset-0 flex items-center justify-center rounded-lg bg-yellow-50 p-1"
                 style={{ backfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}
               >
                 <img

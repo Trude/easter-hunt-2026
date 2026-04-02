@@ -8,14 +8,41 @@
 }
 
 body {
-  background-color: #1a1a2e;
-  color: #ffffff;
+  background: linear-gradient(160deg, #fef9c3 0%, #fde68a 15%, #fce7f3 55%, #e9d5ff 85%, #ddd6fe 100%);
+  background-attachment: fixed;
+  color: #374151;
   font-family: 'Press Start 2P', cursive;
   min-height: 100vh;
   margin: 0;
 }
 
-/* Pixel-stil scrollbar */
+/* Scrollbar */
 ::-webkit-scrollbar { width: 8px; }
-::-webkit-scrollbar-track { background: #1a1a2e; }
-::-webkit-scrollbar-thumb { background: #5c8a1e; }
+::-webkit-scrollbar-track { background: #fce7f3; }
+::-webkit-scrollbar-thumb { background: #c084fc; border-radius: 4px; }
+
+/* Easter background animations */
+@keyframes easter-float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50%       { transform: translateY(-18px) rotate(8deg); }
+}
+@keyframes easter-sway {
+  0%, 100% { transform: translateX(0px) rotate(-6deg); }
+  50%       { transform: translateX(14px) rotate(6deg); }
+}
+@keyframes easter-bounce {
+  0%, 100% { transform: translateY(0px) scaleY(1); }
+  40%       { transform: translateY(-22px) scaleY(1.05); }
+  60%       { transform: translateY(-18px) scaleY(1.05); }
+  80%       { transform: translateY(-4px) scaleY(0.95); }
+}
+@keyframes easter-spin {
+  0%   { transform: rotate(0deg) scale(1); }
+  50%  { transform: rotate(180deg) scale(1.15); }
+  100% { transform: rotate(360deg) scale(1); }
+}
+
+.easter-float  { animation: easter-float  ease-in-out infinite; }
+.easter-sway   { animation: easter-sway   ease-in-out infinite; }
+.easter-bounce { animation: easter-bounce ease-in-out infinite; }
+.easter-spin   { animation: easter-spin   linear     infinite; }

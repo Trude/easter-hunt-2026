@@ -98,7 +98,7 @@ export default function CatchPiip({ onComplete }: Props) {
     <div className="flex flex-col items-center gap-4 p-4">
       <div className="flex justify-between w-full max-w-xs">
         <span className="font-pixel text-xs text-mc-yellow">🐥 {score}/{REQUIRED_HITS}</span>
-        <span className="font-pixel text-xs text-white">⏱ {timeLeft}s</span>
+        <span className="font-pixel text-xs text-gray-600">⏱ {timeLeft}s</span>
       </div>
 
       <div className="grid grid-cols-3 gap-3">
@@ -113,7 +113,7 @@ export default function CatchPiip({ onComplete }: Props) {
                   ? item.type === 'piip'
                     ? 'bg-mc-green border-green-400 scale-110'
                     : 'bg-red-900 border-red-500 scale-105'
-                  : 'bg-mc-dark border-gray-700'
+                  : 'bg-yellow-50 border-gray-200'
               }`}
             >
               {item ? (item.type === 'piip' ? '🐥' : '🐦') : ''}
@@ -124,7 +124,7 @@ export default function CatchPiip({ onComplete }: Props) {
 
       {phase === 'idle' && (
         <div className="flex flex-col items-center gap-3">
-          <p className="font-pixel text-xs text-gray-400 text-center leading-relaxed max-w-xs">
+          <p className="font-pixel text-xs text-gray-600 text-center leading-relaxed max-w-xs">
             Trykk på Piip 🐥 så fort du kan! Unngå kråkene 🐦
           </p>
           <button onClick={startGame} className="bg-mc-green text-white font-pixel text-xs py-3 px-8 rounded border-b-4 border-green-800 active:border-b-0 active:translate-y-1">

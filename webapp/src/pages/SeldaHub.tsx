@@ -97,10 +97,15 @@ export default function SeldaHub() {
 
       {/* Header */}
       <div className="text-center mb-6">
-        <h1 className="font-pixel text-mc-yellow text-xs leading-relaxed">
-          DETEKTIVKONTORET
-        </h1>
-        <p className="font-pixel text-gray-400 text-xs mt-2">AGENT: SPORHUNDEN</p>
+        <div className="text-2xl mb-3 select-none">🐾🐣🌷</div>
+        <div className="inline-block bg-yellow-100 border-2 border-yellow-400 rounded-xl px-5 py-2 mb-2 shadow-sm shadow-yellow-200">
+          <h1 className="font-pixel text-mc-yellow text-xs leading-relaxed">
+            DETEKTIVKONTORET
+          </h1>
+        </div>
+        <div className="inline-block bg-purple-100 border border-purple-300 rounded px-3 py-1 mt-1">
+          <p className="font-pixel text-purple-600 text-xs">AGENT: SPORHUNDEN</p>
+        </div>
         <p className="font-pixel text-gray-500 text-xs mt-1">
           {Array.from({length: 12}, (_, i) => i + 1).filter(i => game.isDeptComplete('selda', i)).length}/12 fullført
         </p>
@@ -113,17 +118,17 @@ export default function SeldaHub() {
 
       {/* Fullført-banner med hemmelig kode */}
       {allComplete && (
-        <div className="mb-6 border-2 border-mc-yellow bg-mc-dark rounded-lg p-4 text-center">
+        <div className="mb-6 border-2 border-mc-yellow bg-yellow-50 rounded-lg p-4 text-center">
           <div className="text-4xl mb-2">🏆</div>
           <p className="font-pixel text-mc-yellow text-xs mb-1">ALLE SAKER LØST!</p>
-          <p className="font-pixel text-white text-xs mb-3">
+          <p className="font-pixel text-gray-700 text-xs mb-3">
             Sporhunden — du har bevist at du er Påskedetektivenes beste agent.
           </p>
-          <div className="bg-black/40 rounded p-3 mb-3">
-            <p className="font-pixel text-gray-400 text-xs mb-1">DIN HEMMELIGE KODE:</p>
+          <div className="bg-yellow-100 border border-mc-yellow/40 rounded p-3 mb-3">
+            <p className="font-pixel text-gray-600 text-xs mb-1">DIN HEMMELIGE KODE:</p>
             <p className="font-pixel text-mc-yellow text-3xl tracking-widest">08</p>
           </div>
-          <p className="font-pixel text-gray-400 text-xs mb-3">
+          <p className="font-pixel text-gray-600 text-xs mb-3">
             Ta vare på koden. Du trenger den snart.
           </p>
           <button

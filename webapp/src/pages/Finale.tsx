@@ -43,23 +43,23 @@ export default function Finale() {
           <h1 className="font-pixel text-mc-yellow text-xs leading-relaxed">
             VENTER PÅ ALLE AGENTER...
           </h1>
-          <div className="border border-gray-700 rounded p-4 w-full max-w-sm">
-            <p className="font-pixel text-gray-400 text-xs mb-4">STATUS:</p>
+          <div className="border border-gray-200 rounded p-4 w-full max-w-sm">
+            <p className="font-pixel text-gray-600 text-xs mb-4">STATUS:</p>
             <div className="flex flex-col gap-3">
               <div className="flex items-center justify-between">
-                <span className="font-pixel text-xs text-white">🔍 KODEKNEKKEREN (Sander)</span>
+                <span className="font-pixel text-xs text-gray-700">🔍 KODEKNEKKEREN (Sander)</span>
                 <span className={`font-pixel text-xs ${status.sander >= 12 ? 'text-mc-green' : 'text-gray-500'}`}>
                   {status.sander >= 12 ? '✅ KLAR' : `${status.sander}/12`}
                 </span>
               </div>
               <div className="flex items-center justify-between">
-                <span className="font-pixel text-xs text-white">🐾 SPORHUNDEN (Selda)</span>
+                <span className="font-pixel text-xs text-gray-700">🐾 SPORHUNDEN (Selda)</span>
                 <span className={`font-pixel text-xs ${status.selda >= 12 ? 'text-mc-green' : 'text-gray-500'}`}>
                   {status.selda >= 12 ? '✅ KLAR' : `${status.selda}/12`}
                 </span>
               </div>
               <div className="flex items-center justify-between">
-                <span className="font-pixel text-xs text-white">🍊 AGENT ØRANSEN (Svein)</span>
+                <span className="font-pixel text-xs text-gray-700">🍊 AGENT ØRANSEN (Svein)</span>
                 <span className={`font-pixel text-xs ${status.svein >= 6 ? 'text-mc-green' : 'text-gray-500'}`}>
                   {status.svein >= 6 ? '✅ KLAR' : `${status.svein}/6`}
                 </span>
@@ -100,10 +100,10 @@ export default function Finale() {
             transition={{ delay: 0.8 }}
             className="border border-mc-yellow rounded p-5 max-w-sm"
           >
-            <p className="font-pixel text-gray-300 text-xs leading-relaxed">
+            <p className="font-pixel text-gray-700 text-xs leading-relaxed">
               Dere er de beste detektivene jeg noensinne har møtt!
             </p>
-            <p className="font-pixel text-gray-300 text-xs leading-relaxed mt-3">
+            <p className="font-pixel text-gray-700 text-xs leading-relaxed mt-3">
               Dere fant alle sporene mine og reddet påsken!
             </p>
             <p className="font-pixel text-mc-green text-xs leading-relaxed mt-3">
@@ -139,15 +139,15 @@ export default function Finale() {
                   </p>
                 </div>
 
-                <div className="mt-4 border border-gray-600 rounded p-4">
-                  <p className="font-pixel text-gray-400 text-xs mb-2">KOMBINASJONSLÅSEN:</p>
+                <div className="mt-4 border border-gray-300 rounded p-4">
+                  <p className="font-pixel text-gray-600 text-xs mb-2">KOMBINASJONSLÅSEN:</p>
                   <p className="font-pixel text-mc-yellow text-3xl tracking-widest">4208</p>
                   <p className="font-pixel text-gray-500 text-xs mt-1">
                     (42 + 08 = Sander + Selda)
                   </p>
                 </div>
 
-                <p className="font-pixel text-gray-400 text-xs leading-relaxed max-w-xs mt-2">
+                <p className="font-pixel text-gray-600 text-xs leading-relaxed max-w-xs mt-2">
                   Med hilsen fra Påskeharen, Kvekk og Piip 🐥🐇
                 </p>
               </motion.div>

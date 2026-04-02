@@ -14,10 +14,17 @@ export default function DepartmentCard({ id, title, icon, status, onClick }: Pro
   const isClickable = status === 'active' || status === 'completed' || status === 'secret';
 
   const cardStyles: Record<CardStatus, string> = {
-    locked: 'bg-gray-900 border-gray-700 opacity-50 cursor-not-allowed',
-    active: 'bg-mc-dark border-mc-yellow cursor-pointer hover:border-yellow-400',
-    completed: 'bg-mc-dark border-mc-green cursor-pointer hover:border-green-400',
-    secret: 'bg-mc-dark border-purple-500 cursor-pointer hover:border-purple-400',
+    locked: 'bg-gray-100 border-gray-200 opacity-50 cursor-not-allowed',
+    active: 'bg-yellow-100 border-yellow-400 cursor-pointer hover:border-yellow-500 shadow-md shadow-yellow-200',
+    completed: 'bg-purple-50 border-purple-300 cursor-pointer hover:border-purple-400',
+    secret: 'bg-purple-100 border-purple-500 cursor-pointer hover:border-purple-600',
+  };
+
+  const badgeStyles: Record<CardStatus, string> = {
+    locked: 'text-gray-400',
+    active: 'text-yellow-600',
+    completed: 'text-purple-500',
+    secret: 'text-purple-600',
   };
 
   const card = (
@@ -28,11 +35,11 @@ export default function DepartmentCard({ id, title, icon, status, onClick }: Pro
       <span className="text-2xl">
         {status === 'locked' ? '🔒' : status === 'completed' ? '✅' : status === 'secret' ? '🔍' : icon}
       </span>
-      <span className="font-pixel text-xs text-center leading-tight text-white">
+      <span className="font-pixel text-xs text-center leading-tight text-gray-800">
         {status === 'secret' ? 'HEMMELIG' : title}
       </span>
       {status !== 'locked' && (
-        <span className="font-pixel text-xs text-gray-500">#{id}</span>
+        <span className={`font-pixel text-xs ${badgeStyles[status]}`}>#{id}</span>
       )}
     </div>
   );
@@ -40,7 +47,7 @@ export default function DepartmentCard({ id, title, icon, status, onClick }: Pro
   if (status === 'active') {
     return (
       <motion.div
-        animate={{ boxShadow: ['0 0 0px #f5c518', '0 0 12px #f5c518', '0 0 0px #f5c518'] }}
+        animate={{ boxShadow: ['0 0 0px #facc15', '0 0 16px #facc15', '0 0 0px #facc15'] }}
         transition={{ duration: 2, repeat: Infinity }}
         className="rounded-lg"
       >

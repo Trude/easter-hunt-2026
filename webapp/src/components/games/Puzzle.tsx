@@ -16,7 +16,7 @@ export default function Puzzle({ onComplete }: Props) {
 
   return (
     <div className="flex flex-col items-center gap-4 p-4">
-      <p className="font-pixel text-xs text-gray-400 text-center leading-relaxed">
+      <p className="font-pixel text-xs text-gray-600 text-center leading-relaxed">
         Sett sammen bildet av Piip og Påskeharen! 🧩
       </p>
 

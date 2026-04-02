@@ -93,10 +93,12 @@ export default function Combine() {
       {/* Header */}
       <div className="text-center mb-8">
         <div className="text-4xl mb-3">🔒</div>
-        <h1 className="font-pixel text-mc-yellow text-xs leading-relaxed">
-          KOMBINER KODENE
-        </h1>
-        <p className="font-pixel text-gray-400 text-xs mt-2 leading-relaxed max-w-xs mx-auto">
+        <div className="inline-block bg-yellow-100 border-2 border-yellow-400 rounded-xl px-5 py-2 mb-2">
+          <h1 className="font-pixel text-mc-yellow text-xs leading-relaxed">
+            KOMBINER KODENE
+          </h1>
+        </div>
+        <p className="font-pixel text-gray-600 text-xs mt-2 leading-relaxed max-w-xs mx-auto">
           Alle tre agenter må legge inn kodene sine, pluss det hemmelige kodeordet.
         </p>
       </div>
@@ -105,7 +107,7 @@ export default function Combine() {
       <div className="flex flex-col gap-4 mb-6">
         {fields.map(f => (
           <div key={f.label} className="flex flex-col gap-1">
-            <label className="font-pixel text-gray-400 text-xs flex items-center gap-2">
+            <label className="font-pixel text-purple-600 text-xs flex items-center gap-2">
               {f.icon} {f.label}
             </label>
             <input
@@ -114,7 +116,7 @@ export default function Combine() {
               value={f.value}
               onChange={e => f.set(e.target.value)}
               placeholder={f.hint}
-              className="bg-mc-dark border border-gray-600 rounded px-3 py-3 font-pixel text-xs text-white placeholder-gray-600 outline-none focus:border-mc-yellow"
+              className="bg-yellow-50 border-2 border-yellow-200 rounded px-3 py-3 font-pixel text-xs text-gray-800 placeholder-gray-400 outline-none focus:border-yellow-400"
             />
           </div>
         ))}

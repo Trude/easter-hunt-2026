@@ -76,12 +76,12 @@ export default function Minecraft() {
               initial={{ y: -80, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               exit={{ y: -80, opacity: 0 }}
-              className="fixed top-4 left-1/2 -translate-x-1/2 z-50 bg-mc-dark border-2 border-mc-yellow rounded px-4 py-3 flex items-center gap-3 shadow-lg"
+              className="fixed top-4 left-1/2 -translate-x-1/2 z-50 bg-yellow-50 border-2 border-mc-yellow rounded px-4 py-3 flex items-center gap-3 shadow-lg"
             >
               <span className="text-2xl">🏆</span>
               <div className="text-left">
                 <p className="font-pixel text-mc-yellow text-xs">ACHIEVEMENT UNLOCKED!</p>
-                <p className="font-pixel text-white text-xs mt-0.5">Påskehare-staven laget!</p>
+                <p className="font-pixel text-gray-700 text-xs mt-0.5">Påskehare-staven laget!</p>
               </div>
             </motion.div>
           )}
@@ -91,12 +91,12 @@ export default function Minecraft() {
         <h2 className="font-pixel text-mc-yellow text-xs leading-relaxed">
           PÅSKEHARE-STAVEN LAGET!
         </h2>
-        <p className="font-pixel text-gray-300 text-xs leading-relaxed max-w-xs">
+        <p className="font-pixel text-gray-700 text-xs leading-relaxed max-w-xs">
           Bra craftet, detektiver! Neste spor bæres av en trofast venn med fire poter.
         </p>
         <div className="border border-mc-yellow rounded p-4">
-          <p className="font-pixel text-gray-400 text-xs mb-2">OPPDRAGET FORTSETTER FYSISK</p>
-          <p className="font-pixel text-gray-300 text-xs leading-relaxed">
+          <p className="font-pixel text-gray-600 text-xs mb-2">OPPDRAGET FORTSETTER FYSISK</p>
+          <p className="font-pixel text-gray-700 text-xs leading-relaxed">
             Sjekk Odin — han vet noe!
           </p>
         </div>
@@ -109,7 +109,7 @@ export default function Minecraft() {
       {/* Header */}
       <div className="text-center mb-6">
         <h1 className="font-pixel text-mc-yellow text-xs leading-relaxed">MINECRAFT-OPPDRAGET</h1>
-        <p className="font-pixel text-gray-400 text-xs mt-2 leading-relaxed max-w-xs mx-auto">
+        <p className="font-pixel text-gray-600 text-xs mt-2 leading-relaxed max-w-xs mx-auto">
           Lag Påskehare-staven! Dere har ingrediensene — sett dem på riktig plass i craftingbordet.
         </p>
       </div>
@@ -119,7 +119,7 @@ export default function Minecraft() {
         <p className="font-pixel text-gray-500 text-xs mb-3 text-center">INGREDIENSER</p>
         <div className="grid grid-cols-2 gap-2">
           {/* Sander */}
-          <div className="border border-gray-700 rounded p-3">
+          <div className="border border-gray-200 rounded p-3">
             <p className="font-pixel text-mc-yellow text-xs mb-2">SANDER har:</p>
             <div className="flex flex-col gap-2">
               {INGREDIENTS.filter(i => i.owner === 'SANDER').map(ing => (
@@ -131,18 +131,18 @@ export default function Minecraft() {
                     selected === ing.id
                       ? 'border-mc-yellow bg-mc-yellow/20'
                       : usedIngredients.has(ing.id)
-                      ? 'border-gray-700 opacity-50'
-                      : 'border-gray-600 hover:border-gray-400'
+                      ? 'border-gray-200 opacity-50'
+                      : 'border-gray-300 hover:border-gray-400'
                   }`}
                 >
                   <span className="text-xl">{ing.emoji}</span>
-                  <span className="font-pixel text-xs text-white">{ing.name}</span>
+                  <span className="font-pixel text-xs text-gray-700">{ing.name}</span>
                 </button>
               ))}
             </div>
           </div>
           {/* Selda */}
-          <div className="border border-gray-700 rounded p-3">
+          <div className="border border-gray-200 rounded p-3">
             <p className="font-pixel text-mc-yellow text-xs mb-2">SELDA har:</p>
             <div className="flex flex-col gap-2">
               {INGREDIENTS.filter(i => i.owner === 'SELDA').map(ing => (
@@ -154,12 +154,12 @@ export default function Minecraft() {
                     selected === ing.id
                       ? 'border-mc-yellow bg-mc-yellow/20'
                       : usedIngredients.has(ing.id)
-                      ? 'border-gray-700 opacity-50'
-                      : 'border-gray-600 hover:border-gray-400'
+                      ? 'border-gray-200 opacity-50'
+                      : 'border-gray-300 hover:border-gray-400'
                   }`}
                 >
                   <span className="text-xl">{ing.emoji}</span>
-                  <span className="font-pixel text-xs text-white">{ing.name}</span>
+                  <span className="font-pixel text-xs text-gray-700">{ing.name}</span>
                 </button>
               ))}
             </div>
@@ -190,7 +190,7 @@ export default function Minecraft() {
                       ? 'border-mc-yellow/50 bg-mc-yellow/5 hover:bg-mc-yellow/10'
                       : cellContent
                       ? 'border-gray-500 bg-gray-800'
-                      : 'border-gray-700 bg-mc-dark'
+                      : 'border-gray-200 bg-yellow-50'
                   }`}
                 >
                   {ing ? (
@@ -207,7 +207,7 @@ export default function Minecraft() {
         {/* Pil + Resultat */}
         <div className="flex flex-col items-center gap-2">
           <span className="font-pixel text-gray-500 text-xs">→</span>
-          <div className="w-16 h-16 border-2 border-gray-600 bg-gray-900 rounded flex items-center justify-center">
+          <div className="w-16 h-16 border-2 border-gray-300 bg-gray-900 rounded flex items-center justify-center">
             <span className="text-gray-600 font-pixel text-xs">?</span>
           </div>
         </div>

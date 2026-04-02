@@ -143,7 +143,7 @@ export default function TriviaSection({ section, onComplete }: Props) {
             <SpotifyEmbed trackId={currentQuestion.spotify} />
           )}
 
-          <p className="font-pixel text-white text-xs leading-relaxed text-center px-2">
+          <p className="font-pixel text-gray-800 text-xs leading-relaxed text-center px-2">
             {currentQuestion.question}
           </p>
 
@@ -153,7 +153,7 @@ export default function TriviaSection({ section, onComplete }: Props) {
               {(currentQuestion as any).options.map((option: string) => {
                 const isSelected = selectedOption === option;
                 const correctAnswer = (currentQuestion as any).answer;
-                let btnClass = 'bg-mc-dark border border-gray-600 text-white';
+                let btnClass = 'bg-yellow-50 border border-gray-300 text-gray-700';
                 if (showResult && isSelected) {
                   btnClass = answerState === 'correct'
                     ? 'bg-mc-green border-mc-green text-white'
@@ -186,10 +186,10 @@ export default function TriviaSection({ section, onComplete }: Props) {
                 onKeyDown={e => { if (e.key === 'Enter' && textInput.trim() && !showResult) handleAnswer(textInput.trim()); }}
                 disabled={showResult}
                 placeholder="Skriv svaret her..."
-                className={`bg-mc-dark border rounded px-3 py-3 font-pixel text-xs text-white placeholder-gray-500 outline-none focus:border-mc-yellow disabled:opacity-60 ${
+                className={`bg-yellow-50 border rounded px-3 py-3 font-pixel text-xs text-gray-800 placeholder-gray-500 outline-none focus:border-mc-yellow disabled:opacity-60 ${
                   showResult
                     ? answerState === 'correct' ? 'border-mc-green' : 'border-red-500'
-                    : 'border-gray-600'
+                    : 'border-gray-300'
                 }`}
               />
               {showResult && answerState === 'wrong' && (

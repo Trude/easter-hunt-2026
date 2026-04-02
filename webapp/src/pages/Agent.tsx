@@ -14,14 +14,14 @@ export default function Agent() {
   const nextGroup = sveinGroups.findIndex((_, i) => !groupsDone[i]);
 
   return (
-    <div className="min-h-screen bg-mc-dark px-4 py-6 max-w-lg mx-auto">
+    <div className="min-h-screen bg-yellow-50 px-4 py-6 max-w-lg mx-auto">
       {/* Header */}
       <div className="text-center mb-6">
-        <div className="inline-block border-2 border-red-700 bg-black/50 rounded px-4 py-1 mb-3">
+        <div className="inline-block border-2 border-red-700 bg-white/90 rounded px-4 py-1 mb-3">
           <p className="font-pixel text-red-500 text-xs tracking-widest">KLASSIFISERT</p>
         </div>
         <h1 className="font-pixel text-mc-yellow text-xs leading-relaxed">AGENT ØRANSEN</h1>
-        <p className="font-pixel text-gray-400 text-xs mt-1">
+        <p className="font-pixel text-gray-600 text-xs mt-1">
           {groupsDone.filter(Boolean).length}/6 arkivmapper dekryptert
         </p>
       </div>
@@ -31,13 +31,13 @@ export default function Agent() {
         {LETTERS.map((l, i) => (
           <div
             key={i}
-            className={`w-9 h-9 border-2 flex items-center justify-center transition-colors ${
+            className={`w-9 h-9 border-2 rounded flex items-center justify-center transition-colors ${
               groupsDone[i]
-                ? 'border-mc-yellow bg-mc-yellow/20'
-                : 'border-gray-700 bg-black/30'
+                ? 'border-yellow-400 bg-yellow-100 shadow-sm shadow-yellow-200'
+                : 'border-purple-200 bg-purple-50'
             }`}
           >
-            <span className={`font-pixel text-xs ${groupsDone[i] ? 'text-mc-yellow' : 'text-gray-700'}`}>
+            <span className={`font-pixel text-xs ${groupsDone[i] ? 'text-yellow-600' : 'text-purple-400'}`}>
               {groupsDone[i] ? l : '?'}
             </span>
           </div>
@@ -46,28 +46,28 @@ export default function Agent() {
 
       {/* Fullført-banner */}
       {allDone && (
-        <div className="mb-6 border-2 border-mc-yellow bg-black/50 rounded-lg p-4 text-center">
+        <div className="mb-6 border-2 border-mc-yellow bg-white/90 rounded-lg p-4 text-center">
           <div className="text-4xl mb-2">🔓</div>
           <p className="font-pixel text-red-500 text-xs tracking-widest mb-3">KLASSIFISERT — DEKRYPTERT</p>
 
-          <div className="border border-gray-600 rounded p-3 mb-3 text-left">
-            <p className="font-pixel text-gray-300 text-xs leading-relaxed">
+          <div className="border border-gray-300 rounded p-3 mb-3 text-left">
+            <p className="font-pixel text-gray-700 text-xs leading-relaxed">
               Agent Øransen — oppdraget er fullført.
             </p>
-            <p className="font-pixel text-gray-400 text-xs leading-relaxed mt-2">
+            <p className="font-pixel text-gray-600 text-xs leading-relaxed mt-2">
               Men det virkelige mysteriet var aldri Påskeharen.
               Det var hvordan noen klarer å bli 54 og fortsatt tro at Liverpool vinner ligaen hvert år.
             </p>
             <p className="font-pixel text-mc-green text-xs leading-relaxed mt-3">
               Gratulerer med dagen, Svein. 🎂
             </p>
-            <p className="font-pixel text-gray-400 text-xs leading-relaxed mt-3">
+            <p className="font-pixel text-gray-600 text-xs leading-relaxed mt-3">
               Barna trenger deg nå. Møt dem ved peisen.
             </p>
           </div>
 
-          <div className="bg-black/40 rounded p-3">
-            <p className="font-pixel text-gray-400 text-xs mb-1">DIN KODE TIL KOMBINER:</p>
+          <div className="bg-yellow-100 border border-yellow-400 rounded p-3">
+            <p className="font-pixel text-gray-600 text-xs mb-1">DIN KODE TIL KOMBINER:</p>
             <p className="font-pixel text-mc-yellow text-2xl tracking-widest">ONKELS</p>
           </div>
         </div>
@@ -90,7 +90,7 @@ export default function Agent() {
                   ? 'border-mc-green bg-mc-green/10'
                   : isNext
                   ? 'border-mc-yellow bg-mc-yellow/5 animate-pulse'
-                  : 'border-gray-700 bg-black/20 opacity-50'
+                  : 'border-gray-200 bg-white/70 opacity-50'
               }`}
             >
               <div className="flex items-center justify-between">
@@ -100,13 +100,13 @@ export default function Agent() {
                     <p className={`font-pixel text-xs ${done ? 'text-mc-green' : isNext ? 'text-mc-yellow' : 'text-gray-600'}`}>
                       MAPPE #{group.id}
                     </p>
-                    <p className={`font-pixel text-xs mt-0.5 ${done ? 'text-white' : isNext ? 'text-white' : 'text-gray-600'}`}>
+                    <p className={`font-pixel text-xs mt-0.5 ${done ? 'text-gray-700' : isNext ? 'text-gray-700' : 'text-gray-600'}`}>
                       {group.title}
                     </p>
                   </div>
                 </div>
                 <div className={`w-8 h-8 border flex items-center justify-center ${
-                  done ? 'border-mc-yellow bg-mc-yellow/20' : 'border-gray-700'
+                  done ? 'border-mc-yellow bg-mc-yellow/20' : 'border-gray-200'
                 }`}>
                   <span className={`font-pixel text-xs ${done ? 'text-mc-yellow' : 'text-gray-700'}`}>
                     {done ? group.letter : locked ? '🔒' : '→'}

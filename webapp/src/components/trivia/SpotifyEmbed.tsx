@@ -10,7 +10,7 @@ export default function SpotifyEmbed({ trackId }: SpotifyEmbedProps) {
       {/* Container klippes til ~64px bred og 64px høy for å vise
           kun albumcover + play-knapp fra Spotify compact embed */}
       <div
-        className="rounded-lg overflow-hidden border border-gray-700"
+        className="rounded-lg overflow-hidden border border-gray-200"
         style={{ width: 64, height: 64, position: 'relative' }}
       >
         <iframe
@@ -27,7 +27,7 @@ export default function SpotifyEmbed({ trackId }: SpotifyEmbedProps) {
           loading="lazy"
         />
       </div>
-      <p className="font-pixel text-xs text-gray-400 text-center">
+      <p className="font-pixel text-xs text-gray-600 text-center">
         🎵 Trykk play og hør på sangen
       </p>
     </div>

@@ -90,7 +90,7 @@ export default function SanderDepartment() {
       {/* Tilbake-knapp */}
       <button
         onClick={() => navigate('/sander')}
-        className="font-pixel text-xs text-gray-400 mb-6 flex items-center gap-2"
+        className="font-pixel text-xs text-gray-600 mb-6 flex items-center gap-2"
       >
         ← TILBAKE
       </button>
@@ -101,7 +101,7 @@ export default function SanderDepartment() {
         <h1 className="font-pixel text-mc-yellow text-xs leading-relaxed">
           AVDELING {id}
         </h1>
-        <p className="font-pixel text-white text-xs mt-1">{meta?.title}</p>
+        <p className="font-pixel text-gray-700 text-xs mt-1">{meta?.title}</p>
         {isCompleted && (
           <p className="font-pixel text-mc-green text-xs mt-2">✅ FULLFØRT</p>
         )}
@@ -125,10 +125,10 @@ export default function SanderDepartment() {
       ) : (
         <div className="flex flex-col items-center gap-6 text-center py-10">
           <div className="text-5xl">{meta?.icon}</div>
-          <p className="font-pixel text-gray-400 text-xs leading-relaxed">KOMMER SNART</p>
+          <p className="font-pixel text-gray-600 text-xs leading-relaxed">KOMMER SNART</p>
           <button
             onClick={handleComplete}
-            className="bg-gray-700 text-gray-300 font-pixel text-xs py-3 px-6 rounded border border-gray-600"
+            className="bg-gray-200 text-gray-700 font-pixel text-xs py-3 px-6 rounded border border-gray-300"
           >
             [TEST: MARKER FULLFØRT]
           </button>

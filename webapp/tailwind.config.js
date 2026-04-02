@@ -7,12 +7,15 @@ export default {
       },
       colors: {
         mc: {
-          dark: '#1a1a2e',
-          green: '#5c8a1e',
-          yellow: '#f5c518',
+          dark: '#fffde7',
+          green: '#16a34a',
+          yellow: '#d97706',
           brown: '#8B4513',
-          stone: '#7a7a7a',
+          stone: '#6b7280',
           dirt: '#916B47',
+          purple: '#9333ea',
+          pink: '#ec4899',
+          lavender: '#ede9fe',
         }
       }
     }

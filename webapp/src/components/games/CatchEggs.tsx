@@ -200,7 +200,7 @@ export default function CatchEggs({ onComplete }: Props) {
     <div className="flex flex-col items-center gap-4 p-4">
       <div className="flex justify-between w-full max-w-sm">
         <span className="font-pixel text-xs text-mc-yellow">🥚 {displayScore}/{REQUIRED_EGGS}</span>
-        <span className="font-pixel text-xs text-white">⏱ {displayTime}s</span>
+        <span className="font-pixel text-xs text-gray-600">⏱ {displayTime}s</span>
       </div>
 
       <div style={{ transform: `scale(${scale})`, transformOrigin: 'top center', height: CANVAS_H * scale }}>
@@ -208,13 +208,13 @@ export default function CatchEggs({ onComplete }: Props) {
           ref={canvasRef}
           width={CANVAS_W}
           height={CANVAS_H}
-          className="rounded-lg border-2 border-gray-700 touch-none block"
+          className="rounded-lg border-2 border-gray-200 touch-none block"
         />
       </div>
 
       {phase === 'idle' && (
         <div className="flex flex-col items-center gap-3 mt-2">
-          <p className="font-pixel text-xs text-gray-400 text-center leading-relaxed max-w-xs">
+          <p className="font-pixel text-xs text-gray-600 text-center leading-relaxed max-w-xs">
             Trykk venstre/høyre side for å bevege kurven.<br />Fang {REQUIRED_EGGS} egg — unngå kråkene!
           </p>
           <button onClick={startGame} className="bg-mc-green text-white font-pixel text-xs py-3 px-8 rounded border-b-4 border-green-800 active:border-b-0 active:translate-y-1">
