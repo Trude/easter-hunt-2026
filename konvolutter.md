@@ -173,7 +173,7 @@ I hold the milk and keep it right.
 Open me up — a clue awaits,
 behind the food, behind the crates."*
 
-— Piip 🐣
+— Piip 🐣 
 
 ---
 
