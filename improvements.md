@@ -22,3 +22,11 @@
 
 # Extras
 [ ] Gjøre spillen gjenspillbare. Legge til Highscore og mulighet for gjester å spille. Kodenavn som ikke er agenter blir gjester for eksempel.
+
+# Bugs
+Selda 1. Fortsett gjør ikkenoe etter fullført game
+selda 3. samme
+selda 5 samme
+Spotify: Hvis du spiller av, og stopper så forsvinner knappen
+selda 7 samme
+Gjøre odin hopping lettere, den er litt vill
