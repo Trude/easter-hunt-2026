@@ -83,12 +83,6 @@ export default function TriviaSection({ section, onComplete }: Props) {
             <p className="font-pixel text-mc-green text-sm leading-relaxed">
               ALLE SVAR RIKTIGE!
             </p>
-            <button
-              onClick={onComplete}
-              className="bg-mc-green text-white font-pixel text-xs px-6 py-3 rounded border-b-4 border-green-800 active:border-b-0 active:translate-y-1"
-            >
-              FORTSETT →
-            </button>
           </>
         ) : (
           <>

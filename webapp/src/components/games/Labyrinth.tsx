@@ -1,11 +1,12 @@
 import { useState, useEffect, useCallback, useRef, useMemo } from 'react';
 
+const PIIP_IMG = '/assets/piip/piip_icon.png';
+
 // ─── Maze dimensions ────────────────────────────────────────
 // 16×16 "rooms" → 33×33 render grid (walls between rooms)
 // 4× area of the old 16×16 flat grid
 const ROOMS = 16;
 const GRID = ROOMS * 2 + 1; // 33
-const FOG_RADIUS = 3; // cells visible around player
 const CELL = 10;
 
 // ─── Seeded PRNG (mulberry32) for deterministic mazes ───────
@@ -349,7 +350,7 @@ export default function Labyrinth({ onComplete }: Props) {
                     style={{ width: CELL, height: CELL }}
                     className={`flex items-center justify-center ${bg} transition-colors duration-150`}
                   >
-                    {isPlayer && <span style={{ fontSize: CELL * 0.7 }}>🐥</span>}
+                    {isPlayer && <img src={PIIP_IMG} alt="Piip" style={{ width: CELL * 1.6, height: CELL * 1.6 }} className="object-contain" />}
                     {isGoal && !isPlayer && (visible || dimExplored) && (
                       <span style={{ fontSize: CELL * 0.7 }}>🏠</span>
                     )}
@@ -368,34 +369,34 @@ export default function Labyrinth({ onComplete }: Props) {
       )}
 
       {/* Controls */}
-      <div className="flex gap-6 items-start">
+      <div className="flex flex-col items-center gap-2">
         {/* D-pad */}
         <div className="grid grid-cols-3 gap-1.5">
           <div />
           <button
             onClick={() => move(-1, 0)}
-            className="bg-mc-dark border border-gray-600 rounded p-2.5 text-white text-sm active:bg-gray-700 select-none"
+            className="bg-mc-dark border border-gray-600 rounded p-2.5 text-sm active:bg-gray-700 select-none"
           >
-            ▲
+            ⬆️
           </button>
           <div />
           <button
             onClick={() => move(0, -1)}
-            className="bg-mc-dark border border-gray-600 rounded p-2.5 text-white text-sm active:bg-gray-700 select-none"
+            className="bg-mc-dark border border-gray-600 rounded p-2.5 text-sm active:bg-gray-700 select-none"
           >
-            ◀
+            ⬅️
           </button>
           <button
             onClick={() => move(1, 0)}
-            className="bg-mc-dark border border-gray-600 rounded p-2.5 text-white text-sm active:bg-gray-700 select-none"
+            className="bg-mc-dark border border-gray-600 rounded p-2.5 text-sm active:bg-gray-700 select-none"
           >
-            ▼
+            ⬇️
           </button>
           <button
             onClick={() => move(0, 1)}
-            className="bg-mc-dark border border-gray-600 rounded p-2.5 text-white text-sm active:bg-gray-700 select-none"
+            className="bg-mc-dark border border-gray-600 rounded p-2.5 text-sm active:bg-gray-700 select-none"
           >
-            ▶
+            ➡️
           </button>
         </div>
 
@@ -404,7 +405,7 @@ export default function Labyrinth({ onComplete }: Props) {
           <button
             onClick={handleHint}
             disabled={showHint}
-            className="font-pixel text-xs text-gray-500 border border-gray-700 rounded px-3 py-2 mt-2 active:bg-gray-800 disabled:opacity-30 select-none"
+            className="font-pixel text-xs text-gray-500 border border-gray-700 rounded px-3 py-2 active:bg-gray-800 disabled:opacity-30 select-none"
           >
             💡 Hint
           </button>

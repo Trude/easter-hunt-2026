@@ -8,7 +8,7 @@ import Memory from '../components/games/Memory';
 import Labyrinth from '../components/games/Labyrinth';
 import CatchEggs from '../components/games/CatchEggs';
 import CatchPiip from '../components/games/CatchPiip';
-import BunnyJump from '../components/games/BunnyJump';
+import LavaFloor from '../components/games/LavaFloor';
 import Puzzle from '../components/games/Puzzle';
 import AchievementPopup from '../components/ui/AchievementPopup';
 import { useState } from 'react';
@@ -25,7 +25,7 @@ const DEPT_META: Record<number, { title: string; icon: string }> = {
   7: { title: 'Musikk', icon: '🎵' },
   8: { title: 'Labyrint', icon: '🗺️' },
   9: { title: 'Natur & Dyr', icon: '🐾' },
-  10: { title: 'Bunny Jump', icon: '🐇' },
+  10: { title: 'Gulvet er lava', icon: '🌋' },
   11: { title: 'Slang & Popkultur', icon: '😎' },
   12: { title: 'Puslespill', icon: '🧩' },
   13: { title: 'Hemmelig Mappe', icon: '🔍' },
@@ -124,7 +124,7 @@ export default function SeldaDepartment() {
       ) : id === 8 ? (
         <Labyrinth onComplete={handleComplete} />
       ) : id === 10 ? (
-        <BunnyJump onComplete={handleComplete} />
+        <LavaFloor onComplete={handleComplete} />
       ) : id === 12 ? (
         <Puzzle onComplete={handleComplete} />
       ) : (

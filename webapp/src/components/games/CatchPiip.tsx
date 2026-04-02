@@ -1,5 +1,7 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 
+const PIIP_IMG = '/assets/piip/piip_icon.png';
+
 const GRID_SIZE = 12;
 const REQUIRED_HITS = 20;
 const GAME_DURATION = 45;
@@ -232,7 +234,7 @@ export default function CatchPiip({ onComplete }: Props) {
   return (
     <div className="flex flex-col items-center gap-3 p-4">
       <div className="flex justify-between w-full max-w-xs items-end">
-        <span className="font-pixel text-xs text-mc-yellow">🐥 {score}/{REQUIRED_HITS}</span>
+        <span className="font-pixel text-xs text-mc-yellow">🧺 {score}/{REQUIRED_HITS}</span>
         {tierName && (
           <span className="font-pixel text-red-400" style={{ fontSize: 9 }}>
             🔥 {tierName}
@@ -271,9 +273,16 @@ export default function CatchPiip({ onComplete }: Props) {
               }`}
             >
               {item && cfg ? (
-                <span className={item.type === 'golden' ? 'animate-pulse' : ''}>
-                  {cfg.emoji}
-                </span>
+                item.type === 'piip' || item.type === 'golden' ? (
+                  <img
+                    src={PIIP_IMG}
+                    alt="Piip"
+                    className={`w-14 h-14 object-contain select-none ${item.type === 'golden' ? 'animate-pulse drop-shadow-[0_0_6px_gold]' : ''}`}
+                    draggable={false}
+                  />
+                ) : (
+                  <span>{cfg.emoji}</span>
+                )
               ) : ''}
             </button>
           );
@@ -293,12 +302,12 @@ export default function CatchPiip({ onComplete }: Props) {
       {phase === 'idle' && (
         <div className="flex flex-col items-center gap-3">
           <p className="font-pixel text-xs text-gray-400 text-center leading-relaxed max-w-xs">
-            Trykk på Piip 🐥 så fort du kan!<br />
+            Trykk på Piip så fort du kan!<br />
             Unngå fiendene — de stjeler poeng!
           </p>
           <div className="font-pixel text-gray-600 text-center leading-relaxed" style={{ fontSize: 8 }}>
-            <p>🐥 Piip = +1 poeng</p>
-            <p>⭐ Gull-Piip = +3 poeng</p>
+            <p>Piip = +1 poeng</p>
+            <p>✨ Gull-Piip = +3 poeng</p>
             <p>🐦 Kråke = -1 poeng</p>
             <p>🦊 Rev = -2 poeng</p>
             <p>💣 Bombe = -3 poeng</p>

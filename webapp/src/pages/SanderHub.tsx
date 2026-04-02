@@ -23,7 +23,7 @@ const DEPT_META = [
   { id: 7, title: 'Musikk', icon: '🎵' },
   { id: 8, title: 'Labyrint', icon: '🗺️' },
   { id: 9, title: 'Natur & Dyr', icon: '🐾' },
-  { id: 10, title: 'Bunny Jump', icon: '🐇' },
+  { id: 10, title: 'Gulvet er lava', icon: '🌋' },
   { id: 11, title: 'Slang & Popkultur', icon: '😎' },
   { id: 12, title: 'Puslespill', icon: '🧩' },
 ];
