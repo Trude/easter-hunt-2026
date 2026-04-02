@@ -1,4 +1,4 @@
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useMemo } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useGame } from '../context/GameContext';
@@ -162,6 +162,13 @@ export default function AgentGroup() {
 
   const currentQuestion = group.questions[currentIdx];
 
+  // Shuffle options so correct answer isn't always in the same position
+  const shuffledOptions = useMemo(() => {
+    const opts = (currentQuestion as any).options as string[] | undefined;
+    if (!opts) return [];
+    return [...opts].sort(() => Math.random() - 0.5);
+  }, [currentQuestion]);
+
   return (
     <div className="min-h-screen bg-yellow-50 px-4 py-6 max-w-lg mx-auto">
       <AchievementPopup
@@ -233,7 +240,7 @@ export default function AgentGroup() {
           {/* Multiple choice */}
           {currentQuestion.format === 'multiple-choice' && (
             <div className="flex flex-col gap-2">
-              {(currentQuestion as any).options.map((option: string) => {
+              {shuffledOptions.map((option: string) => {
                 const isSelected = selectedOption === option;
                 const correctAnswer = (currentQuestion as any).answer;
                 let btnClass = 'bg-white/80 border border-gray-300 text-gray-700';

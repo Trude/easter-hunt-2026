@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import type { TriviaSection as TriviaSectionType } from '../../data/types';
 import { validateAnswer } from '../../lib/validate-answer';
@@ -28,6 +28,13 @@ export default function TriviaSection({ section, onComplete }: Props) {
 
   const currentQuestion = section.questions[currentIndex];
   const isLastQuestion = currentIndex === section.questions.length - 1;
+
+  // Shuffle options so correct answer isn't always in the same position
+  const shuffledOptions = useMemo(() => {
+    const opts = (currentQuestion as any).options as string[] | undefined;
+    if (!opts) return [];
+    return [...opts].sort(() => Math.random() - 0.5);
+  }, [currentQuestion]);
 
   const handleAnswer = (answer: string) => {
     const correct = validateAnswer(answer, currentQuestion.answer as string | string[]);
@@ -150,7 +157,7 @@ export default function TriviaSection({ section, onComplete }: Props) {
           {/* Multiple choice */}
           {currentQuestion.format === 'multiple-choice' && (
             <div className="grid grid-cols-1 gap-2">
-              {(currentQuestion as any).options.map((option: string) => {
+              {shuffledOptions.map((option: string) => {
                 const isSelected = selectedOption === option;
                 const correctAnswer = (currentQuestion as any).answer;
                 let btnClass = 'bg-yellow-50 border border-gray-300 text-gray-700';
