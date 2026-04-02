@@ -55,8 +55,8 @@ export default function SanderDepartment() {
   const handleComplete = () => {
     if (!game.isDeptComplete('sander', id)) {
       game.completeDept('sander', id);
-      setJustCompleted(true);
     }
+    setJustCompleted(true);
   };
 
   const eggConfig = DEPT_EGG[id];

@@ -54,8 +54,8 @@ export default function SeldaDepartment() {
   const handleComplete = () => {
     if (!game.isDeptComplete('selda', id)) {
       game.completeDept('selda', id);
-      setJustCompleted(true);
     }
+    setJustCompleted(true);
   };
 
   const eggConfig = DEPT_EGG[id];
