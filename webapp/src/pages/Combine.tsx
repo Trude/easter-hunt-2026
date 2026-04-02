@@ -3,9 +3,9 @@ import { useNavigate } from 'react-router-dom';
 import { storage } from '../lib/storage';
 
 const CORRECT = {
-  sander: '42',
-  selda: '08',
-  svein: 'ONKELS',
+  sander: 'PÅSKESPOREREN',
+  selda: 'PÅSKEBEVISENE',
+  svein: 'GULROT',
   kodeord: 'PÅSKEJAKT',
 };
 
@@ -26,10 +26,10 @@ export default function Combine() {
           KOMBINER ALLEREDE FULLFØRT
         </p>
         <button
-          onClick={() => navigate('/minecraft')}
+          onClick={() => navigate('/finale')}
           className="bg-mc-green text-white font-pixel text-xs py-3 px-8 rounded border-b-4 border-green-800 active:border-b-0 active:translate-y-1"
         >
-          GÅ TIL MINECRAFT →
+          GÅ TIL FINALEN →
         </button>
       </div>
     );
@@ -42,11 +42,11 @@ export default function Combine() {
       normalize(sander) === CORRECT.sander &&
       normalize(selda) === CORRECT.selda &&
       normalize(svein) === CORRECT.svein &&
-      normalize(kodeord) === normalize(CORRECT.kodeord);
+      normalize(kodeord) === CORRECT.kodeord;
 
     if (ok) {
       storage.setKombinerDone();
-      navigate('/minecraft');
+      navigate('/finale');
     } else {
       setError(true);
       setTimeout(() => setError(false), 2500);
@@ -55,24 +55,24 @@ export default function Combine() {
 
   const fields = [
     {
-      label: 'SANDERSS KODE',
-      icon: '🔢',
+      label: 'SANDERSS KODEORD',
+      icon: '🔍',
       value: sander,
       set: setSander,
-      hint: '2 siffer',
-      inputMode: 'numeric' as const,
+      hint: '13 bokstaver',
+      inputMode: 'text' as const,
     },
     {
-      label: 'SELDAS KODE',
-      icon: '🔢',
+      label: 'SELDAS KODEORD',
+      icon: '🐾',
       value: selda,
       set: setSelda,
-      hint: '2 siffer',
-      inputMode: 'numeric' as const,
+      hint: '13 bokstaver',
+      inputMode: 'text' as const,
     },
     {
-      label: 'SVEINS KODE',
-      icon: '🔐',
+      label: 'SVEINS KODEORD',
+      icon: '🍊',
       value: svein,
       set: setSvein,
       hint: '6 bokstaver',
@@ -80,7 +80,7 @@ export default function Combine() {
     },
     {
       label: 'HEMMELIG KODEORD',
-      icon: '🅿️',
+      icon: '🔑',
       value: kodeord,
       set: setKodeord,
       hint: '9 bokstaver — finn det på bevisene',
@@ -90,6 +90,14 @@ export default function Combine() {
 
   return (
     <div className="min-h-screen px-4 py-8 max-w-lg mx-auto">
+      {/* Tilbake */}
+      <button
+        onClick={() => navigate(-1)}
+        className="font-pixel text-xs text-gray-600 mb-6 flex items-center gap-2"
+      >
+        ← TILBAKE
+      </button>
+
       {/* Header */}
       <div className="text-center mb-8">
         <div className="text-4xl mb-3">🔒</div>
@@ -99,7 +107,7 @@ export default function Combine() {
           </h1>
         </div>
         <p className="font-pixel text-gray-600 text-xs mt-2 leading-relaxed max-w-xs mx-auto">
-          Alle tre agenter må legge inn kodene sine, pluss det hemmelige kodeordet.
+          Alle tre agenter legger inn kodeordene sine, pluss det hemmelige kodeordet fra bevisene.
         </p>
       </div>
 
@@ -111,7 +119,7 @@ export default function Combine() {
               {f.icon} {f.label}
             </label>
             <input
-              type={f.inputMode === 'numeric' ? 'tel' : 'text'}
+              type="text"
               inputMode={f.inputMode}
               value={f.value}
               onChange={e => f.set(e.target.value)}
@@ -126,7 +134,7 @@ export default function Combine() {
       {error && (
         <div className="border border-red-600 rounded p-3 mb-4 text-center">
           <p className="font-pixel text-red-400 text-xs leading-relaxed">
-            ✗ En eller flere koder er feil. Sjekk igjen.
+            ✗ En eller flere kodeord er feil. Sjekk igjen.
           </p>
         </div>
       )}
@@ -140,7 +148,7 @@ export default function Combine() {
       </button>
 
       <p className="font-pixel text-gray-600 text-xs text-center mt-4 leading-relaxed">
-        Kodeordet finner dere ved å kombinere bokstavene på de fysiske bevisene
+        Finn kodeordene ved å sette sammen bokstavene dere fikk i avdelingene.
       </p>
     </div>
   );

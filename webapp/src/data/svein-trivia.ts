@@ -17,7 +17,7 @@ export const sveinGroups: SveinGroup[] = [
     id: 1,
     title: 'Fotballhjerne',
     icon: '⚽',
-    letter: 'O',
+    letter: 'R',
     intro: 'Arkivmappe #1: Agentens lojalitet til en engelsk klubb er godt dokumentert. Bevis din kunnskap.',
     questions: [
       {
@@ -61,7 +61,7 @@ export const sveinGroups: SveinGroup[] = [
     id: 2,
     title: 'Byggmesteren',
     icon: '🏗️',
-    letter: 'N',
+    letter: 'G',
     intro: 'Arkivmappe #2: Den mistenkte har forbindelser til byggebransjen. Avhør pågår.',
     questions: [
       {
@@ -110,7 +110,7 @@ export const sveinGroups: SveinGroup[] = [
     id: 3,
     title: 'Smaksdommeren',
     icon: '🥃',
-    letter: 'K',
+    letter: 'O',
     intro: 'Arkivmappe #3: Agenten har kjent svakhet for visse væsker. Etterforsk.',
     questions: [
       {
@@ -154,7 +154,7 @@ export const sveinGroups: SveinGroup[] = [
     id: 4,
     title: 'Fjellmannen',
     icon: '⛷️',
-    letter: 'E',
+    letter: 'T',
     intro: 'Arkivmappe #4: Den mistenkte er observert i alpinbakken ved Varden. Kryss-sjekk kunnskapene.',
     questions: [
       {
@@ -198,7 +198,7 @@ export const sveinGroups: SveinGroup[] = [
     id: 5,
     title: 'Mysteriet om Agent Øransen',
     icon: '🔎',
-    letter: 'L',
+    letter: 'U',
     intro: 'Arkivmappe #5: ADVARSEL — denne mappen inneholder opplysninger om deg, Agent. Påskeharens arkiv hadde en fil på DEG. Bekreft eller avkreft.',
     questions: [
       {
@@ -239,7 +239,7 @@ export const sveinGroups: SveinGroup[] = [
     id: 6,
     title: 'Siste mappe — Oppdraget',
     icon: '📁',
-    letter: 'S',
+    letter: 'L',
     intro: 'Arkivmappe #6: Du har kommet lenger enn noen annen agent. Siste sikkerhetskontroll. Dette er personlig.',
     questions: [
       {

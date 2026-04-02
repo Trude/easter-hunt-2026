@@ -3,7 +3,7 @@ import { useGame } from '../context/GameContext';
 import { sveinGroups } from '../data/svein-trivia';
 import { storage } from '../lib/storage';
 
-const LETTERS = ['O', 'N', 'K', 'E', 'L', 'S'];
+const LETTERS = ['R', 'G', 'O', 'T', 'U', 'L'];
 
 export default function Agent() {
   const navigate = useNavigate();
@@ -62,14 +62,21 @@ export default function Agent() {
               Gratulerer med dagen, Svein. 🎂
             </p>
             <p className="font-pixel text-gray-600 text-xs leading-relaxed mt-3">
-              Barna trenger deg nå. Møt dem ved peisen.
+              Barna trenger deg nå. Tid for å kombinere kodene!
             </p>
           </div>
 
-          <div className="bg-yellow-100 border border-yellow-400 rounded p-3">
-            <p className="font-pixel text-gray-600 text-xs mb-1">DIN KODE TIL KOMBINER:</p>
-            <p className="font-pixel text-mc-yellow text-2xl tracking-widest">ONKELS</p>
+          <div className="bg-yellow-100 border border-yellow-400 rounded p-3 mb-3">
+            <p className="font-pixel text-gray-600 text-xs mb-1">DITT KODEORD TIL KOMBINER:</p>
+            <p className="font-pixel text-mc-yellow text-2xl tracking-widest">GULROT</p>
           </div>
+
+          <button
+            onClick={() => navigate('/kombiner')}
+            className="bg-mc-green text-white font-pixel text-xs py-3 px-6 rounded border-b-4 border-green-800 active:border-b-0 active:translate-y-1"
+          >
+            GÅ TIL KOMBINER →
+          </button>
         </div>
       )}
 

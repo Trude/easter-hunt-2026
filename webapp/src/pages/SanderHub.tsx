@@ -6,6 +6,13 @@ import AchievementPopup from '../components/ui/AchievementPopup';
 import eggImg from '../assets/easteregg.png';
 import eggCrackedImg from '../assets/easteregg_cracked.png';
 
+// Bokstaver per avdeling (scrambled PÅSKESPOREREN)
+const DEPT_LETTERS: Record<number, string> = {
+  1: 'E', 2: 'R', 3: 'S', 4: 'K', 5: 'N',
+  6: 'S', 7: 'P', 8: 'E', 9: 'Å', 10: 'O',
+  11: 'P', 12: 'R', 13: 'E',
+};
+
 const DEPT_META = [
   { id: 1, title: 'Påske & Krim', icon: '🔍' },
   { id: 2, title: 'Memory', icon: '🃏' },
@@ -13,7 +20,7 @@ const DEPT_META = [
   { id: 4, title: 'Fang påskeegg!', icon: '🥚' },
   { id: 5, title: 'Norsk & Verden', icon: '🌍' },
   { id: 6, title: 'Fang Piip!', icon: '🐥' },
-  { id: 7, title: 'Sport', icon: '⚽' },
+  { id: 7, title: 'Musikk', icon: '🎵' },
   { id: 8, title: 'Labyrint', icon: '🗺️' },
   { id: 9, title: 'Natur & Dyr', icon: '🐾' },
   { id: 10, title: 'Bunny Jump', icon: '🐇' },
@@ -129,20 +136,37 @@ export default function SanderHub() {
         )}
       </div>
 
-      {/* Fullført-banner med hemmelig kode */}
+      {/* Bokstav-indikatorer */}
+      <div className="mb-4">
+        <p className="font-pixel text-gray-500 text-xs text-center mb-2">DITT KODEORD:</p>
+        <div className="flex flex-wrap gap-1.5 justify-center">
+          {Array.from({length: 13}, (_, i) => i + 1).map(id => {
+            const done = game.isDeptComplete('sander', id);
+            return (
+              <div
+                key={id}
+                className={`w-8 h-8 border-2 rounded flex items-center justify-center transition-colors ${
+                  done
+                    ? 'border-yellow-400 bg-yellow-100 shadow-sm shadow-yellow-200'
+                    : 'border-purple-200 bg-purple-50'
+                }`}
+              >
+                <span className={`font-pixel text-xs ${done ? 'text-yellow-600' : 'text-purple-300'}`}>
+                  {done ? DEPT_LETTERS[id] : '?'}
+                </span>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+
+      {/* Fullført-banner */}
       {allComplete && (
         <div className="mb-6 border-2 border-mc-yellow bg-yellow-50 rounded-lg p-4 text-center">
           <div className="text-4xl mb-2">🏆</div>
           <p className="font-pixel text-mc-yellow text-xs mb-1">ALLE SAKER LØST!</p>
           <p className="font-pixel text-gray-700 text-xs mb-3">
-            Kodeknekkeren — du har bevist at du er Påskedetektivenes beste agent.
-          </p>
-          <div className="bg-yellow-100 border border-mc-yellow/40 rounded p-3 mb-3">
-            <p className="font-pixel text-gray-600 text-xs mb-1">DIN HEMMELIGE KODE:</p>
-            <p className="font-pixel text-mc-yellow text-3xl tracking-widest">42</p>
-          </div>
-          <p className="font-pixel text-gray-600 text-xs mb-3">
-            Ta vare på koden. Du trenger den snart.
+            Kodeknekkeren — sett sammen bokstavene og finn kodeordet ditt!
           </p>
           <button
             onClick={() => navigate('/kombiner')}

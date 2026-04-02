@@ -10,14 +10,19 @@
 
 
 # Layout:
-[ ] Fullfør oppdatering av farger/theme
+[x] Fullfør oppdatering av farger/theme
 [ ] Fang påskeegg: Fiks layout: faktiske påskeegg og kurv. Bedre ikon for de som ikke skal fanges. 
 [ ] Laberynt: Nytt ikon for piip. Bør finne veien til påskaeeggene
-[ ] Bunny jump: Se om det fungerer å bruke de to bildene av Odin (sit og jump) som den man styrer. Mulig de er for detaljert? Hvis det fungerer, rename spillet til noe mer passende. Og kan han hoppe på noe bedre? Greiner i skogen eller tja, noe annet?
+[x] Bunny jump: Se om det fungerer å bruke de to bildene av Odin (sit og jump) som den man styrer. Mulig de er for detaljert? Hvis det fungerer, 
+[ ] Bnny jump: rename spillet til noe mer passende (Odin jump?). Og kan han hoppe på noe bedre? Greiner i skogen eller tja, noe annet?
 [ ] Bytt ut pipikoner i spill med ordentlig bilde av piip
+<<<<<<< Updated upstream
 [ ] Eastereggs: helt umulig å se nå, må gjøres mer synlige
 
 
 # Extras
 [ ] Gjøre spinllen gjenspillbare. Legge til Highscore og mulighet for gjester å spille. Kodenavn som ikke er agenter blir gjester for eksempel.
 []
+=======
+[x] Eastereggs: helt umulig å se nå, må gjøres mer synlige
+>>>>>>> Stashed changes

@@ -1,9 +1,12 @@
 import { useRef, useEffect, useState, useCallback } from 'react';
+import eggSrc from '../../assets/easteregg.png';
+import basketSrc from '../../assets/basket.png';
+import crowSrc from '../../assets/crow.png';
 
 const CANVAS_W = 360;
 const CANVAS_H = 480;
-const BASKET_W = 70;
-const BASKET_H = 36;
+const BASKET_W = 80;
+const BASKET_H = 60;
 const BASKET_SPEED = 7;
 const ITEM_RADIUS = 16;
 const REQUIRED_EGGS = 20;
@@ -40,6 +43,15 @@ export default function CatchEggs({ onComplete }: Props) {
   const animRef = useRef<number>(0);
   const lastTimeRef = useRef<number>(0);
   const secondTimerRef = useRef<number>(0);
+  const eggImgRef = useRef<HTMLImageElement | null>(null);
+  const basketImgRef = useRef<HTMLImageElement | null>(null);
+  const crowImgRef = useRef<HTMLImageElement | null>(null);
+
+  useEffect(() => {
+    const egg = new Image(); egg.src = eggSrc; eggImgRef.current = egg;
+    const basket = new Image(); basket.src = basketSrc; basketImgRef.current = basket;
+    const crow = new Image(); crow.src = crowSrc; crowImgRef.current = crow;
+  }, []);
 
   const startGame = useCallback(() => {
     const s = stateRef.current;
@@ -158,11 +170,11 @@ export default function CatchEggs({ onComplete }: Props) {
       }
 
       // Draw
-      ctx.fillStyle = '#1a1a2e';
+      ctx.fillStyle = '#c8e8f8';
       ctx.fillRect(0, 0, CANVAS_W, CANVAS_H);
 
       // Divider (touch guide)
-      ctx.strokeStyle = 'rgba(255,255,255,0.04)';
+      ctx.strokeStyle = 'rgba(0,0,0,0.06)';
       ctx.lineWidth = 1;
       ctx.beginPath();
       ctx.moveTo(CANVAS_W / 2, 0);
@@ -170,20 +182,31 @@ export default function CatchEggs({ onComplete }: Props) {
       ctx.stroke();
 
       // Items
-      ctx.font = `${ITEM_RADIUS * 2}px serif`;
-      ctx.textAlign = 'center';
-      ctx.textBaseline = 'middle';
+      const itemSize = ITEM_RADIUS * 2;
       for (const item of s.items) {
-        ctx.fillText(item.type === 'egg' ? '🥚' : '🐦', item.x, item.y);
+        const imgRef = item.type === 'egg' ? eggImgRef.current : crowImgRef.current;
+        if (imgRef?.complete) {
+          const aspect = imgRef.naturalWidth / imgRef.naturalHeight;
+          const drawH = item.type === 'crow' ? itemSize * 2.0 : itemSize;
+          const drawW = drawH * aspect;
+          ctx.drawImage(imgRef, item.x - drawW / 2, item.y - drawH / 2, drawW, drawH);
+        } else {
+          ctx.font = `${itemSize}px serif`;
+          ctx.textAlign = 'center';
+          ctx.textBaseline = 'middle';
+          ctx.fillText(item.type === 'egg' ? '🥚' : '🐦', item.x, item.y);
+        }
       }
 
-      // Basket
-      ctx.fillStyle = '#6B4226';
-      ctx.beginPath();
-      ctx.roundRect(s.basketX, CANVAS_H - BASKET_H, BASKET_W, BASKET_H, 6);
-      ctx.fill();
-      ctx.fillStyle = '#5c8a1e';
-      ctx.fillRect(s.basketX + 5, CANVAS_H - BASKET_H + 5, BASKET_W - 10, 8);
+      // Basket image
+      if (basketImgRef.current?.complete) {
+        ctx.drawImage(basketImgRef.current, s.basketX, CANVAS_H - BASKET_H, BASKET_W, BASKET_H);
+      } else {
+        ctx.font = `${BASKET_H}px serif`;
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'bottom';
+        ctx.fillText('🧺', s.basketX + BASKET_W / 2, CANVAS_H);
+      }
 
       animRef.current = requestAnimationFrame(loop);
     };
@@ -199,7 +222,7 @@ export default function CatchEggs({ onComplete }: Props) {
   return (
     <div className="flex flex-col items-center gap-4 p-4">
       <div className="flex justify-between w-full max-w-sm">
-        <span className="font-pixel text-xs text-mc-yellow">🥚 {displayScore}/{REQUIRED_EGGS}</span>
+        <span className="font-pixel text-xs text-mc-yellow">🧺 {displayScore}/{REQUIRED_EGGS}</span>
         <span className="font-pixel text-xs text-gray-600">⏱ {displayTime}s</span>
       </div>
 

@@ -22,7 +22,7 @@ const DEPT_META: Record<number, { title: string; icon: string }> = {
   4: { title: 'Fang påskeegg!', icon: '🥚' },
   5: { title: 'Norsk & Verden', icon: '🌍' },
   6: { title: 'Fang Piip!', icon: '🐥' },
-  7: { title: 'Sport', icon: '⚽' },
+  7: { title: 'Musikk', icon: '🎵' },
   8: { title: 'Labyrint', icon: '🗺️' },
   9: { title: 'Natur & Dyr', icon: '🐾' },
   10: { title: 'Bunny Jump', icon: '🐇' },

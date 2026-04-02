@@ -44,15 +44,14 @@ export const sanderTrivia: Record<number, TriviaSection> = {
   },
   7: {
     id: 7,
-    title: 'Sport',
-    icon: '⚽',
+    title: 'Musikk',
+    icon: '🎵',
     questions: [
-      { id: 1, format: 'multiple-choice', question: 'Hva kalles ett slag under par på et hull i golf?', options: ['Eagle', 'Birdie', 'Bogey', 'Par'], answer: 'Birdie' },
-      { id: 2, format: 'multiple-choice', question: 'Hva kalles to slag under par i golf?', options: ['Eagle', 'Birdie', 'Albatross', 'Hole-in-one'], answer: 'Eagle' },
-      { id: 3, format: 'multiple-choice', question: 'Hva kalles ett slag over par i golf?', options: ['Eagle', 'Birdie', 'Bogey', 'Double'], answer: 'Bogey' },
-      { id: 4, format: 'text', question: 'Hvor mange spillere er det på et fotballag på banen?', answer: ['11', 'elleve'] },
-      { id: 5, format: 'text', question: 'Hva heter den øverste fotballdivisjonen i Norge?', answer: 'Eliteserien' },
-      { id: 6, format: 'multiple-choice', question: 'Hvilken sport drives med i Kvitfjell-bakkene?', options: ['Alpint', 'Fotball', 'Tennis', 'Svømming'], answer: 'Alpint' },
+      { id: 1, format: 'text', question: 'Hva heter denne sangen?', answer: ['Give That Wolf a Banana', 'Give that wolf a banana'], spotify: '50Cf2eYv8zT3v2HAkwhIiL' },
+      { id: 2, format: 'text', question: 'Hvem synger denne sangen?', answer: ['Tommy Cash', 'Tommy cash'], spotify: '4f5sxA4nQywcBlU05Ixdc7' },
+      { id: 3, format: 'text', question: 'Hva heter denne sangen?', answer: ['Cha Cha Cha', 'Cha cha cha'], spotify: '7wnrrEdwxQWZsDjW7rGZZc' },
+      { id: 4, format: 'text', question: 'Hva heter denne sangen?', answer: ['Grevling i taket', 'Grevling I Taket'], spotify: '0XyPunztpCUh9Uh6D4OoAh' },
+      { id: 5, format: 'text', question: 'Hvem synger denne sangen?', answer: ['DJ MøMø', 'DJ Mømo', 'dj mømo'], spotify: '5F8c71PbayLIedqmjskrhM' },
     ],
   },
   9: {
@@ -84,8 +83,8 @@ export const sanderTrivia: Record<number, TriviaSection> = {
     title: 'Hemmelig Mappe',
     icon: '🔍',
     questions: [
-      { id: 1, format: 'multiple-choice', question: 'Hva heter kråken som sendte dere det hemmelige brevet om morgenen?', options: ['Kvekk', 'Piip', 'Odin', 'Kråksen'], answer: 'Kvekk' },
-      { id: 2, format: 'multiple-choice', question: 'Hva heter Påskeharens lille gule assistent?', options: ['Piip', 'Kvekk', 'Tweety', 'Kyllingen'], answer: 'Piip' },
+      { id: 1, format: 'multiple-choice', question: 'Hva heter Påskeharens lille gule assistent?', options: ['Piip', 'Tweety', 'Odin', 'Kyllingen'], answer: 'Piip' },
+      { id: 2, format: 'multiple-choice', question: 'Hva heter hemmelighetsmappen som Kodeknekkeren låste opp?', options: ['Hemmelig Mappe', 'Detektivarkivet', 'Påskemappa', 'Sporloggen'], answer: 'Hemmelig Mappe' },
       { id: 3, format: 'multiple-choice', question: 'Hva er ditt hemmelige agentnavn?', options: ['Kodeknekkeren', 'Sporhunden', 'Agent Øransen', 'Detektiven'], answer: 'Kodeknekkeren' },
       { id: 4, format: 'multiple-choice', question: 'Hva er Seldas hemmelige agentnavn?', options: ['Sporhunden', 'Kodeknekkeren', 'Agent Piip', 'Superdetektiven'], answer: 'Sporhunden' },
       { id: 5, format: 'multiple-choice', question: 'Hvem var den hemmelige agenten som hjalp dere i den digitale delen?', options: ['Agent Øransen', 'En mystisk fremmed', 'Påskeharen selv', 'Piip'], answer: 'Agent Øransen' },

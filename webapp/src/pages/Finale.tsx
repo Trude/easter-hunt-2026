@@ -107,7 +107,7 @@ export default function Finale() {
               Dere fant alle sporene mine og reddet påsken!
             </p>
             <p className="font-pixel text-mc-green text-xs leading-relaxed mt-3">
-              Nå er godteriet og gledene gjemt på det varmeste stedet i hytten — der flammene danser og alle samles.
+              Skatten er gjemt ute — gå og finn den!
             </p>
           </motion.div>
 
@@ -132,23 +132,15 @@ export default function Finale() {
                 animate={{ opacity: 1, scale: 1 }}
                 className="flex flex-col items-center gap-4"
               >
-                <div className="text-5xl">🔥</div>
+                <div className="text-5xl">🥚</div>
                 <div className="border-4 border-mc-yellow rounded-lg p-6 bg-mc-yellow/10">
                   <p className="font-pixel text-mc-yellow text-2xl tracking-widest">
-                    VED PEISEN
-                  </p>
-                </div>
-
-                <div className="mt-4 border border-gray-300 rounded p-4">
-                  <p className="font-pixel text-gray-600 text-xs mb-2">KOMBINASJONSLÅSEN:</p>
-                  <p className="font-pixel text-mc-yellow text-3xl tracking-widest">4208</p>
-                  <p className="font-pixel text-gray-500 text-xs mt-1">
-                    (42 + 08 = Sander + Selda)
+                    BODEN UTE
                   </p>
                 </div>
 
                 <p className="font-pixel text-gray-600 text-xs leading-relaxed max-w-xs mt-2">
-                  Med hilsen fra Påskeharen, Kvekk og Piip 🐥🐇
+                  Med hilsen fra Påskeharen og Piip 🐥🐇
                 </p>
               </motion.div>
             )}
