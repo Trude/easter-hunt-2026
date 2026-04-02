@@ -248,25 +248,13 @@ export default function Puzzle({ onComplete }: Props) {
   }, [onComplete]);
 
   useEffect(() => {
-    const onMM = (e: MouseEvent) => handleMove(e.clientX, e.clientY);
-    const onMU = (e: MouseEvent) => handleDrop(e.clientX, e.clientY);
-    const onTM = (e: TouchEvent) => {
-      if (!dragRef.current) return;
-      e.preventDefault();
-      handleMove(e.touches[0].clientX, e.touches[0].clientY);
-    };
-    const onTE = (e: TouchEvent) =>
-      handleDrop(e.changedTouches[0].clientX, e.changedTouches[0].clientY);
-
-    window.addEventListener('mousemove', onMM);
-    window.addEventListener('mouseup', onMU);
-    window.addEventListener('touchmove', onTM, { passive: false });
-    window.addEventListener('touchend', onTE);
+    const onPM = (e: PointerEvent) => handleMove(e.clientX, e.clientY);
+    const onPU = (e: PointerEvent) => handleDrop(e.clientX, e.clientY);
+    window.addEventListener('pointermove', onPM);
+    window.addEventListener('pointerup', onPU);
     return () => {
-      window.removeEventListener('mousemove', onMM);
-      window.removeEventListener('mouseup', onMU);
-      window.removeEventListener('touchmove', onTM);
-      window.removeEventListener('touchend', onTE);
+      window.removeEventListener('pointermove', onPM);
+      window.removeEventListener('pointerup', onPU);
     };
   }, [handleMove, handleDrop]);
 
@@ -297,14 +285,9 @@ export default function Puzzle({ onComplete }: Props) {
           return (
             <div
               key={pieceIdx}
-              onMouseDown={isFloating ? e => {
+              onPointerDown={isFloating ? e => {
                 e.preventDefault();
                 startDrag(pieceIdx, e.clientX, e.clientY, e.currentTarget.getBoundingClientRect());
-              } : undefined}
-              onTouchStart={isFloating ? e => {
-                e.preventDefault();
-                const t = e.touches[0];
-                startDrag(pieceIdx, t.clientX, t.clientY, e.currentTarget.getBoundingClientRect());
               } : undefined}
               className={`absolute touch-none ${isFloating ? 'cursor-grab' : ''}`}
               style={{
@@ -343,14 +326,9 @@ export default function Puzzle({ onComplete }: Props) {
             return (
               <div
                 key={pieceIdx}
-                onMouseDown={e => {
+                onPointerDown={e => {
                   e.preventDefault();
                   startDrag(pieceIdx, e.clientX, e.clientY, e.currentTarget.getBoundingClientRect());
-                }}
-                onTouchStart={e => {
-                  e.preventDefault();
-                  const t = e.touches[0];
-                  startDrag(pieceIdx, t.clientX, t.clientY, e.currentTarget.getBoundingClientRect());
                 }}
                 className="absolute cursor-grab touch-none"
                 style={{

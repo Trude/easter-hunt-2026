@@ -125,9 +125,9 @@ export const seldaTrivia: Record<number, TriviaSection> = {
       { id: 1, format: 'multiple-choice', question: 'I Unicorn Academy — hva slags magisk dyr får hver elev på skolen?', options: ['En enhjørning', 'En drage', 'En pegasus', 'En fe'], answer: 'En enhjørning' },
       { id: 2, format: 'multiple-choice', question: 'Hva heter hovedpersonen i Unicorn Academy?', options: ['Sophia', 'Ava', 'Luna', 'Isla'], answer: 'Sophia' },
       { id: 3, format: 'multiple-choice', question: 'I KPop Demon Hunters — hva slags musikk spiller bandet?', options: ['K-pop', 'Rock', 'Jazz', 'Country'], answer: 'K-pop' },
-      { id: 4, format: 'multiple-choice', question: 'Hva heter den norske artisten som synger "Not Okay"?', options: ['Emma Steinbakken', 'Astrid S', 'Aurora', 'Sigrid'], answer: 'Emma Steinbakken' },
+      { id: 4, format: 'multiple-choice', question: 'Hva heter de norske pop-tvillingene som er kjempestore blant barn og ungdom?', options: ['Marcus & Martinus', 'Ylvis', 'Stargate', 'Kings of Convenience'], answer: 'Marcus & Martinus' },
       { id: 5, format: 'multiple-choice', question: 'Hva gjør en Creeper i Minecraft rett før den eksploderer?', options: ['Den blåser seg opp og fræser', 'Den synger', 'Den hopper', 'Den blir usynlig'], answer: 'Den blåser seg opp og fræser' },
-      { id: 6, format: 'multiple-choice', question: 'Hvilken norsk artist synger "Leva livet"?', options: ['Katastrofe', 'Kygo', 'Alan Walker', 'TIX'], answer: 'Katastrofe' },
+      { id: 6, format: 'multiple-choice', question: 'Hvilken norsk artist er kjent for den verdensberømte sangen "Faded"?', options: ['Alan Walker', 'Kygo', 'TIX', 'Marcus & Martinus'], answer: 'Alan Walker' },
     ],
   },
   13: {
