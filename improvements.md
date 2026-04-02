@@ -2,7 +2,7 @@
 [ ] Gå igjennom alle triviaspørsmål og sjekk at de er ok
 [X] Memoryspill: legg til eller fjern to bilder så griden går opp. Gjør kortene større. 
 [ ] Fang påskeegg: Må ha noen liv elns, så man kan tape. Må klare å fang x egg før man mister alle liv. Tempo bør gradevis økes.
-[ ] Fang pip: samme her, man må "tape" etterhvert - nå kan man holde på i det uendelige. tempo bør også gradevis økes
+[X] Fang pip: samme her, man må "tape" etterhvert - nå kan man holde på i det uendelige. tempo bør også gradevis økes
 [ ] Puslespill: Legg brikkene utenfor rammen. Gjør puslespillet større (dynamisk i forhold til skjermstørrelse)
 [ ] Gå igjennom Sander sin quiz, sjekke at alle spørsmål og svar stemmer og passer for han
 [ ] Gå igjennom Selda sin quiz, sjekke at alle spørsmål og svar stemmer og passer for han
