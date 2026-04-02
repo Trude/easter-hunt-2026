@@ -208,6 +208,7 @@ export default function BunnyJump({ onComplete }: Props) {
     inDarkZone: false,
     darkZoneEnd: 0,
     deathReason: '' as string,
+    completed: false,
   });
   const [phase, setPhase] = useState<'idle' | 'playing' | 'won' | 'lost'>('idle');
   const [displayHeight, setDisplayHeight] = useState(0);
@@ -236,6 +237,7 @@ export default function BunnyJump({ onComplete }: Props) {
     s.inDarkZone = false;
     s.darkZoneEnd = 0;
     s.deathReason = '';
+    s.completed = false;
     gameTimeRef.current = 0;
     setDisplayHeight(0);
     setTierLevel(0);
@@ -340,11 +342,11 @@ export default function BunnyJump({ onComplete }: Props) {
           s.maxScrollY = s.scrollY;
           const h = Math.floor(s.maxScrollY);
           setDisplayHeight(h);
-          if (h >= REQUIRED_HEIGHT) {
-            s.running = false;
-            setPhase('won');
-            setTimeout(onComplete, 800);
-            return;
+          // Fire onComplete once when passing REQUIRED_HEIGHT (unlocks dept)
+          // but keep playing — the game is endless!
+          if (h >= REQUIRED_HEIGHT && !s.completed) {
+            s.completed = true;
+            onComplete();
           }
         }
         // Move platforms & lava down with scroll
@@ -442,8 +444,10 @@ export default function BunnyJump({ onComplete }: Props) {
       // Height indicator bar (right edge)
       const barX = W - 14;
       const barW = 14;
-      const progress = Math.min(s.maxScrollY / REQUIRED_HEIGHT, 1);
-      const lavaProgress = Math.max(0, Math.min(progress, s.lavaWorldY / REQUIRED_HEIGHT));
+      // Height bar scales: use max of REQUIRED_HEIGHT or current height + buffer
+      const barMax = Math.max(REQUIRED_HEIGHT, s.maxScrollY + 500);
+      const progress = Math.min(s.maxScrollY / barMax, 1);
+      const lavaProgress = Math.max(0, Math.min(progress, s.lavaWorldY / barMax));
 
       // Bar background
       ctx.fillStyle = 'rgba(100,160,220,0.3)';
@@ -479,6 +483,21 @@ export default function BunnyJump({ onComplete }: Props) {
         ctx.textAlign = 'right';
         ctx.fillText('🔥', barX - 2, H - H * lavaProgress + 3);
       }
+
+      // Goal line (REQUIRED_HEIGHT marker)
+      const goalY = H - H * Math.min(REQUIRED_HEIGHT / barMax, 1);
+      ctx.strokeStyle = s.completed ? '#5c8a1e' : '#f5c518';
+      ctx.lineWidth = 2;
+      ctx.setLineDash([4, 3]);
+      ctx.beginPath();
+      ctx.moveTo(barX, goalY);
+      ctx.lineTo(barX + barW, goalY);
+      ctx.stroke();
+      ctx.setLineDash([]);
+      ctx.font = '7px sans-serif';
+      ctx.fillStyle = s.completed ? '#5c8a1e' : '#f5c518';
+      ctx.textAlign = 'right';
+      ctx.fillText(s.completed ? '✓' : `${REQUIRED_HEIGHT}m`, barX - 2, goalY + 3);
 
       // Bar border
       ctx.strokeStyle = '#555';
@@ -584,7 +603,7 @@ export default function BunnyJump({ onComplete }: Props) {
   }, [phase, onComplete]);
 
   const scale = Math.min(1, (Math.min(window.innerWidth, 420) - 32) / W);
-  const pct = Math.min(100, Math.round((displayHeight / REQUIRED_HEIGHT) * 100));
+  const pastGoal = displayHeight >= REQUIRED_HEIGHT;
 
   const tierNames = ['Normal', 'Raskere lava', 'Urolige plattformer', 'Vind!', 'Mørke soner', 'Helvete', 'RAGNARØK'];
   const tierName = tierNames[Math.min(tierLevel, tierNames.length - 1)];
@@ -592,8 +611,14 @@ export default function BunnyJump({ onComplete }: Props) {
   return (
     <div className="flex flex-col items-center gap-3 p-4">
       <div className="flex justify-between w-full max-w-sm items-end">
-        <span className="font-pixel text-xs text-mc-yellow">📏 {displayHeight}/{REQUIRED_HEIGHT}</span>
-        <span className="font-pixel text-mc-green" style={{ fontSize: 10 }}>{pct}%</span>
+        <span className="font-pixel text-xs text-mc-yellow">
+          📏 {displayHeight}m
+        </span>
+        {pastGoal && (
+          <span className="font-pixel text-mc-green" style={{ fontSize: 9 }}>
+            ✅ Avdeling godkjent!
+          </span>
+        )}
       </div>
 
       {phase === 'playing' && tierLevel > 0 && (
@@ -609,15 +634,15 @@ export default function BunnyJump({ onComplete }: Props) {
           ref={canvasRef}
           width={W}
           height={H}
-          className="rounded-lg border-2 border-gray-200 touch-none block"
+          className="rounded-lg border-2 border-gray-700 touch-none block"
         />
       </div>
 
       {phase === 'idle' && (
         <div className="flex flex-col items-center gap-3 mt-2">
-          <p className="font-pixel text-xs text-gray-600 text-center leading-relaxed max-w-xs">
+          <p className="font-pixel text-xs text-gray-400 text-center leading-relaxed max-w-xs">
             Trykk venstre/høyre side for å styre.<br />
-            Hopp opp til høyde {REQUIRED_HEIGHT}!<br />
+            Nå {REQUIRED_HEIGHT}m for å klare avdelingen — men hvor høyt klarer du?<br />
             <span className="text-red-400">Pass opp for lavaen! 🌋</span>
           </p>
           <div className="font-pixel text-gray-600 text-center leading-relaxed" style={{ fontSize: 8 }}>
@@ -630,15 +655,23 @@ export default function BunnyJump({ onComplete }: Props) {
           </button>
         </div>
       )}
-      {phase === 'won' && <p className="font-pixel text-mc-green text-xs text-center">🎉 Du nådde toppen!</p>}
       {phase === 'lost' && (
         <div className="flex flex-col items-center gap-3">
-          <p className="font-pixel text-red-400 text-xs text-center">{deathMsg} Høyde: {displayHeight}</p>
-          {tierLevel > 0 && (
-            <p className="font-pixel text-gray-500 text-center" style={{ fontSize: 8 }}>
-              Nådd nivå {tierLevel}: {tierName}
-            </p>
-          )}
+          <p className="font-pixel text-red-400 text-xs text-center">{deathMsg}</p>
+          <div className="bg-mc-dark border border-gray-600 rounded-lg p-3 text-center">
+            <p className="font-pixel text-gray-400" style={{ fontSize: 8 }}>SCORE</p>
+            <p className="font-pixel text-mc-yellow text-lg">{displayHeight}m</p>
+            {tierLevel > 0 && (
+              <p className="font-pixel text-gray-500 mt-1" style={{ fontSize: 8 }}>
+                Nivå {tierLevel}: {tierName}
+              </p>
+            )}
+            {pastGoal && (
+              <p className="font-pixel text-mc-green mt-1" style={{ fontSize: 8 }}>
+                ✅ Avdeling godkjent!
+              </p>
+            )}
+          </div>
           <button onClick={startGame} className="bg-mc-yellow text-black font-pixel text-xs py-3 px-8 rounded border-b-4 border-yellow-700 active:border-b-0 active:translate-y-1">
             PRØV IGJEN
           </button>

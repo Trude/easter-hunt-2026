@@ -16,3 +16,8 @@
 [ ] Bunny jump: Se om det fungerer å bruke de to bildene av Odin (sit og jump) som den man styrer. Mulig de er for detaljert? Hvis det fungerer, rename spillet til noe mer passende. Og kan han hoppe på noe bedre? Greiner i skogen eller tja, noe annet?
 [ ] Bytt ut pipikoner i spill med ordentlig bilde av piip
 [ ] Eastereggs: helt umulig å se nå, må gjøres mer synlige
+
+
+# Extras
+[ ] Gjøre spinllen gjenspillbare. Legge til Highscore og mulighet for gjester å spille. Kodenavn som ikke er agenter blir gjester for eksempel.
+[]

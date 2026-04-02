@@ -374,37 +374,37 @@ export default function Labyrinth({ onComplete }: Props) {
           <div />
           <button
             onClick={() => move(-1, 0)}
-            className="bg-yellow-50 border border-gray-300 rounded p-2.5 text-white text-sm active:bg-gray-200 select-none"
+            className="bg-mc-dark border border-gray-600 rounded p-2.5 text-white text-sm active:bg-gray-700 select-none"
           >
             ▲
           </button>
           <div />
           <button
             onClick={() => move(0, -1)}
-            className="bg-yellow-50 border border-gray-300 rounded p-2.5 text-white text-sm active:bg-gray-200 select-none"
+            className="bg-mc-dark border border-gray-600 rounded p-2.5 text-white text-sm active:bg-gray-700 select-none"
           >
             ◀
           </button>
           <button
             onClick={() => move(1, 0)}
-            className="bg-yellow-50 border border-gray-300 rounded p-2.5 text-white text-sm active:bg-gray-200 select-none"
+            className="bg-mc-dark border border-gray-600 rounded p-2.5 text-white text-sm active:bg-gray-700 select-none"
           >
             ▼
           </button>
           <button
             onClick={() => move(0, 1)}
-            className="bg-yellow-50 border border-gray-300 rounded p-2.5 text-white text-sm active:bg-gray-200 select-none"
+            className="bg-mc-dark border border-gray-600 rounded p-2.5 text-white text-sm active:bg-gray-700 select-none"
           >
             ▶
           </button>
         </div>
 
-        {/* Hint button (limited use) */}
+        {/* Hint button */}
         {!won && (
           <button
             onClick={handleHint}
             disabled={showHint}
-            className="font-pixel text-xs text-gray-500 border border-gray-200 rounded px-3 py-2 mt-2 active:bg-gray-800 disabled:opacity-30 select-none"
+            className="font-pixel text-xs text-gray-500 border border-gray-700 rounded px-3 py-2 mt-2 active:bg-gray-800 disabled:opacity-30 select-none"
           >
             💡 Hint
           </button>
@@ -413,3 +413,4 @@ export default function Labyrinth({ onComplete }: Props) {
     </div>
   );
 }
+ 
