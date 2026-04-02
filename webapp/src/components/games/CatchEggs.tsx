@@ -10,7 +10,6 @@ const BASKET_H = 60;
 const BASKET_SPEED = 7;
 const ITEM_RADIUS = 16;
 const REQUIRED_EGGS = 20;
-const GAME_DURATION = 60;
 const MAX_LIVES = 5;
 
 interface FallingItem {

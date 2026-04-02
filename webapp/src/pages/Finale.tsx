@@ -22,7 +22,7 @@ function playerStatus() {
     if (storage.isDeptComplete('sander', i)) sander++;
     if (storage.isDeptComplete('selda', i)) selda++;
   }
-  for (let i = 1; i <= 6; i++) {
+  for (let i = 1; i <= 11; i++) {
     if (storage.isDeptComplete('svein', i)) svein++;
   }
   return { sander, selda, svein };
@@ -59,8 +59,8 @@ export default function Finale() {
               </div>
               <div className="flex items-center justify-between">
                 <span className="font-pixel text-xs text-gray-700">🍊 AGENT ØRANSEN (Svein)</span>
-                <span className={`font-pixel text-xs ${status.svein >= 6 ? 'text-mc-green' : 'text-gray-500'}`}>
-                  {status.svein >= 6 ? '✅ KLAR' : `${status.svein}/6`}
+                <span className={`font-pixel text-xs ${status.svein >= 11 ? 'text-mc-green' : 'text-gray-500'}`}>
+                  {status.svein >= 11 ? '✅ KLAR' : `${status.svein}/11`}
                 </span>
               </div>
             </div>

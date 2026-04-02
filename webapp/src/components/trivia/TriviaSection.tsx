@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import type { TriviaSection as TriviaSectionType } from '../../data/types';
 import { validateAnswer } from '../../lib/validate-answer';
@@ -69,6 +69,10 @@ export default function TriviaSection({ section, onComplete }: Props) {
   };
 
   const allCorrect = results.length > 0 && results.every(r => r.state === 'correct');
+
+  useEffect(() => {
+    if (sectionDone && allCorrect) onComplete();
+  }, [sectionDone, allCorrect]);
 
   if (sectionDone) {
     return (

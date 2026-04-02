@@ -8,6 +8,7 @@ import SanderDepartment from './pages/SanderDepartment';
 import SeldaDepartment from './pages/SeldaDepartment';
 import Agent from './pages/Agent';
 import AgentGroup from './pages/AgentGroup';
+import AgentGame from './pages/AgentGame';
 import Combine from './pages/Combine';
 import Minecraft from './pages/Minecraft';
 import Finale from './pages/Finale';
@@ -26,6 +27,7 @@ export default function App() {
             <Route path="/selda/:deptId" element={<SeldaDepartment />} />
             <Route path="/agent" element={<Agent />} />
             <Route path="/agent/gruppe/:groupId" element={<AgentGroup />} />
+            <Route path="/agent/spill/:stepId" element={<AgentGame />} />
             <Route path="/kombiner" element={<Combine />} />
             <Route path="/minecraft" element={<Minecraft />} />
             <Route path="/finale" element={<Finale />} />

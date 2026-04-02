@@ -5,13 +5,33 @@ import { storage } from '../lib/storage';
 
 const LETTERS = ['R', 'G', 'O', 'T', 'U', 'L'];
 
+type AgentStep =
+  | { type: 'trivia'; stepId: number; groupId: number }
+  | { type: 'game'; stepId: number; title: string; icon: string };
+
+// Trivia groups (IDs 1–6) og spill (IDs 7–11) vekselvis
+const STEPS: AgentStep[] = [
+  { type: 'trivia', stepId: 1, groupId: 1 },
+  { type: 'game',   stepId: 7,  title: 'Memory',         icon: '🃏' },
+  { type: 'trivia', stepId: 2, groupId: 2 },
+  { type: 'game',   stepId: 8,  title: 'Fang Piip!',     icon: '🐥' },
+  { type: 'trivia', stepId: 3, groupId: 3 },
+  { type: 'game',   stepId: 9,  title: 'Labyrint',       icon: '🗺️' },
+  { type: 'trivia', stepId: 4, groupId: 4 },
+  { type: 'game',   stepId: 10, title: 'Fang påskeegg!', icon: '🥚' },
+  { type: 'trivia', stepId: 5, groupId: 5 },
+  { type: 'game',   stepId: 11, title: 'Gulvet er lava', icon: '🌋' },
+  { type: 'trivia', stepId: 6, groupId: 6 },
+];
+
 export default function Agent() {
   const navigate = useNavigate();
   const game = useGame();
 
+  const stepsDone = STEPS.map(s => game.isDeptComplete('svein', s.stepId));
   const groupsDone = sveinGroups.map(g => game.isDeptComplete('svein', g.id));
-  const allDone = groupsDone.every(Boolean);
-  const nextGroup = sveinGroups.findIndex((_, i) => !groupsDone[i]);
+  const allDone = stepsDone.every(Boolean);
+  const nextStepIdx = stepsDone.findIndex(d => !d);
 
   return (
     <div className="min-h-screen bg-yellow-50 px-4 py-6 max-w-lg mx-auto">
@@ -22,7 +42,7 @@ export default function Agent() {
         </div>
         <h1 className="font-pixel text-mc-yellow text-xs leading-relaxed">AGENT ØRANSEN</h1>
         <p className="font-pixel text-gray-600 text-xs mt-1">
-          {groupsDone.filter(Boolean).length}/6 arkivmapper dekryptert
+          {stepsDone.filter(Boolean).length}/{STEPS.length} oppdrag fullført
         </p>
       </div>
 
@@ -80,18 +100,35 @@ export default function Agent() {
         </div>
       )}
 
-      {/* Gruppe-kort */}
+      {/* Steg-kort */}
       <div className="flex flex-col gap-3">
-        {sveinGroups.map((group, i) => {
-          const done = groupsDone[i];
-          const isNext = i === nextGroup;
+        {STEPS.map((step, i) => {
+          const done = stepsDone[i];
+          const isNext = i === nextStepIdx;
           const locked = !done && !isNext && !allDone;
+
+          const group = step.type === 'trivia'
+            ? sveinGroups.find(g => g.id === step.groupId)
+            : null;
+
+          const icon = step.type === 'trivia' ? (group?.icon ?? '📁') : step.icon;
+          const title = step.type === 'trivia' ? (group?.title ?? '') : step.title;
+          const label = step.type === 'trivia' ? `MAPPE #${step.groupId}` : 'FELTOPPDRAG';
+
+          const handleClick = () => {
+            if (locked) return;
+            if (step.type === 'trivia') {
+              navigate(`/agent/gruppe/${step.groupId}`);
+            } else {
+              navigate(`/agent/spill/${step.stepId}`);
+            }
+          };
 
           return (
             <button
-              key={group.id}
+              key={step.stepId}
               disabled={locked}
-              onClick={() => !locked && navigate(`/agent/gruppe/${group.id}`)}
+              onClick={handleClick}
               className={`w-full text-left rounded border-2 p-4 transition-all ${
                 done
                   ? 'border-mc-green bg-mc-green/10'
@@ -102,22 +139,28 @@ export default function Agent() {
             >
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
-                  <span className="text-xl">{group.icon}</span>
+                  <span className="text-xl">{icon}</span>
                   <div>
                     <p className={`font-pixel text-xs ${done ? 'text-mc-green' : isNext ? 'text-mc-yellow' : 'text-gray-600'}`}>
-                      MAPPE #{group.id}
+                      {label}
                     </p>
                     <p className={`font-pixel text-xs mt-0.5 ${done ? 'text-gray-700' : isNext ? 'text-gray-700' : 'text-gray-600'}`}>
-                      {group.title}
+                      {title}
                     </p>
                   </div>
                 </div>
                 <div className={`w-8 h-8 border flex items-center justify-center ${
                   done ? 'border-mc-yellow bg-mc-yellow/20' : 'border-gray-200'
                 }`}>
-                  <span className={`font-pixel text-xs ${done ? 'text-mc-yellow' : 'text-gray-700'}`}>
-                    {done ? group.letter : locked ? '🔒' : '→'}
-                  </span>
+                  {step.type === 'trivia' && group ? (
+                    <span className={`font-pixel text-xs ${done ? 'text-mc-yellow' : 'text-gray-700'}`}>
+                      {done ? group.letter : locked ? '🔒' : '→'}
+                    </span>
+                  ) : (
+                    <span className="text-sm">
+                      {done ? '✅' : locked ? '🔒' : '→'}
+                    </span>
+                  )}
                 </div>
               </div>
             </button>

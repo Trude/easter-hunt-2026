@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback, useRef, useMemo } from 'react';
 
 const PIIP_IMG = '/assets/piip/piip_icon.png';
+const BUNNY_IMG = '/assets/bunny_goal.png';
 
 // ─── Maze dimensions ────────────────────────────────────────
 // 16×16 "rooms" → 33×33 render grid (walls between rooms)
@@ -217,16 +218,14 @@ export default function Labyrinth({ onComplete }: Props) {
     }
   }, [pos, won, onComplete]);
 
-  // ─── Fog of war: only show cells within FOG_RADIUS of player or visited ───
+  const FOG_RADIUS = 5;
+
   const isVisible = useCallback(
     (r: number, c: number) => {
-      if (won) return true; // Reveal all on win
-      const dr = Math.abs(r - pos[0]);
-      const dc = Math.abs(c - pos[1]);
-      // Chebyshev distance for square viewport
-      return Math.max(dr, dc) <= FOG_RADIUS;
+      if (won) return true;
+      return Math.max(Math.abs(r - pos[0]), Math.abs(c - pos[1])) <= FOG_RADIUS;
     },
-    [pos, won]
+    [pos, won, FOG_RADIUS]
   );
 
   const isExplored = useCallback(
@@ -245,16 +244,10 @@ export default function Labyrinth({ onComplete }: Props) {
     setTimeout(() => setShowHint(false), 1500);
   }, []);
 
-  // Viewport: center around player, show VIEWPORT_SIZE × VIEWPORT_SIZE cells
-  const VIEWPORT_SIZE = FOG_RADIUS * 2 + 1; // 7 cells visible
-  const vpSize = Math.min(GRID, VIEWPORT_SIZE * 3 + 1); // show ~21 cells, enough context
-
-  // Compute viewport bounds (clamped to maze edges)
-  const halfVp = Math.floor(vpSize / 2);
-  const vpTop = Math.max(0, Math.min(pos[0] - halfVp, GRID - vpSize));
-  const vpLeft = Math.max(0, Math.min(pos[1] - halfVp, GRID - vpSize));
-  const vpBottom = Math.min(GRID, vpTop + vpSize);
-  const vpRight = Math.min(GRID, vpLeft + vpSize);
+  const vpTop = 0;
+  const vpLeft = 0;
+  const vpBottom = GRID;
+  const vpRight = GRID;
 
   return (
     <div className="flex flex-col items-center gap-3 p-4">
@@ -330,19 +323,15 @@ export default function Labyrinth({ onComplete }: Props) {
                 const dimExplored = !visible && explored;
                 const onSolution = showHint && solutionSet.has(`${r},${c}`) && visible;
 
-                let bg = 'bg-black'; // fog
-                if (visible || dimExplored) {
-                  if (cell === 1) {
-                    bg = visible ? 'bg-mc-brown' : 'bg-gray-800';
-                  } else {
-                    bg = visible
-                      ? onSolution
-                        ? 'bg-yellow-900'
-                        : 'bg-yellow-50'
-                      : 'bg-gray-900';
-                  }
+                let bg: string;
+                if (visible) {
+                  bg = cell === 1
+                    ? 'bg-stone-700'
+                    : onSolution ? 'bg-yellow-900' : 'bg-yellow-50';
+                } else {
+                  bg = 'bg-black';
                 }
-                if (isGoal && (visible || dimExplored)) bg = 'bg-mc-green bg-opacity-30';
+                if (isGoal && visible) bg = 'bg-mc-green bg-opacity-30';
 
                 return (
                   <div
@@ -350,9 +339,9 @@ export default function Labyrinth({ onComplete }: Props) {
                     style={{ width: CELL, height: CELL }}
                     className={`flex items-center justify-center ${bg} transition-colors duration-150`}
                   >
-                    {isPlayer && <img src={PIIP_IMG} alt="Piip" style={{ width: CELL * 1.6, height: CELL * 1.6 }} className="object-contain" />}
-                    {isGoal && !isPlayer && (visible || dimExplored) && (
-                      <span style={{ fontSize: CELL * 0.7 }}>🏠</span>
+                    {isPlayer && <img src={PIIP_IMG} alt="Piip" style={{ width: CELL * 2.8, height: CELL * 2.8 }} className="object-contain" />}
+                    {isGoal && !isPlayer && visible && (
+                      <img src={BUNNY_IMG} alt="mål" style={{ width: CELL * 3.6, height: CELL * 3.6 }} className="object-contain" />
                     )}
                   </div>
                 );
@@ -375,26 +364,26 @@ export default function Labyrinth({ onComplete }: Props) {
           <div />
           <button
             onClick={() => move(-1, 0)}
-            className="bg-mc-dark border border-gray-600 rounded p-2.5 text-sm active:bg-gray-700 select-none"
+            className="bg-purple-700 border border-purple-400 rounded p-2.5 text-sm active:bg-purple-900 select-none"
           >
             ⬆️
           </button>
           <div />
           <button
             onClick={() => move(0, -1)}
-            className="bg-mc-dark border border-gray-600 rounded p-2.5 text-sm active:bg-gray-700 select-none"
+            className="bg-purple-700 border border-purple-400 rounded p-2.5 text-sm active:bg-purple-900 select-none"
           >
             ⬅️
           </button>
           <button
             onClick={() => move(1, 0)}
-            className="bg-mc-dark border border-gray-600 rounded p-2.5 text-sm active:bg-gray-700 select-none"
+            className="bg-purple-700 border border-purple-400 rounded p-2.5 text-sm active:bg-purple-900 select-none"
           >
             ⬇️
           </button>
           <button
             onClick={() => move(0, 1)}
-            className="bg-mc-dark border border-gray-600 rounded p-2.5 text-sm active:bg-gray-700 select-none"
+            className="bg-purple-700 border border-purple-400 rounded p-2.5 text-sm active:bg-purple-900 select-none"
           >
             ➡️
           </button>
