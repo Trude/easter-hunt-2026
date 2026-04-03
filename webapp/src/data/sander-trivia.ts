@@ -87,7 +87,7 @@ export const sanderTrivia: Record<number, TriviaSection> = {
       { id: 2, format: 'multiple-choice', question: 'Hva heter hemmelighetsmappen som Kodeknekkeren låste opp?', options: ['Hemmelig Mappe', 'Detektivarkivet', 'Påskemappa', 'Sporloggen'], answer: 'Hemmelig Mappe' },
       { id: 3, format: 'multiple-choice', question: 'Hva er ditt hemmelige agentnavn?', options: ['Kodeknekkeren', 'Sporhunden', 'Agent Øransen', 'Detektiven'], answer: 'Kodeknekkeren' },
       { id: 4, format: 'multiple-choice', question: 'Hva er Seldas hemmelige agentnavn?', options: ['Sporhunden', 'Kodeknekkeren', 'Agent Piip', 'Superdetektiven'], answer: 'Sporhunden' },
-      { id: 5, format: 'multiple-choice', question: 'Hvem var den hemmelige agenten som hjalp dere i den digitale delen?', options: ['Agent Øransen', 'En mystisk fremmed', 'Påskeharen selv', 'Piip'], answer: 'Agent Øransen' },
+      { id: 5, format: 'multiple-choice', question: 'Det finnes en hemmelige agenten til som dere snart trenger hjelp av, finne ut hvem det er. Hva er agentnavnet tildenne personen?', options: ['Agent Øransen', 'En mystisk fremmed', 'Påskeharen selv', 'Piip'], answer: 'Agent Øransen' },
     ],
   },
 };

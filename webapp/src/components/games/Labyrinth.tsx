@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback, useRef, useMemo } from 'react';
+import { useState, useEffect, useCallback, useMemo } from 'react';
 
 const PIIP_IMG = '/assets/piip/piip_icon.png';
 const BUNNY_IMG = '/assets/bunny_goal.png';
@@ -143,7 +143,6 @@ export default function Labyrinth({ onComplete }: Props) {
   const [moves, setMoves] = useState(0);
   const [visited, setVisited] = useState<Set<string>>(() => new Set(['1,1']));
   const [showHint, setShowHint] = useState(false);
-  const touchStart = useRef<{ x: number; y: number } | null>(null);
 
   // Verify maze is solvable
   useEffect(() => {
@@ -186,29 +185,6 @@ export default function Labyrinth({ onComplete }: Props) {
     window.addEventListener('keydown', handler);
     return () => window.removeEventListener('keydown', handler);
   }, [move]);
-
-  // Swipe support
-  const handleTouchStart = useCallback((e: React.TouchEvent) => {
-    const touch = e.touches[0];
-    touchStart.current = { x: touch.clientX, y: touch.clientY };
-  }, []);
-
-  const handleTouchEnd = useCallback(
-    (e: React.TouchEvent) => {
-      if (!touchStart.current) return;
-      const touch = e.changedTouches[0];
-      const dx = touch.clientX - touchStart.current.x;
-      const dy = touch.clientY - touchStart.current.y;
-      const MIN_SWIPE = 15;
-      if (Math.abs(dx) > Math.abs(dy)) {
-        if (Math.abs(dx) > MIN_SWIPE) move(0, dx > 0 ? 1 : -1);
-      } else {
-        if (Math.abs(dy) > MIN_SWIPE) move(dy > 0 ? 1 : -1, 0);
-      }
-      touchStart.current = null;
-    },
-    [move]
-  );
 
   // Check win
   useEffect(() => {
@@ -303,12 +279,10 @@ export default function Labyrinth({ onComplete }: Props) {
         </p>
       </div>
 
-      {/* Main viewport: fog-of-war view */}
+      {/* Main viewport: fog-of-war view with edge-tap overlays */}
       <div
-        className="border-2 border-mc-yellow overflow-hidden rounded"
+        className="border-2 border-mc-yellow overflow-hidden rounded relative"
         style={{ width: (vpRight - vpLeft) * CELL, height: (vpBottom - vpTop) * CELL }}
-        onTouchStart={handleTouchStart}
-        onTouchEnd={handleTouchEnd}
       >
         {maze.slice(vpTop, vpBottom).map((row, ri) => {
           const r = vpTop + ri;
@@ -349,6 +323,47 @@ export default function Labyrinth({ onComplete }: Props) {
             </div>
           );
         })}
+
+        {/* Edge tap zones (overlay) */}
+        {!won && (
+          <>
+            {/* Top */}
+            <button
+              onPointerDown={e => { e.preventDefault(); move(-1, 0); }}
+              className="absolute top-0 left-0 right-0 flex items-center justify-center select-none touch-none z-20 active:bg-purple-900/40"
+              style={{ height: '20%' }}
+            >
+              <span style={{ color: 'rgba(216, 180, 254, 0.65)', fontSize: 22, lineHeight: 1 }}>▲</span>
+            </button>
+
+            {/* Bottom */}
+            <button
+              onPointerDown={e => { e.preventDefault(); move(1, 0); }}
+              className="absolute bottom-0 left-0 right-0 flex items-center justify-center select-none touch-none z-20 active:bg-purple-900/40"
+              style={{ height: '20%' }}
+            >
+              <span style={{ color: 'rgba(216, 180, 254, 0.65)', fontSize: 22, lineHeight: 1 }}>▼</span>
+            </button>
+
+            {/* Left */}
+            <button
+              onPointerDown={e => { e.preventDefault(); move(0, -1); }}
+              className="absolute top-0 left-0 bottom-0 flex items-center justify-center select-none touch-none z-20 active:bg-purple-900/40"
+              style={{ width: '20%' }}
+            >
+              <span style={{ color: 'rgba(216, 180, 254, 0.65)', fontSize: 22, lineHeight: 1 }}>◀</span>
+            </button>
+
+            {/* Right */}
+            <button
+              onPointerDown={e => { e.preventDefault(); move(0, 1); }}
+              className="absolute top-0 right-0 bottom-0 flex items-center justify-center select-none touch-none z-20 active:bg-purple-900/40"
+              style={{ width: '20%' }}
+            >
+              <span style={{ color: 'rgba(216, 180, 254, 0.65)', fontSize: 22, lineHeight: 1 }}>▶</span>
+            </button>
+          </>
+        )}
       </div>
 
       {won && (
@@ -357,49 +372,16 @@ export default function Labyrinth({ onComplete }: Props) {
         </p>
       )}
 
-      {/* Controls */}
-      <div className="flex flex-col items-center gap-2">
-        {/* D-pad */}
-        <div className="grid grid-cols-3 gap-1.5">
-          <div />
-          <button
-            onClick={() => move(-1, 0)}
-            className="bg-purple-700 border border-purple-400 rounded p-2.5 text-sm active:bg-purple-900 select-none"
-          >
-            ⬆️
-          </button>
-          <div />
-          <button
-            onClick={() => move(0, -1)}
-            className="bg-purple-700 border border-purple-400 rounded p-2.5 text-sm active:bg-purple-900 select-none"
-          >
-            ⬅️
-          </button>
-          <button
-            onClick={() => move(1, 0)}
-            className="bg-purple-700 border border-purple-400 rounded p-2.5 text-sm active:bg-purple-900 select-none"
-          >
-            ⬇️
-          </button>
-          <button
-            onClick={() => move(0, 1)}
-            className="bg-purple-700 border border-purple-400 rounded p-2.5 text-sm active:bg-purple-900 select-none"
-          >
-            ➡️
-          </button>
-        </div>
-
-        {/* Hint button */}
-        {!won && (
-          <button
-            onClick={handleHint}
-            disabled={showHint}
-            className="font-pixel text-xs text-gray-500 border border-gray-700 rounded px-3 py-2 active:bg-gray-800 disabled:opacity-30 select-none"
-          >
-            💡 Hint
-          </button>
-        )}
-      </div>
+      {/* Hint button */}
+      {!won && (
+        <button
+          onClick={handleHint}
+          disabled={showHint}
+          className="font-pixel text-xs text-gray-500 border border-gray-700 rounded px-3 py-2 active:bg-gray-800 disabled:opacity-30 select-none"
+        >
+          💡 Hint
+        </button>
+      )}
     </div>
   );
 }

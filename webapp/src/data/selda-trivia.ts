@@ -139,7 +139,7 @@ export const seldaTrivia: Record<number, TriviaSection> = {
       { id: 2, format: 'multiple-choice', question: 'Hva heter hemmelighetsmappen som Sporhunden låste opp?', options: ['Hemmelig Mappe', 'Detektivarkivet', 'Påskemappa', 'Sporloggen'], answer: 'Hemmelig Mappe' },
       { id: 3, format: 'multiple-choice', question: 'Hva er ditt hemmelige agentnavn?', options: ['Sporhunden', 'Kodeknekkeren', 'Agent Øransen', 'Detektiven'], answer: 'Sporhunden' },
       { id: 4, format: 'multiple-choice', question: 'Hva er Sanders hemmelige agentnavn?', options: ['Kodeknekkeren', 'Sporhunden', 'Agent Piip', 'Superdetektiven'], answer: 'Kodeknekkeren' },
-      { id: 5, format: 'multiple-choice', question: 'Hvem var den hemmelige agenten som hjalp dere i dag?', options: ['Onkel Svein', 'Odin', 'Piip', 'Tommy'], answer: 'Onkel Svein' },
+      { id: 5, format: 'multiple-choice', question: 'Det finnes en hemmelige agenten til som dere snart trenger hjelp av, finne ut hvem det er. Hva er agentnavnet tildenne personen?', options: ['Agent Øransen', 'En mystisk fremmed', 'Påskeharen selv', 'Piip'], answer: 'Agent Øransen' },
     ],
   },
 };

@@ -270,7 +270,7 @@ export const sveinGroups: SveinGroup[] = [
       },
       {
         id: 65,
-        question: 'Hva er den viktigste datoen i dag — ifølge deg selv?',
+        question: 'Hva er den viktigste med dagen i dag — ifølge deg selv?',
         format: 'text',
         answer: ['bursdagen min', 'bursdagen', 'bursdag', 'min bursdag', 'fødselsdagen min', 'fødselsdagen'],
       },

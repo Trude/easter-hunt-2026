@@ -6,7 +6,7 @@ import { sveinGroups } from '../data/svein-trivia';
 import { validateAnswer } from '../lib/validate-answer';
 import AchievementPopup from '../components/ui/AchievementPopup';
 
-const MIN_CORRECT = 4;
+const MIN_CORRECT = 5;
 
 type AnswerState = 'unanswered' | 'correct' | 'wrong';
 
