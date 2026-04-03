@@ -44,9 +44,9 @@ export const storage = {
   getKombinerCode: (player: Player): string =>
     localStorage.getItem(key([player, 'kombiner', 'code'])) || '',
 
-  // Svein: alle 11 steg fullført (trivia IDs 1–6, spill IDs 7–11)
+  // Svein: alle 12 steg fullført (trivia IDs 1–6, spill IDs 7–11, bonusmappe ID 12)
   isSveinAllDone: (): boolean => {
-    for (let i = 1; i <= 11; i++) {
+    for (let i = 1; i <= 12; i++) {
       if (localStorage.getItem(key(['svein', 'dept', String(i), 'complete'])) !== 'true') return false;
     }
     return true;
@@ -72,8 +72,8 @@ export const storage = {
       localStorage.setItem(key(['selda', 'dept', String(i), 'complete']), 'true');
     }
     localStorage.setItem(key(['selda', 'secret', 'unlocked']), 'true');
-    // Svein: 6 mapper + 5 spill
-    for (let i = 1; i <= 11; i++) {
+    // Svein: 6 mapper + 5 spill + 1 bonusmappe
+    for (let i = 1; i <= 12; i++) {
       localStorage.setItem(key(['svein', 'dept', String(i), 'complete']), 'true');
     }
     // Kombiner + Minecraft

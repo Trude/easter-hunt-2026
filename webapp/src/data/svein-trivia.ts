@@ -7,7 +7,7 @@ export interface SveinGroup {
   title: string;
   icon: string;
   intro: string;
-  letter: string;
+  letter?: string; // valgfri — bonusgrupper uten kodeordsbokstav
   questions: Question[];
 }
 
@@ -273,6 +273,56 @@ export const sveinGroups: SveinGroup[] = [
         question: 'Hva er den viktigste med dagen i dag — ifølge deg selv?',
         format: 'text',
         answer: ['bursdagen min', 'bursdagen', 'bursdag', 'min bursdag', 'fødselsdagen min', 'fødselsdagen'],
+      },
+    ] as Question[],
+  },
+  {
+    id: 7,
+    title: 'Musikkeksperten',
+    icon: '🎵',
+    intro: 'Bonusmappe #7: Hør nøye. Gjenkjenner du disse sangene? Ingen bokstav på spill — bare ære.',
+    questions: [
+      {
+        id: 71,
+        format: 'text',
+        question: 'Hvilken artist synger denne sangen?',
+        spotify: '3iGBycfZb7Ex2ltiKrg95a',
+        answer: ['Mr. Pimp Lotion', 'mr. pimp lotion', 'mr pimp lotion', 'Mr Pimp Lotion'],
+      },
+      {
+        id: 72,
+        format: 'text',
+        question: 'Hvilket år ble denne sangen utgitt?',
+        spotify: '3spdoTYpuCpmq19tuD0bOe',
+        answer: ['1969'],
+      },
+      {
+        id: 73,
+        format: 'text',
+        question: 'Hva heter denne sangen?',
+        spotify: '0ulAxaVBayqFMZEK5f95ee',
+        answer: ['Sånne som deg', 'sånne som deg', 'Sanne som deg', 'sanne som deg'],
+      },
+      {
+        id: 74,
+        format: 'text',
+        question: 'Hvilket årstall vant denne sangen Eurovision Song Contest?',
+        spotify: '7tostJTMXhaRiVLTTXcvhe',
+        answer: ['2023'],
+      },
+      {
+        id: 75,
+        format: 'text',
+        question: 'Hva heter vokalisten i dette bandet?',
+        spotify: '2T5UDvBzecsQkTMVbOvRLS',
+        answer: ['Joakim Berg', 'joakim berg'],
+      },
+      {
+        id: 76,
+        format: 'text',
+        question: 'Hva heter denne artisten — kjent som eksen til The Kid LAROI?',
+        spotify: '2yWlGEgEfPot0lv3OAjuG3',
+        answer: ['Tate McRae', 'Tate Mcrae', 'tate mcrae', 'tate mcRae'],
       },
     ] as Question[],
   },

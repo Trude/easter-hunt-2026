@@ -5,6 +5,7 @@ import { useGame } from '../context/GameContext';
 import { sveinGroups } from '../data/svein-trivia';
 import { validateAnswer } from '../lib/validate-answer';
 import AchievementPopup from '../components/ui/AchievementPopup';
+import SpotifyEmbed from '../components/trivia/SpotifyEmbed';
 
 const MIN_CORRECT = 5;
 
@@ -99,10 +100,14 @@ export default function AgentGroup() {
       <div className="min-h-screen bg-yellow-50 px-4 py-8 max-w-lg mx-auto flex flex-col items-center gap-6 text-center">
         <div className="text-4xl">{group.icon}</div>
         <p className="font-pixel text-mc-green text-xs">✅ MAPPE #{group.id} ALLEREDE DEKRYPTERT</p>
-        <div className="border border-mc-yellow rounded p-4">
-          <p className="font-pixel text-gray-600 text-xs mb-2">BOKSTAV AVSLØRT:</p>
-          <p className="font-pixel text-mc-yellow text-4xl">{group.letter}</p>
-        </div>
+        {group.letter ? (
+          <div className="border border-mc-yellow rounded p-4">
+            <p className="font-pixel text-gray-600 text-xs mb-2">BOKSTAV AVSLØRT:</p>
+            <p className="font-pixel text-mc-yellow text-4xl">{group.letter}</p>
+          </div>
+        ) : (
+          <p className="font-pixel text-mc-green text-xs">🎵 Bonusmappe fullført!</p>
+        )}
         <button
           onClick={() => navigate('/agent')}
           className="font-pixel text-gray-600 text-xs"
@@ -132,12 +137,19 @@ export default function AgentGroup() {
         {passed ? (
           <>
             <p className="font-pixel text-mc-green text-xs">
-              {correctCount}/5 RIKTIGE — MAPPE DEKRYPTERT
+              {correctCount}/{group.questions.length} RIKTIGE — MAPPE DEKRYPTERT
             </p>
-            <div className="border-2 border-mc-yellow rounded p-6">
-              <p className="font-pixel text-gray-600 text-xs mb-2">BOKSTAV AVSLØRT:</p>
-              <p className="font-pixel text-mc-yellow text-5xl">{group.letter}</p>
-            </div>
+            {group.letter ? (
+              <div className="border-2 border-mc-yellow rounded p-6">
+                <p className="font-pixel text-gray-600 text-xs mb-2">BOKSTAV AVSLØRT:</p>
+                <p className="font-pixel text-mc-yellow text-5xl">{group.letter}</p>
+              </div>
+            ) : (
+              <div className="border-2 border-mc-yellow rounded p-6">
+                <p className="font-pixel text-mc-yellow text-3xl">🎵</p>
+                <p className="font-pixel text-gray-600 text-xs mt-2">Bonusmappe fullført!</p>
+              </div>
+            )}
             <button
               onClick={() => navigate('/agent')}
               className="bg-mc-green text-white font-pixel text-xs py-3 px-8 rounded border-b-4 border-green-800 active:border-b-0 active:translate-y-1"
@@ -148,7 +160,7 @@ export default function AgentGroup() {
         ) : (
           <>
             <p className="font-pixel text-red-400 text-xs leading-relaxed">
-              AVVIST — {correctCount}/5 riktige.
+              AVVIST — {correctCount}/{group.questions.length} riktige.
               <br /><br />
               Du trenger minst {MIN_CORRECT}. Prøv igjen, Agent.
             </p>
@@ -224,7 +236,7 @@ export default function AgentGroup() {
       </div>
 
       <p className="font-pixel text-gray-500 text-xs text-center mb-4">
-        {currentIdx + 1}/{group.questions.length} · Trenger {MIN_CORRECT}/5 riktige
+        {currentIdx + 1}/{group.questions.length} · Trenger {MIN_CORRECT}/{group.questions.length} riktige
       </p>
 
       {/* Spørsmål */}
@@ -236,6 +248,11 @@ export default function AgentGroup() {
           exit={{ opacity: 0, x: -20 }}
           className="flex flex-col gap-4"
         >
+          {/* Spotify embed */}
+          {(currentQuestion as any).spotify && (
+            <SpotifyEmbed trackId={(currentQuestion as any).spotify} />
+          )}
+
           <p className="font-pixel text-gray-800 text-xs leading-relaxed text-center px-2">
             {currentQuestion!.question}
           </p>

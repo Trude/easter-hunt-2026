@@ -21,6 +21,7 @@ const STEPS: AgentStep[] = [
   { type: 'game',   stepId: 10, title: 'Fang påskeegg!', icon: '🥚' },
   { type: 'trivia', stepId: 5, groupId: 5 },
   { type: 'game',   stepId: 11, title: 'Gulvet er lava', icon: '🌋' },
+  { type: 'trivia', stepId: 12, groupId: 7 },
   { type: 'trivia', stepId: 6, groupId: 6 },
 ];
 
