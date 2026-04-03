@@ -487,7 +487,7 @@ Et Minecraft-craftingbord vises på én delt enhet. Barna drar/klikker ingredien
 
 **Delte ingredienser — ekte samarbeid:**
 Siden vet hvilke barn som er pålogget (fra localStorage). Ingrediensene er fordelt:
-- **Sanderss ingredienser** (merket med grønn navnelapp): gulrot, pinne
+- **Sanders ingredienser** (merket med grønn navnelapp): gulrot, pinne
 - **Seldas ingredienser** (merket med gul navnelapp): hvit ull
 
 Begge barns ingredienser vises på siden — men de må sitte sammen for å vite hva den andre har og bli enige om plasseringen. Ingen nettverkssynk nødvendig.

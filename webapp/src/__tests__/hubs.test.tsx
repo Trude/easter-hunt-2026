@@ -23,7 +23,7 @@ beforeEach(() => {
   mockNavigate.mockClear()
 })
 
-describe('Sanderss detektivkontor', () => {
+describe('Sanders detektivkontor', () => {
   it('hilser Sander med hans agentnavn', () => {
     renderPage(<SanderHub />)
     expect(screen.getByText(/KODEKNEKKEREN/)).toBeInTheDocument()

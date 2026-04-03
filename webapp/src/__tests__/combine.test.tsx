@@ -20,9 +20,9 @@ describe('Kombiner-siden — alle agenter samler kodene', () => {
     expect(screen.getByText(/alle tre agenter/i)).toBeInTheDocument()
   })
 
-  it('viser felt for Sanderss kode, Seldas kode, Sveins kode og kodeordet', () => {
+  it('viser felt for Sanders kode, Seldas kode, Sveins kode og kodeordet', () => {
     renderPage(<Combine />)
-    expect(screen.getByText(/sanderss kode/i)).toBeInTheDocument()
+    expect(screen.getByText(/sanders kode/i)).toBeInTheDocument()
     expect(screen.getByText(/seldas kode/i)).toBeInTheDocument()
     expect(screen.getByText(/sveins kode/i)).toBeInTheDocument()
     expect(screen.getByText(/hemmelig kodeord/i)).toBeInTheDocument()

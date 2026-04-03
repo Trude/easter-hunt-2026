@@ -1,5 +1,12 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
 import { GameProvider } from './context/GameContext';
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+  useEffect(() => { window.scrollTo(0, 0); }, [pathname]);
+  return null;
+}
 import EasterBackground from './components/ui/EasterBackground';
 import Home from './pages/Home';
 import SanderHub from './pages/SanderHub';
@@ -17,6 +24,7 @@ export default function App() {
   return (
     <GameProvider>
       <BrowserRouter>
+        <ScrollToTop />
         <EasterBackground />
         <div className="relative z-10">
           <Routes>

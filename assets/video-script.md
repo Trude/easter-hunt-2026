@@ -16,9 +16,7 @@ Men dere fulgte sporene mine, løste gåtene, og jobbet sammen hele veien. Og Od
 
 Nå er det én ting igjen. Skatten. Godteriet. Eggene.
 
-De er gjemt der jakten begynte. Der flammene danser og varmen sitter. Der dere samlet alle bevisene.
-
-Ved peisen.
+De er gjemt der skiene tilbringer sommeren.
 
 God påske, detektiver. Dere er de beste jeg noensinne har møtt.
 

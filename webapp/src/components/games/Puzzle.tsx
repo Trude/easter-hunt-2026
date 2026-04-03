@@ -294,6 +294,7 @@ export default function Puzzle({ onComplete }: Props) {
                 ...pieceStyle(pieceIdx),
                 left: x,
                 top: y,
+                zIndex: isFloating ? 10 : 1,
                 filter: isFloating ? 'drop-shadow(0 2px 5px rgba(0,0,0,0.3))' : undefined,
               }}
             />

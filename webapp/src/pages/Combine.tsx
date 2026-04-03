@@ -55,7 +55,7 @@ export default function Combine() {
 
   const fields = [
     {
-      label: 'SANDERSS KODEORD',
+      label: 'SANDERS KODEORD',
       icon: '🔍',
       value: sander,
       set: setSander,

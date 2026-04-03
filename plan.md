@@ -158,7 +158,7 @@ Begge løper sitt eget løp SAMTIDIG. Ved hver stasjon: ledetråd til neste sted
 
 **Ventetid:** Den som er ferst samler og organiserer bevisene på stavlen mens den andre fullfører.
 
-#### SANDERSS RUTE (5. klasse matte, 3 engelske ledetråder)
+#### SANDERSRUTE (5. klasse matte, 3 engelske ledetråder)
 
 | # | Gjemmested | Bevis som hentes | Ut-ledetråd | Språk |
 |---|-----------|-----------------|-------------|-------|
@@ -225,7 +225,7 @@ Alle taster inn sitt kodeord. Det er en **tilbakeknapp** slik at de kan gå tilb
 
 | Felt | Kodeord | Kilde |
 |------|---------|-------|
-| Sanderss kodeord | PÅSKESPOREREN | Bokstaver fra avd. 1–13 i appen |
+| Sanders kodeord | PÅSKESPOREREN | Bokstaver fra avd. 1–13 i appen |
 | Seldas kodeord | PÅSKEBEVISENE | Bokstaver fra avd. 1–13 i appen |
 | Sveins kodeord | GULROT | Bokstaver fra gruppe 1–6 i appen |
 
@@ -257,7 +257,7 @@ Barna løper ut og finner påskeeggene.
 | Side | Kode | Innhold |
 |------|------|---------|
 | `/` | — | Forside — Piip ønsker velkommen, kodefelt |
-| `/sander` | KODEKNEKKEREN | Sanderss detektivkontor — 12 avdelinger + hemmelig avd. 13 |
+| `/sander` | KODEKNEKKEREN | Sanders detektivkontor — 12 avdelinger + hemmelig avd. 13 |
 | `/selda` | SPORHUNDEN | Seldas detektivkontor — 12 avdelinger + hemmelig avd. 13 |
 | `/agent` | SVEIN | Sveins løp — 6 arkivmapper |
 | `/kombiner` | KOMBINER | Alle tre kodeord kombineres + tilbakeknapp til hub |

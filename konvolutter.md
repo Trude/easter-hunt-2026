@@ -128,7 +128,7 @@ Lykke til, Sporhunden!
 
 ---
 
-## SANDERSS STASJONSKJEDE
+## SANDERS STASJONSKJEDE
 
 ### Stasjon S1 — Grillplassen (ENGELSK ledetråd)
 
