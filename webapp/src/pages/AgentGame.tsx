@@ -61,10 +61,11 @@ export default function AgentGame() {
         </p>
       </div>
 
-      {/* Fullført */}
-      {done && (
-        <div className="mb-6 border-2 border-mc-green bg-white/90 rounded-lg p-4 text-center">
-          <p className="font-pixel text-mc-green text-xs mb-3">✅ FELTOPPDRAG FULLFØRT!</p>
+      {/* Fullført-banner vises KUN når spillet er ferdig — erstatter innholdet */}
+      {done ? (
+        <div className="flex flex-col items-center gap-6 text-center py-10">
+          <div className="text-5xl">✅</div>
+          <p className="font-pixel text-mc-green text-xs">FELTOPPDRAG FULLFØRT!</p>
           <button
             onClick={() => navigate('/agent')}
             className="bg-mc-green text-white font-pixel text-xs py-3 px-8 rounded border-b-4 border-green-800 active:border-b-0 active:translate-y-1"
@@ -72,14 +73,16 @@ export default function AgentGame() {
             ← TILBAKE TIL OPPDRAGET
           </button>
         </div>
+      ) : (
+        /* Spill */
+        <>
+          {id === 7 && <Memory onComplete={handleComplete} />}
+          {id === 8 && <CatchPiip onComplete={handleComplete} />}
+          {id === 9 && <Labyrinth onComplete={handleComplete} />}
+          {id === 10 && <CatchEggs onComplete={handleComplete} />}
+          {id === 11 && <LavaFloor onComplete={handleComplete} />}
+        </>
       )}
-
-      {/* Spill */}
-      {id === 7 && <Memory onComplete={handleComplete} />}
-      {id === 8 && <CatchPiip onComplete={handleComplete} />}
-      {id === 9 && <Labyrinth onComplete={handleComplete} />}
-      {id === 10 && <CatchEggs onComplete={handleComplete} />}
-      {id === 11 && <LavaFloor onComplete={handleComplete} />}
 
     </div>
   );

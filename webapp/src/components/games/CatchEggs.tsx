@@ -171,15 +171,16 @@ export default function CatchEggs({ onComplete }: Props) {
         if (s.lives === 0) {
           s.running = false;
           setPhase('lost');
+          if (completedRef.current) onComplete();
           return;
         }
       }
 
-      // Unlock completion when enough eggs caught
+      // Marker fullføring når nok egg er fanget — men ikke kall onComplete() ennå.
+      // onComplete() kalles først når spillet er over (livene er oppbrukt).
       if (!completedRef.current && s.score >= REQUIRED_EGGS) {
         completedRef.current = true;
         setCompleted(true);
-        onComplete();
       }
 
       // Draw

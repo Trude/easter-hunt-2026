@@ -346,7 +346,8 @@ export default function LavaFloor({ onComplete }: Props) {
           // but keep playing — the game is endless!
           if (h >= REQUIRED_HEIGHT && !s.completed) {
             s.completed = true;
-            onComplete();
+            // Ikke kall onComplete her — spillet fortsetter.
+            // onComplete() kalles først når spillet er over (death).
           }
         }
         // Move platforms & lava down with scroll
@@ -414,6 +415,7 @@ export default function LavaFloor({ onComplete }: Props) {
         s.deathReason = 'Du falt! 💀';
         setDeathMsg(s.deathReason);
         setPhase('lost');
+        if (s.completed) onComplete();
         return;
       }
       // 2) Touched lava
@@ -422,6 +424,7 @@ export default function LavaFloor({ onComplete }: Props) {
         s.deathReason = 'Slukt av lavaen! 🌋';
         setDeathMsg(s.deathReason);
         setPhase('lost');
+        if (s.completed) onComplete();
         return;
       }
 

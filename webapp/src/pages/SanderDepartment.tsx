@@ -113,10 +113,11 @@ export default function SanderDepartment() {
         )}
       </div>
 
-      {/* Fullført-banner */}
-      {justCompleted && (
-        <div className="mb-6 border-2 border-mc-green bg-mc-dark rounded-lg p-4 text-center">
-          <p className="font-pixel text-mc-green text-xs mb-3">✅ AVDELING {id} FULLFØRT!</p>
+      {/* Fullført-banner vises KUN når spillet er ferdig — erstatter innholdet */}
+      {justCompleted ? (
+        <div className="flex flex-col items-center gap-6 text-center py-10">
+          <div className="text-5xl">✅</div>
+          <p className="font-pixel text-mc-green text-xs">AVDELING {id} FULLFØRT!</p>
           <button
             onClick={() => navigate('/sander')}
             className="bg-mc-green text-white font-pixel text-xs py-3 px-8 rounded border-b-4 border-green-800 active:border-b-0 active:translate-y-1"
@@ -124,34 +125,34 @@ export default function SanderDepartment() {
             ← TILBAKE TIL KONTORET
           </button>
         </div>
-      )}
-
-      {/* Innhold */}
-      {TRIVIA_DEPTS.includes(id) && sanderTrivia[id] ? (
-        <TriviaSection section={sanderTrivia[id]} onComplete={handleComplete} />
-      ) : id === 2 ? (
-        <Memory onComplete={handleComplete} />
-      ) : id === 4 ? (
-        <CatchEggs onComplete={handleComplete} />
-      ) : id === 6 ? (
-        <CatchPiip onComplete={handleComplete} />
-      ) : id === 8 ? (
-        <Labyrinth onComplete={handleComplete} />
-      ) : id === 10 ? (
-        <LavaFloor onComplete={handleComplete} />
-      ) : id === 12 ? (
-        <Puzzle onComplete={handleComplete} />
       ) : (
-        <div className="flex flex-col items-center gap-6 text-center py-10">
-          <div className="text-5xl">{meta?.icon}</div>
-          <p className="font-pixel text-gray-400 text-xs leading-relaxed">KOMMER SNART</p>
-          <button
-            onClick={handleComplete}
-            className="bg-gray-700 text-white font-pixel text-xs py-3 px-8 rounded border-b-4 border-gray-900 active:border-b-0 active:translate-y-1"
-          >
-            FULLFØR (DEV) →
-          </button>
-        </div>
+        /* Innhold */
+        TRIVIA_DEPTS.includes(id) && sanderTrivia[id] ? (
+          <TriviaSection section={sanderTrivia[id]} onComplete={handleComplete} />
+        ) : id === 2 ? (
+          <Memory onComplete={handleComplete} />
+        ) : id === 4 ? (
+          <CatchEggs onComplete={handleComplete} />
+        ) : id === 6 ? (
+          <CatchPiip onComplete={handleComplete} />
+        ) : id === 8 ? (
+          <Labyrinth onComplete={handleComplete} />
+        ) : id === 10 ? (
+          <LavaFloor onComplete={handleComplete} />
+        ) : id === 12 ? (
+          <Puzzle onComplete={handleComplete} />
+        ) : (
+          <div className="flex flex-col items-center gap-6 text-center py-10">
+            <div className="text-5xl">{meta?.icon}</div>
+            <p className="font-pixel text-gray-400 text-xs leading-relaxed">KOMMER SNART</p>
+            <button
+              onClick={handleComplete}
+              className="bg-gray-700 text-white font-pixel text-xs py-3 px-8 rounded border-b-4 border-gray-900 active:border-b-0 active:translate-y-1"
+            >
+              FULLFØR (DEV) →
+            </button>
+          </div>
+        )
       )}
 
     </div>

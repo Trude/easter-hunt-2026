@@ -57,11 +57,11 @@ export default function VoksneDepartment() {
         <p className="font-pixel text-gray-400 text-xs mt-1">Bare for gøy 🎉</p>
       </div>
 
-      {/* Fullført-banner */}
-      {done && (
-        <div className="mb-6 border-2 border-mc-green bg-mc-dark rounded-lg p-4 text-center">
-          <div className="text-3xl mb-2">🎉</div>
-          <p className="font-pixel text-mc-green text-xs mb-3">BRA JOBBET!</p>
+      {/* Fullført-banner vises KUN når spillet er ferdig — erstatter innholdet */}
+      {done ? (
+        <div className="flex flex-col items-center gap-6 text-center py-10">
+          <div className="text-5xl">🎉</div>
+          <p className="font-pixel text-mc-green text-xs">BRA JOBBET!</p>
           <button
             onClick={() => navigate('/voksne')}
             className="bg-mc-green text-white font-pixel text-xs py-3 px-8 rounded border-b-4 border-green-800 active:border-b-0 active:translate-y-1"
@@ -69,28 +69,28 @@ export default function VoksneDepartment() {
             ← TILBAKE TIL KONTORET
           </button>
         </div>
-      )}
-
-      {/* Innhold */}
-      {TRIVIA_DEPTS.includes(id) && voksneTrivia[id] ? (
-        <TriviaSection section={voksneTrivia[id]} onComplete={handleComplete} />
-      ) : id === 1 ? (
-        <Memory onComplete={handleComplete} />
-      ) : id === 2 ? (
-        <CatchEggs onComplete={handleComplete} />
-      ) : id === 3 ? (
-        <CatchPiip onComplete={handleComplete} />
-      ) : id === 4 ? (
-        <Labyrinth onComplete={handleComplete} />
-      ) : id === 5 ? (
-        <LavaFloor onComplete={handleComplete} />
-      ) : id === 6 ? (
-        <Puzzle onComplete={handleComplete} />
       ) : (
-        <div className="flex flex-col items-center gap-6 text-center py-10">
-          <div className="text-5xl">{meta?.icon}</div>
-          <p className="font-pixel text-gray-400 text-xs leading-relaxed">KOMMER SNART</p>
-        </div>
+        /* Innhold */
+        TRIVIA_DEPTS.includes(id) && voksneTrivia[id] ? (
+          <TriviaSection section={voksneTrivia[id]} onComplete={handleComplete} />
+        ) : id === 1 ? (
+          <Memory onComplete={handleComplete} />
+        ) : id === 2 ? (
+          <CatchEggs onComplete={handleComplete} />
+        ) : id === 3 ? (
+          <CatchPiip onComplete={handleComplete} />
+        ) : id === 4 ? (
+          <Labyrinth onComplete={handleComplete} />
+        ) : id === 5 ? (
+          <LavaFloor onComplete={handleComplete} />
+        ) : id === 6 ? (
+          <Puzzle onComplete={handleComplete} />
+        ) : (
+          <div className="flex flex-col items-center gap-6 text-center py-10">
+            <div className="text-5xl">{meta?.icon}</div>
+            <p className="font-pixel text-gray-400 text-xs leading-relaxed">KOMMER SNART</p>
+          </div>
+        )
       )}
     </div>
   );
