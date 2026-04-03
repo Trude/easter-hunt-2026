@@ -1,7 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { useGame } from '../context/GameContext';
 import { sveinGroups } from '../data/svein-trivia';
-import { storage } from '../lib/storage';
 
 const LETTERS = ['R', 'G', 'O', 'T', 'U', 'L'];
 
