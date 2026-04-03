@@ -115,7 +115,7 @@ export default function Agent() {
 
           const icon = step.type === 'trivia' ? (group?.icon ?? '📁') : step.icon;
           const title = step.type === 'trivia' ? (group?.title ?? '') : step.title;
-          const label = step.type === 'trivia' ? `MAPPE #${step.groupId}` : 'FELTOPPDRAG';
+          const label = step.type === 'trivia' ? `MAPPE #${group?.displayNumber ?? step.groupId}` : 'FELTOPPDRAG';
 
           const handleClick = () => {
             if (locked) return;

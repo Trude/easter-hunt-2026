@@ -7,7 +7,9 @@ export interface SveinGroup {
   title: string;
   icon: string;
   intro: string;
-  letter?: string; // valgfri — bonusgrupper uten kodeordsbokstav
+  letter?: string;        // valgfri — bonusgrupper uten kodeordsbokstav
+  stepId?: number;        // overstyrer hvilken localStorage-nøkkel som brukes (standard: id)
+  displayNumber?: number; // overstyrer mappenummer som vises i UI (standard: id)
   questions: Question[];
 }
 
@@ -240,6 +242,7 @@ export const sveinGroups: SveinGroup[] = [
     title: 'Siste mappe — Oppdraget',
     icon: '📁',
     letter: 'L',
+    displayNumber: 7,
     intro: 'Arkivmappe #6: Du har kommet lenger enn noen annen agent. Siste sikkerhetskontroll. Dette er personlig.',
     questions: [
       {
@@ -280,7 +283,9 @@ export const sveinGroups: SveinGroup[] = [
     id: 7,
     title: 'Musikkeksperten',
     icon: '🎵',
-    intro: 'Bonusmappe #7: Hør nøye. Gjenkjenner du disse sangene? Ingen bokstav på spill — bare ære.',
+    stepId: 12,
+    displayNumber: 6,
+    intro: 'Bonusmappe #6: Hør nøye. Gjenkjenner du disse sangene? Ingen bokstav på spill — bare ære.',
     questions: [
       {
         id: 71,

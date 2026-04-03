@@ -32,7 +32,9 @@ export default function AgentGroup() {
   const [groupDone, setGroupDone] = useState(false);
   const [achievement, setAchievement] = useState(false);
 
-  const alreadyDone = group ? game.isDeptComplete('svein', group.id) : false;
+  const storageId = group ? (group.stepId ?? group.id) : 0;
+  const displayNum = group ? (group.displayNumber ?? group.id) : 0;
+  const alreadyDone = group ? game.isDeptComplete('svein', storageId) : false;
 
   const correctCount = results.filter(r => r.state === 'correct').length;
   const passed = correctCount >= MIN_CORRECT;
@@ -48,8 +50,8 @@ export default function AgentGroup() {
 
   // Persist completion in useEffect, not during render
   useEffect(() => {
-    if (groupDone && passed && group && !game.isDeptComplete('svein', group.id)) {
-      game.completeDept('svein', group.id);
+    if (groupDone && passed && group && !game.isDeptComplete('svein', storageId)) {
+      game.completeDept('svein', storageId);
     }
   }, [groupDone, passed]);
 
@@ -95,11 +97,12 @@ export default function AgentGroup() {
     );
   }
 
-  if (alreadyDone && !groupDone) {
+  // Bonusgrupper (ingen bokstav) kan alltid spilles på nytt
+  if (alreadyDone && !groupDone && group.letter) {
     return (
       <div className="min-h-screen bg-yellow-50 px-4 py-8 max-w-lg mx-auto flex flex-col items-center gap-6 text-center">
         <div className="text-4xl">{group.icon}</div>
-        <p className="font-pixel text-mc-green text-xs">✅ MAPPE #{group.id} ALLEREDE DEKRYPTERT</p>
+        <p className="font-pixel text-mc-green text-xs">✅ MAPPE #{displayNum} ALLEREDE DEKRYPTERT</p>
         {group.letter ? (
           <div className="border border-mc-yellow rounded p-4">
             <p className="font-pixel text-gray-600 text-xs mb-2">BOKSTAV AVSLØRT:</p>
@@ -204,7 +207,7 @@ export default function AgentGroup() {
       {/* Header */}
       <div className="text-center mb-4">
         <div className="inline-block border border-red-700 bg-white/80 rounded px-3 py-0.5 mb-2">
-          <p className="font-pixel text-red-500 text-xs">ARKIVMAPPE #{group.id}</p>
+          <p className="font-pixel text-red-500 text-xs">ARKIVMAPPE #{displayNum}</p>
         </div>
         <div className="text-3xl mb-1">{group.icon}</div>
         <p className="font-pixel text-mc-yellow text-xs">{group.title.toUpperCase()}</p>
