@@ -253,40 +253,67 @@ export default function CatchPiip({ onComplete }: Props) {
         </div>
       )}
 
-      {/* Grid */}
-      <div className="grid grid-cols-3 gap-2">
-        {Array.from({ length: GRID_SIZE }, (_, i) => {
-          const item = activeItems.find(a => a.index === i);
-          const isFlash = flash?.index === i;
-          const cfg = item ? ITEM_CONFIG[item.type] : null;
+      {/* Grid + idle overlay */}
+      <div className="relative">
+        <div className="grid grid-cols-3 gap-2">
+          {Array.from({ length: GRID_SIZE }, (_, i) => {
+            const item = activeItems.find(a => a.index === i);
+            const isFlash = flash?.index === i;
+            const cfg = item ? ITEM_CONFIG[item.type] : null;
 
-          return (
-            <button
-              key={i}
-              onClick={() => handleHit(i)}
-              className={`w-24 h-24 rounded-xl border-2 flex items-center justify-center text-4xl transition-all duration-100 select-none active:scale-95 ${
-                isFlash
-                  ? `${flash.color} border-white scale-95`
-                  : item && cfg
-                  ? `${cfg.bg} ${cfg.border} scale-110`
-                  : 'bg-mc-dark border-gray-700'
-              }`}
-            >
-              {item && cfg ? (
-                item.type === 'piip' || item.type === 'golden' ? (
-                  <img
-                    src={PIIP_IMG}
-                    alt="Piip"
-                    className={`w-14 h-14 object-contain select-none ${item.type === 'golden' ? 'animate-pulse drop-shadow-[0_0_6px_gold]' : ''}`}
-                    draggable={false}
-                  />
-                ) : (
-                  <span>{cfg.emoji}</span>
-                )
-              ) : ''}
+            return (
+              <button
+                key={i}
+                onClick={() => handleHit(i)}
+                className={`w-24 h-24 rounded-xl border-2 flex items-center justify-center text-4xl transition-all duration-100 select-none active:scale-95 ${
+                  isFlash
+                    ? `${flash.color} border-white scale-95`
+                    : item && cfg
+                    ? `${cfg.bg} ${cfg.border} scale-110`
+                    : 'bg-mc-dark border-gray-700'
+                }`}
+              >
+                {item && cfg ? (
+                  item.type === 'piip' || item.type === 'golden' ? (
+                    <img
+                      src={PIIP_IMG}
+                      alt="Piip"
+                      className={`w-14 h-14 object-contain select-none ${item.type === 'golden' ? 'animate-pulse drop-shadow-[0_0_6px_gold]' : ''}`}
+                      draggable={false}
+                    />
+                  ) : (
+                    <span>{cfg.emoji}</span>
+                  )
+                ) : ''}
+              </button>
+            );
+          })}
+        </div>
+
+        {/* Start-overlay */}
+        {phase === 'idle' && (
+          <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 rounded-xl bg-black/75">
+            <p className="font-pixel text-xs text-gray-300 text-center leading-relaxed px-4">
+              Trykk på Piip så fort du kan!<br />
+              Unngå fiendene — de stjeler poeng!
+            </p>
+            <div className="font-pixel text-gray-500 text-center leading-relaxed" style={{ fontSize: 8 }}>
+              <p>🐥 Piip = +1 poeng</p>
+              <p>✨ Gull-Piip = +3 poeng</p>
+              <p>🐦 Kråke = -1 poeng</p>
+              <p>🦊 Rev = -2 poeng</p>
+              <p>💣 Bombe = -3 poeng</p>
+            </div>
+            {bestScore > 0 && (
+              <p className="font-pixel text-gray-500" style={{ fontSize: 9 }}>
+                Beste score: {bestScore}
+              </p>
+            )}
+            <button onClick={startGame} className="bg-mc-green text-white font-pixel text-xs py-3 px-8 rounded border-b-4 border-green-800 active:border-b-0 active:translate-y-1">
+              {bestScore > 0 ? 'SPILL IGJEN →' : 'START →'}
             </button>
-          );
-        })}
+          </div>
+        )}
       </div>
 
       {/* Restart-knapp mens man spiller */}
@@ -297,30 +324,6 @@ export default function CatchPiip({ onComplete }: Props) {
         >
           🔄 Start på nytt
         </button>
-      )}
-
-      {phase === 'idle' && (
-        <div className="flex flex-col items-center gap-3">
-          <p className="font-pixel text-xs text-gray-400 text-center leading-relaxed max-w-xs">
-            Trykk på Piip så fort du kan!<br />
-            Unngå fiendene — de stjeler poeng!
-          </p>
-          <div className="font-pixel text-gray-600 text-center leading-relaxed" style={{ fontSize: 8 }}>
-            <p>Piip = +1 poeng</p>
-            <p>✨ Gull-Piip = +3 poeng</p>
-            <p>🐦 Kråke = -1 poeng</p>
-            <p>🦊 Rev = -2 poeng</p>
-            <p>💣 Bombe = -3 poeng</p>
-          </div>
-          {bestScore > 0 && (
-            <p className="font-pixel text-gray-500" style={{ fontSize: 9 }}>
-              Beste score: {bestScore}
-            </p>
-          )}
-          <button onClick={startGame} className="bg-mc-green text-white font-pixel text-xs py-3 px-8 rounded border-b-4 border-green-800 active:border-b-0 active:translate-y-1">
-            {bestScore > 0 ? 'SPILL IGJEN →' : 'START →'}
-          </button>
-        </div>
       )}
       {phase === 'won' && (
         <div className="flex flex-col items-center gap-3">

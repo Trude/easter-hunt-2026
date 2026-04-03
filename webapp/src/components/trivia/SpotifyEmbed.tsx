@@ -11,7 +11,7 @@ export default function SpotifyEmbed({ trackId }: SpotifyEmbedProps) {
           kun albumcover + play-knapp fra Spotify compact embed */}
       <div
         className="rounded-lg overflow-hidden border border-gray-200"
-        style={{ width: 50, height: 55, position: 'relative' }}
+        style={{ width: 50, height: 90, position: 'relative' }}
       >
         <iframe
           src={`https://open.spotify.com/embed/track/${trackId}?utm_source=generator&theme=0`}

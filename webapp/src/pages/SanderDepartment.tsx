@@ -113,6 +113,19 @@ export default function SanderDepartment() {
         )}
       </div>
 
+      {/* Fullført-banner */}
+      {justCompleted && (
+        <div className="mb-6 border-2 border-mc-green bg-mc-dark rounded-lg p-4 text-center">
+          <p className="font-pixel text-mc-green text-xs mb-3">✅ AVDELING {id} FULLFØRT!</p>
+          <button
+            onClick={() => navigate('/sander')}
+            className="bg-mc-green text-white font-pixel text-xs py-3 px-8 rounded border-b-4 border-green-800 active:border-b-0 active:translate-y-1"
+          >
+            ← TILBAKE TIL KONTORET
+          </button>
+        </div>
+      )}
+
       {/* Innhold */}
       {TRIVIA_DEPTS.includes(id) && sanderTrivia[id] ? (
         <TriviaSection section={sanderTrivia[id]} onComplete={handleComplete} />
@@ -141,18 +154,6 @@ export default function SanderDepartment() {
         </div>
       )}
 
-      {/* Fullført-banner */}
-      {justCompleted && (
-        <div className="mt-6 border-2 border-mc-green bg-mc-dark rounded-lg p-4 text-center">
-          <p className="font-pixel text-mc-green text-xs mb-3">✅ AVDELING {id} FULLFØRT!</p>
-          <button
-            onClick={() => navigate('/sander')}
-            className="bg-mc-green text-white font-pixel text-xs py-3 px-8 rounded border-b-4 border-green-800 active:border-b-0 active:translate-y-1"
-          >
-            ← TILBAKE TIL KONTORET
-          </button>
-        </div>
-      )}
     </div>
   );
 }

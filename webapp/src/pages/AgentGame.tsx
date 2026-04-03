@@ -61,16 +61,9 @@ export default function AgentGame() {
         </p>
       </div>
 
-      {/* Spill */}
-      {id === 7 && <Memory onComplete={handleComplete} />}
-      {id === 8 && <CatchPiip onComplete={handleComplete} />}
-      {id === 9 && <Labyrinth onComplete={handleComplete} />}
-      {id === 10 && <CatchEggs onComplete={handleComplete} />}
-      {id === 11 && <LavaFloor onComplete={handleComplete} />}
-
       {/* Fullført */}
       {done && (
-        <div className="mt-6 border-2 border-mc-green bg-white/90 rounded-lg p-4 text-center">
+        <div className="mb-6 border-2 border-mc-green bg-white/90 rounded-lg p-4 text-center">
           <p className="font-pixel text-mc-green text-xs mb-3">✅ FELTOPPDRAG FULLFØRT!</p>
           <button
             onClick={() => navigate('/agent')}
@@ -80,6 +73,14 @@ export default function AgentGame() {
           </button>
         </div>
       )}
+
+      {/* Spill */}
+      {id === 7 && <Memory onComplete={handleComplete} />}
+      {id === 8 && <CatchPiip onComplete={handleComplete} />}
+      {id === 9 && <Labyrinth onComplete={handleComplete} />}
+      {id === 10 && <CatchEggs onComplete={handleComplete} />}
+      {id === 11 && <LavaFloor onComplete={handleComplete} />}
+
     </div>
   );
 }
