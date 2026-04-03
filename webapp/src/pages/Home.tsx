@@ -8,6 +8,7 @@ const ROUTES: Record<string, string> = {
   SVEIN: '/agent',
   VARDEN26: '/finale',
   KOMBINER: '/kombiner',
+  PÅSKEHAREN: '/voksne',
 };
 
 export default function Home() {

@@ -19,6 +19,8 @@ import AgentGame from './pages/AgentGame';
 import Combine from './pages/Combine';
 import Minecraft from './pages/Minecraft';
 import Finale from './pages/Finale';
+import VoksneHub from './pages/VoksneHub';
+import VoksneDepartment from './pages/VoksneDepartment';
 
 export default function App() {
   return (
@@ -39,6 +41,8 @@ export default function App() {
             <Route path="/kombiner" element={<Combine />} />
             <Route path="/minecraft" element={<Minecraft />} />
             <Route path="/finale" element={<Finale />} />
+            <Route path="/voksne" element={<VoksneHub />} />
+            <Route path="/voksne/:deptId" element={<VoksneDepartment />} />
             <Route path="*" element={<Home />} />
           </Routes>
         </div>
