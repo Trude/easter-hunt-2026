@@ -169,16 +169,6 @@ export default function Agent() {
           );
         })}
       </div>
-
-      {/* Reset knapp (diskret, for testing) */}
-      <div className="mt-8 text-center">
-        <button
-          onClick={() => { storage.resetAll(); window.location.reload(); }}
-          className="font-pixel text-gray-700 text-xs"
-        >
-          [RESET]
-        </button>
-      </div>
     </div>
   );
 }
