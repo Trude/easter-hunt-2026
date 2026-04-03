@@ -238,3 +238,34 @@ Koden **ONKELS** kan brukes som:
 Språket i appen skal føles som om han er rekruttert av en etterretningsorganisasjon som ikke tar seg selv helt på alvor. Tenk: MI6 møter Kvikk Lunsj. Litt formelt, litt absurd, og med en undertone av "vi vet hvem du er, Agent."
 
 Bursdagselementet bygges opp gradvis — de første gruppene handler om hobbyer og interesser uten å røpe at det handler om ham. Gruppe 5 snur alt på hodet. Gruppe 6 + fullført-skjermen lander det varmt.
+
+
+---
+
+## MUSIKK QUIZ SVEIN:
+
+Legg til en ny seksjon i sidesporet til Svein. Det skal være en musikk quiz på samme måte som sander og selda har, med avspilling av sanger på spotify. Spørsmål, link til sangene og svar:
+
+Spørsmål: Hvilken artist?
+Link til sang: https://open.spotify.com/track/3iGBycfZb7Ex2ltiKrg95a?si=bf3812e3e8bc4f78
+Svar: Mr. Pimp Lotion
+
+Spørsmål: Hvilket år ble denne sangen utgitt? 
+Link til sang: https://open.spotify.com/track/3spdoTYpuCpmq19tuD0bOe?si=7ff0135036ee4096
+Svar: 1969
+
+Spørsmål: Tittel på denne sangen?
+Link til sang: https://open.spotify.com/track/0ulAxaVBayqFMZEK5f95ee?si=7498bbd8e63b4e8a
+Svar: Sånne som deg
+
+Spørsmål: Hvilket årstall vant denne sangen Eurovision song contest? 
+Link til sang: https://open.spotify.com/track/7tostJTMXhaRiVLTTXcvhe?si=c287106040814614
+Svar: 2023
+
+Spørsmål: Hva heter vokalisten i dette bandet?  (spille en Kent sang)?
+Link til sang: https://open.spotify.com/track/2T5UDvBzecsQkTMVbOvRLS?si=afa061e3a93d458d
+Svar: Joakim Berg
+
+Spørsmål: Hva heter denne artisten som er eksen til Kid Laroi 
+Link til sang: https://open.spotify.com/track/2yWlGEgEfPot0lv3OAjuG3?si=74a052dfe6ef4d7d
+Svar: Tate Mcrae

@@ -339,8 +339,8 @@ Vi ses ved peisen, Kodeknekkeren.
 
 ## SELDAS STASJONSKJEDE
 
-### Stasjon Ø1 — Kisten i stua (Donald-blad!)
-
+### Stasjon Ø1 — Kisten i stua (Donald-blad!) 
+LAGT PÅ PLASS!
 *Ingen konvolutt — et Donald Duck-blad er lagt godt synlig på/ved kisten i stua med en lapp på forsiden: "ÅPNES AV SELDA — HEMMELIG".*
 
 ---
@@ -434,7 +434,7 @@ Kom du frem innen tiden?
 ---
 
 ### Stasjon Ø4 — Fryseren
-
+LAGT PÅ PLASS
 *Konvolutten er gjemt inne i fryseren — gjerne pakket inn i noe så den ikke fryser. Bevis: halvspist frossen gulrot (legg i fryseren ved siden av konvolutten).*
 
 ---
@@ -480,7 +480,7 @@ Neste ledetråd er kodet. Bruk dekoderen i detektivboken.
 ---
 
 ### Stasjon Ø6 — Vaskerommet
-
+LAGT PÅ PLASS
 *Konvolutten er gjemt i/bak vaskemaskin eller på hylle. Bevis: halvt skattekart (Ø-halvdelen for Selda).*
 
 ---
@@ -588,6 +588,7 @@ Innhold:
 Quick — the Easter Bunny left something under the living room table. Go NOW!"*
 
 **RH2 — Festet under stuebordets underside:**
+*LAGT PÅ PLASS*
 Innhold:
 - Håndtegnet bilde av en rød sild
 - Lapp:
